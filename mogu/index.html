@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <!-- SEO  -->
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <!-- 苹果专用 -->
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="blank" />
+    <meta name="format-detection" content="telephone=no" />
+    <!-- 简单移动端适配 -->
+   	<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+    <!-- 图标 -->
+	<link rel="shortcut icon" href="">
+    <title>首页</title>
+    <link rel="stylesheet" href="css/swiper.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/iconfont.css">
+</head>
+<body>
+<div id="content" style="height: 100%;position:relative;">
+
+<!--------------------header------------------------------------>
+    <div id="header" style="position:fixed;top:0;left:0;">
+        <div class="message iconfont">&#xe62e;</div>
+        <div class="search-content"><input type="search" placeholder="简约百搭欧美大牌短靴" class="search" results="s"></div>
+        <div class="cart iconfont">&#xe632;</div>
+    </div>
+<!-----------------------中间部分----------------------------->
+     <!---------------------------banner------------------>
+    <div id="container" style="position:absolute;top: 0.4rem;bottom: 0.5rem;height: 100%;">
+        <div>
+        <div id="banner">
+            <div class="swiper-container zhuye-banner">
+                <div class="swiper-wrapper"></div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+    <!--------------------------banner-bottom---------------------------->
+        <div id="banner-bottom"></div>
+       <!-------------------------middle------------------------------->
+        <div id="middle">
+            <div class="one"></div>
+            <div class="two"></div>
+            <div class="three"></div>
+        </div>
+       <!------------------------benefit-------------------------------->
+        <div id="benefit">
+            <div class="title">
+                <div>买实惠</div>
+                <div>热门促销</div>
+            </div>
+            <div class="goods"></div>
+        </div>
+        <!------------------------正在流行-------------------------------->
+        <div id="popular">
+            <div class="title">
+                <div>正在流行</div>
+                <div>热门分类</div>
+            </div>
+            <div class="goods"></div>
+        </div>
+       <!-----------------------猜你喜欢---like----------------------------->
+           <div id="like">
+                   <div class="title">猜你喜欢</div>
+                   <div class="goods" style="overflow: hidden;"></div>
+                   <div id="pullUp" class="pull" style="height:0.5rem;font-size: 0.2rem"></div>
+           </div>
+               </div>
+           </div>
+<!------------------------footer------------------------->
+    <div id="footer">
+        <ul></ul>
+    </div>
+</div>
+<script src="js/zepto.js"></script>
+<script src="js/swiper.js"></script>
+<script src="js/iscroll.js" ></script>
+<script src="js/banner.js"></script>
+ <script type="text/javascript">
+   /*-----------------第一个接口---------------------*/
+    	$.ajax({
+    		url: 'http://mce.mogucdn.com/jsonp/multiget/3?pids=7356%2C3756%2C24513%2C24522%2C24526',
+    		dataType: 'jsonp',
+    		success: function(a){
+                //banner图
+                for(var i=0;i< a.data[3756].list.length;i++) {
+                    $(".swiper-wrapper").append(
+                            '<div class="swiper-slide"><a href="' + a.data[3756].list[i].link + '">' +
+                            '<img src=' + a.data[3756].list[i].image + ' alt="">' +
+                            '</a></div>'
+                    );
+                }
+                //banner-bottom
+                for(var i=0;i< a.data[24513].list.length;i++){
+                    $('#banner-bottom').append(
+                            '<a href="'+a.data[24513].list[i].link+'"><img src="'+a.data[24513].list[i].image+'" alt=""></a>'
+                    );
+                }
+                //middle
+                //one
+                for(var i=0;i< a.data[24522].list.length;i++){
+                    $('#middle .one').append(
+                            '<div class="pic"><a href="'+a.data[24522].list[i].link+'"><img src="'+a.data[24522].list[i].image+'" alt=""></a></div>'
+                    );
+                }
+                //two
+                for(var i=0;i< a.data[24526].list.length;i++){
+                    $('#middle .two').append(
+                            '<div class="pic"><a href="'+a.data[24526].list[i].link+'"><img src="'+a.data[24526].list[i].image+'" alt=""></a></div>'
+                    );
+                }
+    		}
+    	})
+   /*-----------------第二个接口---------------------*/
+   $.ajax({
+       url:'http://mce.mogucdn.com/jsonp/multiget/3?pids=24532%2C3093%2C4746%2C4604',
+       dataType:'jsonp',
+       success:function(a){
+           //middle
+           //three
+           for(var i=0;i< a.data[24532].list.length;i++){
+               $('#middle  .three').append(
+                       '<div class="pic"><a href="'+a.data[24532].list[i].link+'"><img src="'+a.data[24532].list[i].image+'" alt=""></a></div>'
+               );
+           }
+           //benefit
+           for(var i=0;i< a.data[3093].list.length;i++){
+               $('#benefit  .goods').append(
+                       '<div class="pic"><a href="'+a.data[3093].list[i].link+'">' +
+                       '<p>'+a.data[3093].list[i].title+'</p>' +
+                       '<p>'+a.data[3093].list[i].viceTitle+'</p>' +
+                       '<img src="'+a.data[3093].list[i].image+'" alt="">' +
+                       '</a>' +
+                       '</div>'
+               );
+           }
+           //popular
+           for(var i=0;i< a.data[4746].list.length;i++){
+               $('#popular  .goods').append(
+                       '<div class="pic"><a href="'+a.data[4746].list[i].link+'"><img src="'+a.data[4746].list[i].image+'" alt=""><p>'+a.data[4746].list[i].title+'</p></a></div>'
+               );
+           }
+           //footer
+           for(var i=0;i< a.data[4604].list.length;i++){
+               $('#footer  ul').append(
+                       '<li><img src="'+a.data[4604].list[i].image+'" alt=""><span>'+a.data[4604].list[i].title+'</span></li>'
+               );
+           }
+       }
+   });
+
+     /*---------------------------------上拉加载-------------------------------*/
+   var oScroll = null,
+           oContainer= null,
+           oPullUp = null;
+   setTimeout(function () {
+       oPullUp = $("#pullUp");
+       oContainer =$("#container");
+       oScroll = new iScroll("container", {
+           hScrollbar: false,
+           vScrollbar: false,
+           onScrollMove: function () {
+               if (this.y < this.maxScrollY && !oPullUp.hasClass("loading")) {
+                   oPullUp.addClass("loading").html("放手加载")
+               } else if (this.y >= this.maxScrollY) {
+                   oPullUp.removeClass("loading").html("上拉加载")
+               }
+           },
+           onScrollEnd: function () {
+               if (oPullUp.hasClass('loading')) {
+                   oPullUp.html('loading');
+                  pullUpData()
+               }
+           },
+           onRefresh: function () {
+               if (oPullUp.hasClass("loading")) {
+                   oPullUp.removeClass("loading").html("上拉加载")
+               }
+           },
+       })
+   }, 200);
+
+   function pullUpData(){
+       var num=1;
+       num++;
+       $.ajax({
+           type:"get",
+           url:"http://list.mogujie.com/search?cKey=h5-shopping&fcid=&pid=9750&searchTag=&sort=pop&page='+num+'&ratio=3%3A4&_version=1&",
+           dataType:"jsonp",
+           json:"callback",
+           async:true,
+           success:function(a){
+               for (var i = 0; i < a.result.wall.docs.length; i++) {
+                   if (a.result.wall.docs[i].leftbottom_taglist.length == 2) {
+                       if (a.result.wall.docs[i].lefttop_taglist.length == 1) {
+                           $('#like  .goods').append(
+                                   '<div class="pic">' +
+                                   '<a href="' + a.result.wall.docs[i].link + '">' +
+                                   '<img src="' + a.result.wall.docs[i].img + '" alt="">' +
+                                   '<p>' + a.result.wall.docs[i].title + '</p>' +
+                                   '<div class="titles"><span>' + a.result.wall.docs[i].price + '</span><span>' + a.result.wall.docs[i].cfav + '</span></div>' +
+                                   '<img src="' + a.result.wall.docs[i].lefttop_taglist[0].img + '" id="picture">' +
+                                   '<img src="' + a.result.wall.docs[i].leftbottom_taglist[0].img + '" id="picture1">' +
+                                   '<img src="' + a.result.wall.docs[i].leftbottom_taglist[1].img + '" id="picture2">' +
+                                   '</a>' +
+                                   '</div>'
+                           );
+                       } else if(a.result.wall.docs[i].lefttop_taglist.length == 0){
+                           $('#like  .goods').append(
+                                   '<div class="pic">' +
+                                   '<a href="' + a.result.wall.docs[i].link + '">' +
+                                   '<img src="' + a.result.wall.docs[i].img + '" alt="">' +
+                                   '<p>' + a.result.wall.docs[i].title + '</p>' +
+                                   '<div class="titles"><span>' + a.result.wall.docs[i].price + '</span><span>' + a.result.wall.docs[i].cfav + '</span></div>' +
+                                   '<img src="' + a.result.wall.docs[i].leftbottom_taglist[0].img + '" id="picture1">' +
+                                   '<img src="' + a.result.wall.docs[i].leftbottom_taglist[1].img + '" id="picture2">' +
+                                   '</a>' +
+                                   '</div>'
+                           );
+                       }
+                   } else if (a.result.wall.docs[i].leftbottom_taglist.length == 1) {
+                       if (a.result.wall.docs[i].lefttop_taglist.length == 1) {
+                           $('#like  .goods').append(
+                                   '<div class="pic">' +
+                                   '<a href="' + a.result.wall.docs[i].link + '">' +
+                                   '<img src="' + a.result.wall.docs[i].img + '" alt="">' +
+                                   '<p>' + a.result.wall.docs[i].title + '</p>' +
+                                   '<div class="titles"><span>' + a.result.wall.docs[i].price + '</span><span>' + a.result.wall.docs[i].cfav + '</span></div>' +
+                                   '<img src="' + a.result.wall.docs[i].lefttop_taglist[0].img + '" id="picture">' +
+                                   '<img src="' + a.result.wall.docs[i].leftbottom_taglist[0].img + '" id="picture1">' +
+                                   '</a>' +
+                                   '</div>'
+                           );
+                       } else if(a.result.wall.docs[i].lefttop_taglist.length == 0){
+                           $('#like  .goods').append(
+                                   '<div class="pic">' +
+                                   '<a href="' + a.result.wall.docs[i].link + '">' +
+                                   '<img src="' + a.result.wall.docs[i].img + '" alt="">' +
+                                   '<p>' + a.result.wall.docs[i].title + '</p>' +
+                                   '<div class="titles"><span>' + a.result.wall.docs[i].price + '</span><span>' + a.result.wall.docs[i].cfav + '</span></div>' +
+                                   '<img src="' + a.result.wall.docs[i].leftbottom_taglist[0].img + '" id="picture1">' +
+                                   '</a>' +
+                                   '</div>'
+                           );
+                       }
+                   } else if(a.result.wall.docs[i].leftbottom_taglist.length == 0){
+                       if (a.result.wall.docs[i].lefttop_taglist.length == 1) {
+                           $('#like  .goods').append(
+                                   '<div class="pic">' +
+                                   '<a href="' + a.result.wall.docs[i].link + '">' +
+                                   '<img src="' + a.result.wall.docs[i].img + '" alt="">' +
+                                   '<p>' + a.result.wall.docs[i].title + '</p>' +
+                                   '<div class="titles"><span>' + a.result.wall.docs[i].price + '</span><span>' + a.result.wall.docs[i].cfav + '</span></div>' +
+                                   '<img src="' + a.result.wall.docs[i].lefttop_taglist[0].img + '" id="picture">' +
+                                   '</a>' +
+                                   '</div>'
+                           );
+                       } else {
+                           $('#like  .goods').append(
+                                   '<div class="pic">' +
+                                   '<a href="' + a.result.wall.docs[i].link + '">' +
+                                   '<img src="' + a.result.wall.docs[i].img + '" alt="">' +
+                                   '<p>' + a.result.wall.docs[i].title + '</p>' +
+                                   '<div class="titles"><span>' + a.result.wall.docs[i].price + '</span><span>' + a.result.wall.docs[i].cfav + '</span></div>' +
+                                   '</a>' +
+                                   '</div>'
+                           );
+                       }
+                   }
+
+               }
+               oScroll.refresh();
+           }
+       });
+   }
+   $.ajax({
+       type:"get",
+       url:"http://list.mogujie.com/search?cKey=h5-shopping&fcid=&pid=9750&searchTag=&sort=pop&page=1&ratio=3%3A4&_version=1&",
+       dataType:"jsonp",
+       json:"callback",
+       async:true,
+       success:function(a) {
+           console.log(a)
+           for (var i = 0; i < a.result.wall.docs.length; i++) {
+               if (a.result.wall.docs[i].leftbottom_taglist.length == 2) {
+                   if (a.result.wall.docs[i].lefttop_taglist.length == 1) {
+                       $('#like  .goods').append(
+                               '<div class="pic">' +
+                               '<a href="' + a.result.wall.docs[i].link + '">' +
+                               '<img src="' + a.result.wall.docs[i].img + '" alt="">' +
+                               '<p>' + a.result.wall.docs[i].title + '</p>' +
+                               '<div class="titles"><span>' + a.result.wall.docs[i].price + '</span><span>' + a.result.wall.docs[i].cfav + '</span></div>' +
+                               '<img src="' + a.result.wall.docs[i].lefttop_taglist[0].img + '" id="picture">' +
+                               '<img src="' + a.result.wall.docs[i].leftbottom_taglist[0].img + '" id="picture1">' +
+                               '<img src="' + a.result.wall.docs[i].leftbottom_taglist[1].img + '" id="picture2">' +
+                               '</a>' +
+                               '</div>'
+                       );
+                   } else if(a.result.wall.docs[i].lefttop_taglist.length == 0){
+                       $('#like  .goods').append(
+                               '<div class="pic">' +
+                               '<a href="' + a.result.wall.docs[i].link + '">' +
+                               '<img src="' + a.result.wall.docs[i].img + '" alt="">' +
+                               '<p>' + a.result.wall.docs[i].title + '</p>' +
+                               '<div class="titles"><span>' + a.result.wall.docs[i].price + '</span><span>' + a.result.wall.docs[i].cfav + '</span></div>' +
+                               '<img src="' + a.result.wall.docs[i].leftbottom_taglist[0].img + '" id="picture1">' +
+                               '<img src="' + a.result.wall.docs[i].leftbottom_taglist[1].img + '" id="picture2">' +
+                               '</a>' +
+                               '</div>'
+                       );
+                   }
+               } else if (a.result.wall.docs[i].leftbottom_taglist.length == 1) {
+                   if (a.result.wall.docs[i].lefttop_taglist.length == 1) {
+                       $('#like  .goods').append(
+                               '<div class="pic">' +
+                               '<a href="' + a.result.wall.docs[i].link + '">' +
+                               '<img src="' + a.result.wall.docs[i].img + '" alt="">' +
+                               '<p>' + a.result.wall.docs[i].title + '</p>' +
+                               '<div class="titles"><span>' + a.result.wall.docs[i].price + '</span><span>' + a.result.wall.docs[i].cfav + '</span></div>' +
+                               '<img src="' + a.result.wall.docs[i].lefttop_taglist[0].img + '" id="picture">' +
+                               '<img src="' + a.result.wall.docs[i].leftbottom_taglist[0].img + '" id="picture1">' +
+                               '</a>' +
+                               '</div>'
+                       );
+                   } else if(a.result.wall.docs[i].lefttop_taglist.length == 0){
+                       $('#like  .goods').append(
+                               '<div class="pic">' +
+                               '<a href="' + a.result.wall.docs[i].link + '">' +
+                               '<img src="' + a.result.wall.docs[i].img + '" alt="">' +
+                               '<p>' + a.result.wall.docs[i].title + '</p>' +
+                               '<div class="titles"><span>' + a.result.wall.docs[i].price + '</span><span>' + a.result.wall.docs[i].cfav + '</span></div>' +
+                               '<img src="' + a.result.wall.docs[i].leftbottom_taglist[0].img + '" id="picture1">' +
+                               '</a>' +
+                               '</div>'
+                       );
+                   }
+               } else if(a.result.wall.docs[i].leftbottom_taglist.length == 0){
+                   if (a.result.wall.docs[i].lefttop_taglist.length == 1) {
+                       $('#like  .goods').append(
+                               '<div class="pic">' +
+                               '<a href="' + a.result.wall.docs[i].link + '">' +
+                               '<img src="' + a.result.wall.docs[i].img + '" alt="">' +
+                               '<p>' + a.result.wall.docs[i].title + '</p>' +
+                               '<div class="titles"><span>' + a.result.wall.docs[i].price + '</span><span>' + a.result.wall.docs[i].cfav + '</span></div>' +
+                               '<img src="' + a.result.wall.docs[i].lefttop_taglist[0].img + '" id="picture">' +
+                               '</a>' +
+                               '</div>'
+                       );
+                   } else {
+                       $('#like  .goods').append(
+                               '<div class="pic">' +
+                               '<a href="' + a.result.wall.docs[i].link + '">' +
+                               '<img src="' + a.result.wall.docs[i].img + '" alt="">' +
+                               '<p>' + a.result.wall.docs[i].title + '</p>' +
+                               '<div class="titles"><span>' + a.result.wall.docs[i].price + '</span><span>' + a.result.wall.docs[i].cfav + '</span></div>' +
+                               '</a>' +
+                               '</div>'
+                       );
+                   }
+               }
+
+           }
+       }
+   });
+</script>
+</body>
+</html>
