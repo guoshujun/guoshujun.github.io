@@ -1,0 +1,576 @@
+*{
+    margin:0;
+    padding:0;
+}
+a{
+    text-decoration: none;
+    font-size:0.2rem;
+    color:#313131;
+}
+html,body {
+    height: 100%;
+    font-family: Helvetica Neue, Helvetica, STHeiTi, sans-serif;
+}
+html{
+    font-size:31.2vw;
+    background-color: #f1f1f1;
+}
+input,img{
+    border:none
+}
+li{
+    list-style: none;
+}
+
+
+
+
+@font-face {
+    font-family: 'iconfont';
+    src: url('iconfont.eot');
+    src: url('iconfont.eot?#iefix') format('embedded-opentype'),
+    url('iconfont.woff') format('woff'),
+    url('iconfont.ttf') format('truetype'),
+    url('iconfont.svg#iconfont') format('svg');
+}
+.iconfont{
+    font-family:"iconfont" !important;
+    font-size:16px;font-style:normal;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-stroke-width: 0.2px;
+    -moz-osx-font-smoothing: grayscale;
+     color:#999;
+}
+
+#container{
+    /*height:10rem;*/
+    overflow-y: scroll;
+}
+/*-----------------------------------header----------------------------------*/
+#header{
+    width:100%;
+    height:0.4rem;
+    font-size: 0.2rem;
+    background-color:#fff;
+    position:fixed;
+    top:0;
+    z-index: 9999;
+}
+#header div{
+    float: left;
+}
+#header .message {
+    width:0.4rem;
+    height:0.4rem;
+    line-height:0.4rem;
+    text-align: center;
+}
+#header .search-content input{
+    width:2.3rem;
+    height:0.2rem;
+    border-radius: 3px;
+    margin-top:0.05rem;
+    padding:0.1rem 0.2rem;
+    color:#999;
+    background-color: #eee;
+    margin-top:0.1rem;
+}
+#header  .cart{
+    line-height:0.4rem;
+    width:0.5rem;
+    text-align: center;
+}
+/*-----------------------------banner----------------------------------------*/
+#banner{
+    width:100%;
+    height:1.54rem;
+    display: flex;
+}
+#banner .zhuye-banner{
+	width:100%;
+    height:100%;
+    display: flex;
+}
+#banner .zhuye-banner img{
+	width:100%;
+    height:100%;
+}
+#banner .swiper-container-horizontal>.swiper-pagination-bullets, .swiper-pagination-custom, .swiper-pagination-fraction{
+    position: absolute;
+    bottom: 5px;
+    left: 1%;
+    -webkit-transform: none;
+    padding: 3px 1px;
+    height: 9px;
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 5px;
+    width:35%;
+}
+.swiper-pagination-bullet {
+    float: left;
+    margin: 0 5px;
+    width: 4px;
+    height: 4px;
+    text-indent: 99em;
+    border-radius: 50%;
+    background: #8c8c8c;
+    overflow: hidden;
+}
+.swiper-pagination-bullet-active{
+    background-color: #fe6c9c
+}
+/*------------------------------banner-bottom----------------------------------*/
+#banner-bottom{
+    width:100%;
+    height:1.1rem;
+}
+#banner-bottom img{
+    width:100%;
+    height:100%;
+}
+/*----------------------------------middle-----------------------------------*/
+#middle{
+    background-color: #d7e1ea;
+    padding:0.02rem;
+    width:100%;
+}
+/*----one------*/
+#middle .one{
+    width:100%;
+    height:0.93rem;
+}
+#middle .one .pic{
+    float: left;
+    margin:0 0.02rem;
+}
+#middle .one .pic img{
+    width:100%;
+    height:100%;
+}
+#middle .one .pic:nth-child(1){
+    width:1.58rem;
+    height:0.9rem;
+}
+#middle .one .pic:nth-child(2){
+    width:0.75rem;
+    height:0.9rem;
+}
+#middle .one .pic:nth-child(3){
+    width:0.75rem;
+    height:0.9rem;
+    margin:0;
+}
+/*-----two------*/
+#middle .two{
+    width:100%;
+    height:1.65rem;
+    padding:0.1rem 0;
+}
+#middle .two .pic{
+    float: left;
+    margin:0 0.03rem;
+    font-size: 0;
+}
+#middle .two .pic,#middle .two .pic img{
+    width:100%;
+    height:100%;
+}
+#middle .two .pic:nth-child(1){
+    width:1.58rem;
+    height:1.7rem;
+    margin:0 0 0.05rem 0;
+}
+#middle .two .pic:nth-child(2){
+    width:0.75rem;
+    height:0.83rem;
+}
+#middle .two .pic:nth-child(3){
+    width:0.75rem;
+    height:0.83rem;
+    margin:0 0 0.05rem 0;
+}
+#middle .two .pic:nth-child(4){
+    width:0.75rem;
+    height:0.83rem;
+}
+#middle .two .pic:nth-child(5){
+    width:0.75rem;
+    height:0.83rem;
+    margin:0;
+}
+/*---------three--------*/
+#middle .three{
+    width:100%;
+    height:1.78rem;
+    padding:0.05rem 0;
+}
+#middle .three .pic{
+    float: left;
+    margin:0.05rem 0.02rem;
+    font-size: 0;
+    width:0.76rem;
+    height:0.80rem;
+}
+#middle .three .pic img{
+    width:100%;
+    height:100%;
+}
+#middle .three .pic:nth-child(4){
+   margin-right:0;
+    margin-left:0;
+}
+#middle .three .pic:nth-child(8){
+   margin-right:0;
+    margin-left:0;
+}
+/*------------------------------benefit--------------------------------------*/
+#benefit{
+    width:100%;
+    background-color: #fff;
+    height:2.3rem;
+    font-size: 0.1rem;
+}
+#benefit .title{
+    width:100%;
+    height:0.5rem;
+    background-color: #f1f1f1;
+}
+#benefit .title div{
+    width:60%;
+    text-align: center;
+    font-size: 0.2rem;
+    line-height:0.3rem;
+    margin-left:20%;
+    height:0.2rem;
+}
+#benefit .title div:nth-child(1){
+    color:#333;
+    background:url(http://s18.mogucdn.com/p1/160415/upload_ifrwkyzymu2damdgg4zdambqhayde_313x10.png) center no-repeat;
+    background-size:2rem;
+}
+#benefit .title div:nth-child(2){
+    font-size: 0.12rem;
+    color:#999;
+}
+#benefit .goods .pic{
+    float: left;
+    font-size: 0;
+    position:relative;
+}
+#benefit .goods .pic:nth-child(1){
+    width:1.36rem;
+    height:1.79rem;
+    border-right:1px solid #ccc;
+}
+#benefit .goods .pic:nth-child(1) p:nth-of-type(1){
+    position:absolute;
+    top:0.1rem;
+    left:0.1rem;
+    z-index: 10;
+    color: #B800EE;
+    line-height:0.3rem;
+    font-size: 0.12rem;
+}
+#benefit .goods .pic:nth-child(1) p:nth-of-type(2){
+    position:absolute;
+    top:0.4rem;
+    left:0.1rem;
+    z-index: 10;
+    font-size: 0.12rem;
+}
+#benefit .goods .pic:nth-child(2){
+    width:1.83rem;
+    height:0.89rem;
+    border-bottom: 1px solid #ccc;
+}
+#benefit .goods .pic:nth-child(2) p:nth-of-type(1){
+    position:absolute;
+    top:0.1rem;
+    left:0.1rem;
+    z-index: 10;
+    color: #FF3333;
+    font-size: 0.12rem;
+    line-height:0.3rem;
+}
+#benefit .goods .pic:nth-child(2) p:nth-of-type(2){
+    position:absolute;
+    top:0.4rem;
+    left:0.1rem;
+    z-index: 10;
+    font-size: 0.12rem;
+}
+#benefit .goods .pic:nth-child(3){
+    width:0.91rem;
+    height:0.89rem;
+    border-right:1px solid #ccc;
+}
+#benefit .goods .pic:nth-child(3) p:nth-of-type(1){
+    position:absolute;
+    top:0.05rem;
+    left:0.1rem;
+    z-index: 10;
+    color: #006CCC;
+    font-size: 0.12rem;
+    line-height:0.3rem;
+}
+#benefit .goods .pic:nth-child(3) p:nth-of-type(2){
+    position:absolute;
+    top:0.3rem;
+    left:0.1rem;
+    z-index: 10;
+    font-size: 0.12rem;
+}
+#benefit .goods .pic:nth-child(4){
+    width:0.91rem;
+    height:0.89rem;
+}
+#benefit .goods .pic:nth-child(4) p:nth-of-type(1){
+    position:absolute;
+    top:0.05rem;
+    left:0.1rem;
+    z-index: 10;
+    color: #FF5533;
+    font-size: 0.12rem;
+    line-height:0.3rem;
+}
+#benefit .goods .pic:nth-child(4) p:nth-of-type(2){
+    position:absolute;
+    top:0.3rem;
+    left:0.1rem;
+    z-index: 10;
+    font-size: 0.12rem;
+}
+#benefit .goods .pic img{
+    width:100%;
+    height:100%;
+    position:absolute;
+    top:0;
+    left:0;
+}
+
+/*---------------------------------正在流行--------------------------------*/
+#popular{
+    width:100%;
+    height:4.8rem;
+    background-color: #fff;
+}
+#popular .title{
+    width:100%;
+    height:0.5rem;
+    background-color: #f1f1f1;
+}
+#popular .title div{
+    width:60%;
+    text-align: center;
+    font-size: 0.2rem;
+    line-height:0.3rem;
+    margin-left:20%;
+    height:0.2rem;
+}
+#popular .title div:nth-child(1){
+    color:#333;
+    background:url(http://s18.mogucdn.com/p1/160415/upload_ifrwkyzymu2damdgg4zdambqhayde_313x10.png) center no-repeat;
+    background-size:2rem;
+}
+#popular .title div:nth-child(2){
+    font-size: 0.12rem;
+    color:#999;
+}
+#popular .goods{
+    padding:0.1rem;
+    background-color: #fff;
+}
+#popular .goods .pic{
+    float: left;
+    width:0.75rem;
+    height:1.05rem;
+    font-size: 0;
+}
+#popular .goods .pic img{
+    width:100%;
+    height:0.75rem;
+    background-color: #fff;
+}
+#popular .goods .pic  p{
+    height:0.3rem;
+    font-size: 0.15rem;
+    width:100%;
+    background-color: #fff;
+    color:#333;
+    text-align: center;
+}
+/*-------------------------------猜你喜欢-like-------------------------*/
+/*#like{
+    height:100%;
+    overflow-y: scroll;
+}*/
+#like .title{
+    width:60%;
+    height:0.8rem;
+    font-size: 0.18rem;
+    color:#333;
+    background:url(http://s18.mogucdn.com/p1/160415/upload_ifrwkyzymu2damdgg4zdambqhayde_313x10.png) center no-repeat;
+    background-size:2rem;
+    text-align: center;
+    line-height:0.8rem;
+    margin-left:20%;
+}
+#like .goods .pic{
+    width:1.5rem;
+    height:2.8rem;
+    font-size: 0;
+    float: left;
+    margin:0.1rem 0 0 0.1rem;
+    position:relative;
+}
+#like .goods .pic img{
+    width:1.5rem;
+    height:2rem;
+}
+#like .goods .pic p{
+    width:100%;
+    height:0.4rem;
+    font-size: 0.12rem;
+    color:#010101;
+    line-height:0.2rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display:-webkit-box;
+    -webkit-line-clamp:2;
+    -webkit-box-orient:vertical;
+    /*多行文本溢出显示省略号*/
+}
+#like .goods .pic .titles span:nth-of-type(1){
+    color:#333;
+    display: inline-block;
+    width:60%;
+    font-size: 0.15rem;
+    font-weight: bolder;
+}
+#like .goods .pic .titles span:nth-of-type(2){
+    color:#999;
+    display: inline-block;
+    width:40%;
+    font-size: 0.1rem;
+    background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAuCAAAAABLtcWwAAAAAmJLR…dNXhi1Q3vujEtVn1zyqHnG6lYyyHDJ5pxYpDSTXGaghf8BQmofv0UdUUcAAAAASUVORK5CYII=) 100% no-repeat;
+    background-size: auto .23rem;
+}
+#like  #picture{
+    position:absolute;
+    top:0;
+    left:0;
+    width:0.28rem;
+    height:0.28rem;
+}
+#like #picture1{
+    width:0.3rem;
+    height:0.2rem;
+}
+#like #picture2{
+    width:0.3rem;
+    height:0.2rem;
+}
+    /*--------------------------footer--------------------------------------*/
+#footer{
+    width:100%;
+    height:0.5rem;
+    background-color: #fff;
+    position: fixed;
+    bottom:0;
+}
+#footer ul li{
+    float: left;
+    width:20%;
+    font-size: 0;
+    position:relative;
+}
+#footer ul li:nth-of-type(3){
+	margin-left:20%;
+}
+#footer ul .camera{
+	position:absolute;
+	top:0;
+	left:40%;
+	width: 20%;
+	height: 100%;
+	font-size: 0.2rem;
+	line-height: 0.5rem;
+	text-align: center;
+	border-radius: 50%;
+	border:3px solid #ccc;
+	font-weight: bold;
+	color:#333;
+}
+#footer ul .camera img{
+	width: 100%;
+	height: 100%;
+}
+#footer ul li img{
+    width:0.22rem;
+    height:0.22rem;
+    display: block;
+    margin-left:35%;
+    margin-top:10%;
+}
+#footer ul li span{
+    font-size: 0.15rem;
+    display: block;
+    text-align: center;
+    line-height:0.18rem;
+    color:#666;
+}
+
+/*//4.加载/刷新事件
+       var goodscroll = new IScroll('#like',{
+    probeType:3,
+    //mouseWheel: true,		//鼠标滚动
+    scrollbars: true
+});
+
+$("#like").height($("#cont").height());
+var dir = 0;
+var index = 0;
+//a.刷新事件
+
+  goodscroll.on("scroll",function(){
+    index = index++;
+    dir = this.directionY;       //当前滚动条的竖直高度
+if(this.directionY==-1 && this.y<1){      //scroll.directionY  scroll.y
+$("#up").show();
+//	console.log(this);
+}
+else if(this.directionY==1 && this.y<(this.maxScrollY+1)){
+    $("#down").show();
+    goodscroll.refresh();
+    console.log(this.directionY,this.y);
+}
+});
+
+goodscroll.on("scrollEnd",function(){
+if(dir==-1){
+    $("#up").show().html('--已是最新数据--');
+}
+if(dir == 0){
+$.ajax({
+type:'get',
+url:'http://list.mogujie.com/search?cKey=h5-shopping&fcid=&pid=9750&searchTag=&sort=pop&page='+index+'&ratio=3%3A4&_version=1',
+dataType:'jsonp',
+success:function(a){
+    console.log(a);
+for(var i=0;i<a.result.wall.docs.length;i++){
+    $('#like  .goods').append(
+    '<div class="pic">' +
+    '<a href="'+a.result.wall.docs[i].link+'">' +
+    '<img src="'+a.result.wall.docs[i].img+'" alt="">' +
+    '<p>'+a.result.wall.docs[i].title+'</p>' +
+    '<div class="titles"><span>'+a.result.wall.docs[i].price+'</span><span>'+a.result.wall.docs[i].cfav+'</span></div>'+
+    '</a>' +
+    '</div>'
+    );
+}
+}
+})
+}
+});*/
+
+

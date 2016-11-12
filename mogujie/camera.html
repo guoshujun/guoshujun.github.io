@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>照片</title>
+		<style>
+    	<style>
+    	html,body{
+    		width: 100%;
+    		height: 100%;
+    		margin: 0;
+    		padding: 10px;
+    		border: 0;
+    		box-sizing: border-box;
+    		font-size: 50px;
+    	}
+    	#showDiv{
+    		margin: 10px auto;
+    		width: 500px;
+    		border: 1px dotted #000;
+    		min-height: 400px;
+    		max-width: 300px;
+    		/*overflow: hidden;*/
+    	}
+    	button{
+    		display: inline-block;
+    		margin:20px auto;
+    		height: 60px;
+    		width: 200px;
+    		background-color: green;
+    		color: yellow;
+    		font-size: 17px;
+    		line-height: 60px;
+    	}
+    	img{
+    		width: 100%;
+    	}
+    </style>
+    </style>
+	</head>
+	<body>
+    <fieldset>
+		<legend style="font-size: 20px;">拍照功能</legend>
+		<div id="showDiv">
+			<img src=""  id="showImg"/>
+		</div>
+		
+	</fieldset>
+	<button id="btn">开始拍照</button>
+		<!------------------------footer------------------------->
+		<script>
+   		document.addEventListener('plusready', function(){
+   			$("#btn").click(function(){
+   				var myCam = plus.camera.getCamera();
+   				console.log(myCam);
+   				var myFormat = myCam.supportedImageFormats;
+   				$("#showDiv").append(myCam.supportedImageResolutions);
+   				myCam.captureImage(function(capturedFile){
+   					console.log(capturedFile);
+// 					$("#showImg").attr("src",capturedFile);
+					plus.io.resolveLocalFileSystemURL(capturedFile,function(entry){
+						$("#showImg").attr("src",entry.fullPath);
+						
+					},function(error){
+						
+					});
+
+   				}, function(error){
+   					var code = error.code; // 错误编码
+					var message = error.message; // 错误描述信息
+					
+   				}, {
+   					format:myFormat,
+   					index:"2",
+   				});
+   			})
+   		
+   		});
+
+	</script>
+</div>
+</body>
+</html>
