@@ -1,0 +1,504 @@
+*{
+    margin:0;
+    padding:0;
+}
+body{
+    font: 14px/22px 'Microsoft Yahei',Helvetica,Arial,STXihei,SimSun,sans-serif;
+    color: #3e3e3e;
+    background-color: #F5F5F5;
+}
+a{
+    text-decoration: none;
+    color:#3e3e3e;
+    font-size:12px;
+}
+li{
+    list-style: none;
+    float: left;
+}
+input{
+    outline:none;
+}
+img{
+    border:none;
+}
+/*=======================logox==============================*/
+#logox{
+    background: #fff;
+    position: relative;
+    height:95px;
+}
+#logox .content{
+    width:1090px;
+    height:95px;
+    margin:0 auto;
+}
+#logox .content .logo1{
+    width:180px;
+    height: 45px;
+    position: absolute;
+    top: 21px;
+    overflow: hidden;
+    float: left;
+}
+#logox .content  .middle{
+    background:url('../img/cartstep.png') no-repeat;
+    width: 550px;
+    height: 62px;
+    float: left;
+    margin: 20px 0 0 280px;
+    overflow: hidden;
+}
+#logox .content  .img{
+    padding-top: 30px;
+    width: 235px;
+    overflow: hidden;
+    margin-left:100px;
+    height: 86px;
+}
+#logox .content  .img img{
+    display: inline-block;
+    margin:0 10px 0 10px;
+}
+#cartcontain{
+    background-color: #F5F5F5;
+    padding-top: 20px;
+    width: 985px;
+    margin: 0 auto;
+}
+#cartcontain .cartitle{
+    margin: 20px 0 0px;
+    height: 38px;
+    background:url('../img/home-bt.png') no-repeat 0 -845px;
+}
+#cartcontain .cartmain{
+    background: #fff;
+    table-layout: fixed;
+    width: 935px;
+}
+#cartcontain  .carttitles{
+    width:935px;
+    height:30px;
+    margin:0 auto;
+
+}
+#cartcontain  .carttitle{
+    width:200px;
+    height: 30px;
+    margin-left:735px
+}
+#cartcontain .cartmain{
+    width:935px;
+    margin:0 auto;
+}
+#cartcontain .cartmain .count{
+    height:37px;
+    border-bottom:1px solid #cccccc;
+    border-left: 5px solid #ed407e;
+}
+#cartcontain .cartmain .count .name{
+    width:212px;
+    height:37px;
+    float: left;
+    line-height: 37px;
+    text-indent: 10px;
+}
+#cartcontain .cartmain .count .tagname{
+    width:378px;
+    line-height: 37px;
+    float: left;
+}
+#cartcontain .cartmain .count .price{
+    width:98px;
+    line-height: 37px;
+    float: left;
+}
+#cartcontain .cartmain .count .num{
+    width:99px;
+    line-height: 37px;
+    float: left;
+}
+#cartcontain .cartmain .count .sum{
+    width:99px;
+    line-height: 37px;
+    float: left;
+}
+#cartcontain .cartmain .main{
+    width:985px;
+
+}
+#cartcontain .cartmain .main ul{
+    width:985px;
+    overflow: hidden;
+}
+#cartcontain  .main ul li{
+    width:935px;
+    height:135px;
+    border-bottom:1px solid #ccc;
+    position:relative;
+}
+#cartcontain  .cartmain .main ul  .img{
+    width:212px;
+    height: 135px;
+    float: left;
+}
+#cartcontain  .cartmain .main ul .img img{
+    width:120px;
+    height: 120px;
+    margin:15px 0 0 15px;
+}
+#cartcontain .cartmain .main ul .goods-title{
+    width:378px;
+    height: 135px;
+    float: left;
+    line-height:135px;
+}
+#cartcontain .cartmain .main ul  .goods-price{
+    width:98px;
+    height: 135px;
+    float: left;
+    line-height:135px;
+}
+#cartcontain .cartmain .main ul .goods-num{
+    width:99px;
+    float: left;
+    line-height:135px;
+}
+#cartcontain .cartmain .main ul .goods-num a{
+    display: inline-block;
+    background-color: #eee;
+    color:#000;
+    border-color: #ccc;
+    width:22px;
+    height:22px;
+    line-height:22px;
+    text-align: center;
+    font-size:13px;
+}
+#cartcontain .cartmain .main ul .goods-num input{
+    width:20px;
+    height: 20px;
+    border:1px solid #cccccc;
+    display: inline-block;
+}
+#cartcontain .cartmain .main ul .goods-sum{
+    line-height:135px;
+    height:135px;
+    width:99px;
+    position:absolute;
+    top:0;
+    right:50px;
+}
+#cartcontain .cartmain .main ul .goods-del {
+    width:50px;
+    line-height: 135px;
+    height:135px;
+    position:absolute;
+    top:0;
+    right:0;
+    cursor:pointer;
+}
+#cartcontain .continues{
+    width:935px;
+    height: 40px;
+    margin:30px auto 0;
+    background-color: #fff;
+}
+#cartcontain .continues .continuesshoping{
+    display: inline-block;
+    width:100px;
+    line-height:40px;
+    text-align: center;
+    font-size: 14px;
+    float: left;
+}
+#cartcontain .continues .clearcart{
+    display:inline-block;
+    width:100px;
+    line-height:40px;
+    text-align: center;
+    font-size: 14px;
+    float: left;
+}
+#cartcontain .continues .sumcount{
+    float: left;
+    width:400px;
+    line-height: 40px;
+    text-align: right;
+}
+#cartcontain .continues .sumcount span{
+    color:#ec3e7d;
+}
+#cartcontain .continues .sumprice{
+    width:200px;
+    height:40px;
+    text-align: right;
+    line-height: 30px;
+    float: left;
+}
+#cartcontain .continues .sumprice span,#cartcontain .continues .sumprice b{
+    color:#ec3e7d;
+    font-size:24px;
+}
+#cartcontain .continues .buygooods{
+    display: inline-block;
+    width:132px;
+    height: 40px;
+    line-height:40px;
+    background: #ec3e7d;
+    color:#fff;
+    font-size:18px;
+    text-align: center;
+}
+#addbuy{
+
+}
+#addbuy .content{
+    width:1090px;
+    height: 700px;
+    margin:0 auto;
+    position:relative;
+}
+#addbuy h3{
+    font-size: 30px;
+    font-weight: bold;
+    width:100%;
+    height:100px;
+    line-height: 100px;
+    text-align: center;
+}
+.line{
+    border-bottom:1px solid #ec3e7d;
+}
+#addbuy .btnlists{
+    width: 320px;
+    margin: 0 auto;
+    border: 1px solid #ec3e7d;
+    border-radius: 25px;
+    height: 35px;
+    line-height: 29px;
+    background: #f2f2f2;
+    overflow: hidden;
+    margin-top:-18px;
+}
+#addbuy .btnlists a{
+    display:block;
+    float: left;
+    margin: 3px 5px;
+    padding: 0 15px;
+    font-size:16px;
+}
+#addbuy .btnlists.first{
+    margin-left:10px;
+}
+#addbuy .btnlists  .select{
+    background: #edcdda;
+    border-radius: 18px;
+    color:#ec3e7d;
+}
+#addbuy .box{
+    width:1090px;
+   /* background-color: pink;*/
+    margin-top:50px;
+    overflow: hidden;
+    margin-bottom:100px;
+    height:600px;
+}
+.box .addbuygoods{
+    display:none;
+    overflow: hidden;
+    height:600px;
+    width:1200px;
+    position:relative;
+}
+.box .show{
+    display:block;
+    overflow: hidden;
+    height:600px;
+    width:1200px;
+}
+.box ul{
+    width:7300px;
+    position:absolute;
+    top:0;
+    left:0;
+}
+.box ul li{
+    width: 253px;
+    background: #fff;
+    height:422px;
+    position:relative;
+    margin: 0 26px 20px 0;
+
+}
+.box ul .three{
+    margin-right:0;
+}
+.box ul .formall .formallimg{
+    position: relative;
+    width: 253px;
+    height: 253px;
+    overflow: hidden;
+    border-bottom:1px solid #eeeeee;
+    z-index: 1;
+    transition: all .3s linear;
+}
+.box ul li:hover{
+    box-shadow: 10px 10px 10px #dddddd;
+}
+.box ul li:hover .tobuy{
+    box-shadow: 10px 10px 10px #dddddd;
+}
+.box ul .formall .formallimg .zhijiang{
+    position:absolute;
+    top:10px;
+    left:10px;
+}
+.box ul .formall .formallimg  .vip{
+    position:absolute;
+    right:10px;
+    bottom:10px;
+}
+.box ul .formall .formallimg ul{
+    width:253px;
+    height:253px;
+}
+.box ul .formall .formallimg ul li{
+
+}
+.box ul .formall .formallimg ul li img{
+    width:243px;
+    height:243px;
+}
+.box ul .formall .formallimg ul .select{
+    display:block;
+}
+.box ul .formallimgright1{
+    position:absolute;
+    width: 88px;
+    height: 422px;
+    right: 0;
+    top:0;
+    background-color: #fff;
+    z-index: 20;
+    display: none;
+    box-shadow: 5px 0px 10px #dddddd;
+}
+.box ul .formallimgright1 div{
+    width: 80px;
+    height: 80px;
+    /*border-top: 1px solid #e0e0e0;*/
+    border: 4px solid #fff;
+}
+.box ul .formallimgright1 div img{
+    display: inline-block;
+    width: 76px;
+    height: 76px;
+    cursor: pointer;
+}
+.box ul .formallimgright1 .active{
+    border: 4px solid #c69a62;
+}
+.box ul .formall .price{
+    border-bottom: 1px solid #eee;
+    color: #858587;
+    margin-left:20px;
+    width:233px;
+    background-color: #fff;
+    overflow: hidden;
+}
+.box ul .formall .price1{
+    font-size: 24px;
+    margin-right: 10px;
+    color: #ec3e7d;
+    float: left;
+}
+.box ul .formall .price2{
+    float: left;
+    text-decoration: line-through;
+    margin-top:5px;
+    margin-right:55px;
+}
+.box ul .formall .price3{
+    color: #c69a62;
+    margin-top: 5px;
+}
+.box ul .formall .decoration {
+    margin-left:20px;
+    width:233px;
+    background-color: #fff;
+    height:140px;
+}
+.box ul .formall .decoration .name1{
+    height: 20px;
+    overflow: hidden;
+    white-space: nowrap;
+    padding: 0;
+    line-height: 20px;
+    font-size: 13px;
+    text-overflow: ellipsis;
+    font-weight: bold;
+}
+.box ul .formall .decoration .name1 b{
+    color: #ee9c23;
+}
+.box ul .formall .decoration .name2{
+    overflow: hidden;
+    line-height: 20px;
+    font-size: 13px;
+    height: 40px;
+}
+.box ul .cont {
+    margin-left:10px;
+    margin-top:20px;
+    border-radius: 5px;
+    width:40px;
+    height: 22px;
+    background:#c69a62;
+}
+.box ul .cont a{
+    color:#ffffff;
+    font-size: 12px;
+    display: inline-block;
+    text-indent: 5px;
+}
+.box ul .tobuy{
+    width:100%;
+    height:63px;
+    margin-top:30px;
+    position:absolute;
+    top:349px;
+    left:0;
+    background-color: #fff;
+    z-index: 10;
+}
+.box ul .tobuycontent{
+    vertical-align: middle;
+    text-align: center;
+}
+.box ul .tobuy a{
+    width: 223px;
+    text-align: center;
+    background: #f06597;
+    display: inline-block;
+    height: 39px;
+    line-height: 35px;
+    color:#fff;
+    font-size:16px;
+}
+ .decorations a{
+    position:absolute;
+    display: block;
+    width:30px;
+    height:60px;
+     line-height:60px;
+     color: #cccccc;;
+    top:50%;
+    margin-top:-30px;
+    left:-50px;
+    font-size: 50px;
+     z-index: 200;
+}
+.decorations .rightright{
+     left:1100px;
+ }

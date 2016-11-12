@@ -1,0 +1,576 @@
+*{
+    margin:0;
+    padding:0;
+}
+body{
+    font: 14px/22px 'Microsoft Yahei',Helvetica,Arial,STXihei,SimSun,sans-serif;
+    color: #3e3e3e;
+    background: #fff;
+}
+a{
+    text-decoration: none;
+    color:#3e3e3e;
+    font-size:12px;
+}
+li{
+    list-style: none;
+    float: left;
+}
+input{
+    outline:none;
+}
+img{
+    border:none;
+}
+/*====================banner图部分==========================*/
+#banner{
+    width:100%;
+    height:416px;
+}
+#banner .banner1{
+    height: 416px;
+    overflow: hidden;
+    position: relative;
+}
+#banner .imglist{
+
+}
+#banner .banner1 .imglist li {
+    height: 416px;
+    width: 100%;
+    display: none;
+    position:absolute;
+    text-align: center;
+    opacity: 0;
+    filter: alpha(opacity=0);
+}
+#banner .banner1 .imglist .show{
+    display:block;
+    opacity:1;
+    filter:alpha(opacity=100);
+}
+#banner .banner1 .imglist .one{
+    background:url("../img/banner1.jpg") center center
+}
+#banner .banner1 .imglist .two{
+    background:url("../img/banner2.jpg") center center
+}
+#banner .banner1 .imglist .three{
+    background:url("../img/banner3.jpg") center center
+}
+#banner .banner1 .imglist .four{
+    background:url("../img/banner4.jpg") center center
+}
+#banner .banner1 .imglist .five{
+    background:url("../img/banner5.jpg") center center
+}
+#banner .banner1 .imglist .six{
+    background:url("../img/banner6.jpg") center center
+}
+#banner .banner1 .imglist li img{
+   vertical-align: bottom;
+}
+#banner .banner1 .btnlist{
+    width:100%;
+    text-align: center;
+    position: absolute;
+    bottom:10px;
+    left:0;
+    right:0;
+}
+#banner .banner1 .btnlist a{
+    display: inline-block;
+    background: #333;
+    opacity: .4;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    margin-left: 14px;
+    overflow: hidden;
+    border: 3px solid rgba(255,255,255,0.7);
+}
+#banner .banner1 .btnlist .select{
+    background: #fa3778;
+    opacity: 1;
+}
+/*========================banner图下保证部分=====================*/
+#promise{
+    width:100%;
+    height:126px;
+    background-color: #F2F2F2;
+}
+#promise .content,#promise .content ul{
+    width:1200px;
+    height:126px;
+    margin:0 auto;
+}
+#promise .content li{
+    float: left;
+    height:126px;
+    margin-right:70px;
+}
+#promise .content .img{
+    float: left;
+    margin-top: 42px;
+    height: 32px;
+}
+#promise .content .word{
+    margin-left: 14px;
+    float: left;
+    height: 50px;
+    overflow: hidden;
+    margin-top: 38px;
+    width: 127px;
+}
+#promise .content .word1{
+    font-size: 18px;
+    color: #111111;
+    font-weight: 600;
+    width: 100%;
+    height: 22px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+#promise .content .word2{
+    font-size: 13px;
+    color: #999999;
+    margin-top: 4px;
+    width: 100%;
+    height: 22px;
+    overflow: hidden;
+    white-space: nowrap;
+}
+/*=======================每日必看MUST CHECK======================*/
+#mustcheck{
+    width:100%;
+    background-color: #F2F2F2;
+    height:1374px;
+}
+#mustcheck .content{
+    width:1200px;
+    height:1374px;
+    margin:0 auto;
+}
+#mustcheck .content h3{
+    width: 1200px;
+    height: 26px;
+    margin-bottom: 26px;
+    background:url("../img/must_check.png")
+}
+#mustcheck .content li{
+    width: 592px;
+    height: 310px;
+    background-color: white;
+    margin-bottom: 16px;
+    border: 1px solid #eee;
+    margin-right:10px;
+}
+#mustcheck .content li:hover{
+    box-shadow:0px 5px 5px #ddd;
+    /*第一个表示：0px 阴影向右偏移量，为0
+    第二个表示：5px 阴影向下偏移量，为10px
+    第三个表示：5px 阴影的过渡距离，为5px
+    第四个表示：#ddd阴影颜色，为灰色*/
+}
+#mustcheck .content li .img{
+    width: 360px;
+    height: 310px;
+    display: block;
+    float: left;
+}
+#mustcheck .content li .info{
+    width: 230px;
+    height: 310px;
+    float: right;
+}
+#mustcheck .content li .word1{
+    margin-top: 80px;
+    font-size: 24px;
+    color: #e93b78;
+    width:100%;
+    text-align: center;
+}
+#mustcheck .content li .word2{
+    color: #5a5a5a;
+    font-size: 18px;
+    margin-top: 10px;
+    width:100%;
+    text-align: center;
+}
+#mustcheck .content li .word3{
+    color: #5a5a5a;
+    font-size: 15px;
+    margin-top: 3px;
+    width:100%;
+    text-align: center;
+}
+#mustcheck .content li .info a{
+    width: 108px;
+    display: inline-block;
+    height: 32px;
+    line-height: 32px;
+    text-align: center;
+    color: #fff;
+    font-size: 20px;
+    background-color: #e93b78;
+    margin-left:60px;
+    margin-top:60px;
+}
+
+/*==========================限时特卖LIMITED OFFER=========================*/
+#limitedoffed{
+    width:100%;
+    height:4420px;
+    background-color: #F2F2F2;
+}
+#limitedoffed .content{
+    width:1200px;
+    height:4420px;
+    margin:0 auto;
+}
+#limitedoffed .content h3{
+    width: 1200px;
+    height: 26px;
+    margin-bottom: 26px;
+    background:url("../img/limitted_offer.png")
+}
+#limitedoffed .content h4{
+    color:#3e3e3e;
+    font-size:20px;
+    text-align: center;
+    font-weight:200;
+}
+#limitedoffed .content li{
+    margin-top:26px;
+    width:1200px;
+    height:400px;
+    position:relative;
+}
+#limitedoffed .content li:hover{
+    box-shadow: 0px 5px 10px #ddd;
+}
+#limitedoffed .content li .img{
+    width:680px;
+    height:400px;
+    float: left;
+}
+#limitedoffed .content li .img img{
+    width:680px;
+    height:400px;
+}
+#limitedoffed .content li .info{
+    width:520px;
+    height:400px;
+    float: left;
+    background-color: #fff;
+}
+#limitedoffed .content li .info .time{
+    height: 30px;
+    margin-left:40px;
+    margin-top:50px;
+    overflow: hidden;
+    padding: 0 10px;
+    background-color: #414141;
+    color: #fff;
+    line-height: 30px;
+    text-align: center;
+    font-size: 14px;
+    display: inline-block;
+}
+#limitedoffed .content li .info .time span{
+    color: #fff;
+    line-height: 30px;
+    text-align: center;
+    font-size: 14px;
+}
+#limitedoffed .content li .info .introduce{
+    width: 440px;
+    height: 150px;
+    font-size: 18px;
+    line-height: 30px;
+    margin:20px 0 0 40px;
+    overflow: hidden;
+}
+#limitedoffed .content li .info .large{
+    width: 440px;
+    height: 20px;
+    font-size: 14px;
+    margin-left:40px;
+}
+#limitedoffed .content li .info .price{
+    margin-top:30px;
+}
+#limitedoffed .content li .info .price1{
+    font-size: 15px;
+    display: block;
+    float: left;
+    margin-left:40px;
+}
+#limitedoffed .content li .info .price1 span{
+    display:block;
+    font-weight: 600;
+    color: #fc3f83;
+    margin-top: -3px;
+    float: left;
+}
+#limitedoffed .content li .info .price1 b{
+    font-size: 28px;
+    font-weight: 600;
+    color: #fc3f83;
+    line-height: 30px;
+    float: left;
+}
+#limitedoffed .content li .info .price2{
+    text-decoration: line-through;
+    color: #999;
+    font-size:12px;
+    line-height:30px;
+}
+#limitedoffed .content li .info .selled{
+    width: 100px;
+    height: 13px;
+    line-height: 13px;
+    margin-top: 33px;
+    float: left;
+    color: #999;
+    margin-left:40px ;
+}
+#limitedoffed .content li .info .tobuy{
+    width: 92px;
+    height: 36px;
+    float: left;
+    line-height: 36px;
+    text-align: center;
+    cursor: pointer;
+    background-color: #e93b78;
+    color: #fff;
+    font-size: 20px;
+    margin-left:230px;
+    margin-top:10px;
+}
+#limitedoffed .content .limitedoffermore{
+
+    text-align: center;
+}
+#limitedoffed .content .limitedoffermore a{
+    text-align: center;
+    margin-top:20px;
+    display: inline-block;
+    border: 1px solid #fc3f83;
+    width: 200px;
+    height: 32px;
+    line-height: 32px;
+    font-size: 14px;
+    color: #222222;
+    background: url("../img/limtmore.png") no-repeat 80% 50%;
+}
+#limitedoffed .content .circle{
+    color: #fff;
+    font-size: 24px;
+    font-weight: normal;
+    display: inline-block;
+    font-style: italic;
+    width: 68px;
+    height:68px;
+    border-radius: 50%;
+    background-color: #fc3f83;
+    position:absolute;
+    top:10px;
+    left:10px;
+    line-height:68px;
+    text-align: center;
+}
+#limitedoffed .content .circle b{
+    font-weight: bold;
+    font-size: 12px;
+}
+/*====================新品 NEW ARRIVAL=================================*/
+#newarrival{
+    width:100%;
+    height:870px;
+    background-color: #F2F2F2;
+}
+#newarrival .content{
+    width:1200px;
+    height:870px;
+    margin:0 auto;
+    overflow: hidden;
+}
+#newarrival .content h3{
+    width: 1200px;
+    height: 26px;
+    margin-bottom: 26px;
+    background:url("../img/new_arrival.png")
+}
+#newarrival .content li{
+    background-color: #fff;
+    width:291px;
+    height:380px;
+    margin-right: 12px;
+    margin-bottom: 12px;
+}
+#newarrival .content li .top{
+    width:291px;
+    height:297px;
+}
+#newarrival .content li .top .new{
+    width: 46px;
+    height: 46px;
+    background: url("../img/new_arrival_icon.png");
+    margin:10px 0 0 10px;
+    float: left;
+}
+#newarrival .content li .top .country{
+    float: right;
+    margin-right:10px;
+    width:90px;
+    height:30px;
+}
+#newarrival .content li .top .country img{
+    margin-top:10px;
+    display:inline-block;
+    float: left;
+}
+#newarrival .content li .top .country span{
+    margin-top:15px;
+    display:inline-block;
+}
+#newarrival .content li .info{
+    width: 251px;
+    height: 33px;
+    line-height: 16px;
+    padding: 0 20px;
+    margin-bottom: 16px;
+    overflow: hidden;
+    font-size: 14px;
+    color: #000;
+    font-weight: bold;
+}
+#newarrival .content li .price{
+    width:291px;
+    height:20px;
+    margin-top:20px;
+    padding:0 20px;
+}
+#newarrival .content li .price1{
+    float: left;
+    color: #fc3f83;
+    font-size:18px;
+}
+#newarrival .content li .price2{
+    float: left;
+    font-size:12px;
+    color:#999;
+    text-decoration: line-through;
+    margin:5px 0 0 5px;
+}
+/*=========================销售排行榜top5===============================*/
+#ranking{
+    width:100%;
+    height:680px;
+    background-color: #F2F2F2;
+}
+#ranking .content{
+    width:1200px;
+    height:680px;
+    margin:0 auto;
+}
+#ranking .content h3{
+    width: 1200px;
+    height: 26px;
+    margin-bottom: 26px;
+    background:url("../img/title_ranking.png")
+}
+#ranking .content .perfume,#ranking .content .cosmetics,#ranking .content .personal{
+    width:382px;
+    border-top: 2px solid #fc3f83;
+    background-color: #fff;
+    float: left;
+    margin-right: 27px;
+}
+#ranking .content  h4{
+    width: 100%;
+    height: 64px;
+    line-height: 64px;
+    text-align: center;
+    font-size: 22px;
+    color: #111;
+    font-weight: bold;
+}
+#ranking .content li{
+    width: 362px;
+    height: 80px;
+    padding: 10px;
+    position: relative;
+    border-top: 1px solid #eee;
+}
+#ranking .content li .img{
+    width:80px;
+    height:80px;
+    float: left;
+}
+#ranking .content li img{
+    width:80px;
+    height:80px;
+}
+#ranking .content .info{
+    float: left;
+    width: 272px;
+    height: 80px;
+}
+#ranking .content .name{
+    width: 100%;
+    height: 36px;
+    line-height: 18px;
+    overflow: hidden;
+    margin-top: 13px;
+    color: #000;
+    font-weight: 600;
+}
+#ranking .content .price{
+    width: 100%;
+    height: 20px;
+    margin-top: 7px;
+}
+#ranking .content .pri{
+    float: left;
+    width:200px;
+}
+#ranking .content .price1{
+    float: left;
+    color: #fc3f83;
+    font-size: 16px;
+    line-height: 20px;
+    height: 20px;
+    font-weight: bold
+}
+#ranking .content .price2{
+    float: left;
+    margin-left: 5px;
+    color: #999;
+    height: 21px;
+    line-height: 21px;
+    position: relative;
+    text-decoration: line-through;
+}
+#ranking .content .selled{
+    float: right;
+    width:50px;
+    line-height: 20px;
+    color: #999;
+    font-size: 12px;
+    margin-right: 10px;
+}
+#ranking .content li i{
+    position:absolute;
+    top:-4px;
+    left:-4px;
+    width:40px;
+    height:40px;
+    display: block;
+}
+#ranking .content li i img{
+    width:40px;
+    height:40px;
+}

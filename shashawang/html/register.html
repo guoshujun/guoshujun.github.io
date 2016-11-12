@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>注册页面</title>
+    <link rel="stylesheet" href="../style/headerend.css">
+    <link rel="stylesheet" href="../style/font.css">
+    <link rel="stylesheet" href="../style/register.css">
+    <script src="../js/jquery.js"></script>
+    <script src="../js/index.js"></script>
+    <script src="../js/cookie.js"></script>
+</head>
+<body>
+<!--============================导航=======================-->
+<div id="header">
+    <div class="content">
+        <div class="login">
+            <span class="afterlogin">欢迎光临莎莎官网!</span>
+            <a href="login.html" class="first">登录</a>
+            <span class="two">或</span>
+            <a href="register.html" class="three">免费注册</a>
+            <a href="javascript:;" class="four">退出</a>
+        </div>
+        <div class="member">
+            <ul>
+                <li style="position:relative" class="user2"><a href="javascript:;"><i class="user">&#xe61b;</i>我的账户<i class="bottomarrow">&#xe638;</i></a>
+                    <dl class="user1">
+                        <dd><a href="javascript:;">我的订单</a></dd>
+                        <dd><a href="javascript:;">我的积分</a></dd>
+                        <dd><a href="javascript:;">我的优惠券</a></dd>
+                        <dd><a href="javascript:;">我的收藏</a></dd>
+                        <dd><a href="javascript:;">我的评价</a></dd>
+                    </dl>
+                </li>
+                <li  class="shopcart2"><a href="cart.html"><i class="shopcart">&#xe660;</i>我的购物车</a></li>
+                <li><a href="javascript:;"><i class="newtext">&#xe60e;</i>我的站内信</a></li>
+                <li><a href="javascript:;">积分中心</a></li>
+                <li><a href="javascript:;">Global Site</a></li>
+                <li style="position:relative"><a href="javascript:;">关于我们<i class="weibo"><img src="../img/weibo.png" alt=""></i><i class="weixin"><img
+                        src="../img/weixin.png" alt=""></i></a>
+                    <div class="wb">
+                        <img src="../img/wberweima.png" alt="">
+                    </div>
+                    <div class="wx">
+                        <img src="../img/wxerweima.png" alt="">
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<!--========================logo部分=========================-->
+<div id="logo">
+    <div class="content">
+        <div class="logo1">
+            <a href="homepage.html">
+                <img src="../img/logo.png" alt="">
+            </a>
+        </div>
+    </div>
+</div>
+<!--======================注册部分========================-->
+<div id="main">
+    <div class="content">
+        <div class="img"><div class="img1"></div></div>
+        <div class="form">
+           <div class="content1">
+               <div class="formtitle">
+                   <div class="word1">注册账号</div>
+                   <div class="word2">已有莎莎账号？</div>
+                   <a href="login.html">立即登录</a>
+               </div>
+               <div class="text">
+                   <ul>
+                       <li>
+                           <input type="text" placeholder="请输入手机号" class="tel">
+                           <span  class="span1">格式有误，请使用正确的手机号码</span>
+                       </li>
+                       <li>
+                           <input type="password" placeholder="请输入密码6-16位字母和数字的组合" class="psd1">
+                           <span  class="span2">格式有误，请输入密码6-16位字母和数字的组合</span>
+                       </li>
+                       <li>
+                           <input type="password" placeholder="再次填写密码" class="psd2">
+                           <span  class="span3">请输入相同的密码</span>
+                       </li>
+                       <li style="position:relative">
+                           <input type="text" placeholder="请填写验证码" class="number">
+                           <a href="javascript:;" class="number1"></a>
+                           <a href="javascript:;" class="number2">看不清换一张</a>
+                           <span  class="span4">请输入正确的验证码</span>
+                       </li>
+                   </ul>
+                   <div class="agree">
+                       <input type="checkbox" checked id="xcheck">
+                       <p>同意 莎莎网使用条款 和 隐私保护政策</p>
+                   </div>
+                   <div class="register">
+                       <a href="javascript:;"><input type="submit" id="reg" value="注册"></a>
+                   </div>
+               </div>
+           </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

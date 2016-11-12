@@ -1,0 +1,735 @@
+*{
+    margin:0;
+    padding:0;
+}
+body{
+    font: 14px/22px 'Microsoft Yahei',Helvetica,Arial,STXihei,SimSun,sans-serif;
+    color: #666666;
+    background-color: #F5F5F5;
+}
+a{
+    text-decoration: none;
+    color:#3e3e3e;
+    font-size:12px;
+}
+li{
+    list-style: none;
+    float: left;
+}
+input{
+    outline:none;
+}
+img{
+    border:none;
+}
+/*=======================logox==============================*/
+#logox{
+    background: #fff;
+    position: relative;
+    height:95px;
+}
+#logox .content{
+    width:1090px;
+    height:95px;
+    margin:0 auto;
+}
+#logox .content .logo1{
+    width:180px;
+    height: 45px;
+    position: absolute;
+    top: 21px;
+    overflow: hidden;
+    float: left;
+}
+#logox .content  .middle{
+    background:url('../img/cartstep.png') no-repeat 0 -80px;
+    width: 550px;
+    height: 62px;
+    float: left;
+    margin: 20px 0 0 280px;
+    overflow: hidden;
+}
+#logox .content  .img{
+    padding-top: 30px;
+    width: 235px;
+    overflow: hidden;
+    margin-left:100px;
+    height: 86px;
+}
+#logox .content  .img img{
+    display: inline-block;
+    margin:0 10px 0 10px;
+}
+/*==============================收货地址============================*/
+#sure{
+    width:1000px;
+    height:97px;
+    margin:0 auto;
+}
+#sure h2{
+    line-height:97px;
+    font-size:30px;
+    font-weight:900;
+}
+#address{
+    width:100%;
+}
+#address .content{
+    width:1000px;
+    margin:0 auto;
+    background-color: #fff;
+}
+#address .content h3{
+    width:980px;
+    height:52px;
+    font-size: 18px;
+    color: #676767;
+    line-height:80px;
+    padding-left:20px;
+    padding-bottom:20px;
+}
+#address .content h3 span{
+    background: #be9a5c;
+    border-radius: 14px;
+    width: 26px;
+    height: 26px;
+    line-height: 26px;
+    text-align: center;
+    color: #fff;
+    margin-right: 5px;
+    display: inline-block;
+}
+#address .content .oldaddress{
+    width:100%;
+    background-color: #fff;
+}
+#address .content .oldaddress .olds,#address .content .olds{
+    border: 4px solid #be9a5c;
+    padding: 3px 9px;
+    margin: 5px 40px 5px 30px;
+    width: 220px;
+    height: 130px;
+    float: left;
+    position: relative;
+    cursor: pointer;
+    background-color: #fff;
+}
+#address .content .oldaddress .olds .del,#address .content .olds .del{
+    width:80px;
+    height:20px;
+    margin-left:140px;
+}
+#address .content  .olds .del .write,
+#address .content .oldaddress .olds .del .write,
+#address .content .olds .del .dels ,
+#address .content .oldaddress .olds .del .dels {
+    padding: 0 8px 0 0;
+    cursor:pointer;
+    float: left;
+}
+#address .content .oldaddress .username,#address .content .oldaddress .add,#address .content .oldaddress .longadd,#address .content .oldaddress .tel{
+    width: 210px;
+    height: 20px;
+}
+#address .content .oldaddress .longadd {
+    height:40px;
+    width:210px;
+    word-wrap:break-word;
+    word-break:normal;
+    overflow: hidden;
+}
+h4{
+    width:900px;
+    padding-top:30px;
+    margin:0 auto;
+    font-size:20px;
+    font-weight: normal;
+    border-bottom:1px solid #ccc;
+    cursor:pointer;
+}
+#address .contentn{
+    width:1000px;
+    margin:0 auto ;
+    background-color: #fff;
+    overflow: hidden;
+}
+#address .newaddress{
+    width:100%;
+    height: 309px;
+    padding-top:30px;
+    padding-bottom:30px;
+    display: none;
+}
+#address .newaddress .content{
+    width:864px;
+    height: 309px;
+    margin:0 auto;
+    font-size:20px;
+    color:#3e3e3e;
+}
+#address .newaddress .content .box1{
+    width:864px;
+    height:60px;
+}
+#address .newaddress .newname{
+    float: left;
+    margin-right:130px;
+    margin-left:50px;
+}
+#address .newaddress .newname input{
+    margin-left:20px;
+}
+#address .newaddress .email{
+    float: left;
+}
+#address .newaddress .newname input,#address .newaddress .email input{
+    width: 258px;
+    height:26px;
+    padding:5px;
+    border: 1px solid #ccc
+}
+#address .newaddress .newadd{
+    margin-left:50px;
+}
+#address .newaddress .newadd select{
+    padding :4px;
+    height:36px;
+    width:100px;
+    border: 1px solid #ccc;
+    color:#3e3e3e;
+}
+#address .newaddress .detailadd{
+    margin-left:50px;
+    margin-top:30px;
+}
+#address .newaddress .detailadd input{
+    height: 26px;
+    line-height: 26px;
+    padding: 4px;
+    width:700px;
+    border: 1px solid #ccc;
+}
+#address .newaddress .content .box2{
+    width:864px;
+    height:80px;
+}
+#address .box2 .tels{
+    margin-left:50px;
+    margin-top:30px;
+    float: left;
+}
+#address .box2 .tels input{
+    width:200px;
+    height:26px;
+    padding:4px;
+    margin-left:20px;
+    border: 1px solid #ccc;
+}
+#address .box2 .tela{
+    float: left;
+    margin-left:60px;
+
+}
+#address .box2 .tela input{
+    width:70px;
+    height: 26px;
+    padding:4px;
+    margin-left:30px;
+    margin-top:30px;
+    border: 1px solid #ccc;
+    color: #3e3e3e;
+}
+#address .yesorno{
+    width:864px;
+    height:80px;
+    margin-left:130px;
+    margin-top:30px;
+}
+#address .yesorno .yes{
+    background: #ec3e7d;
+    padding: 8px 50px;
+    display: inline-block;
+    color: #fff;
+    border: 0;
+}
+#address .yesorno .no{
+    background: #f2f2f2;
+    padding: 8px 50px;
+    display: inline-block;
+    color: #666;
+    border: 0;
+}
+/*===================商品清单=============================*/
+
+#goodlistm{
+    width:100%;
+    margin-top:50px;
+}
+#goodlistm .content{
+    width:1000px;
+    margin:0 auto;
+    background-color: #fff;
+}
+#goodlistm .content h3{
+    width:980px;
+    height:52px;
+    font-size: 18px;
+    color: #676767;
+    line-height:80px;
+    padding-left:20px;
+    padding-bottom:20px;
+}
+#goodlistm .content h3 span{
+    background: #be9a5c;
+    border-radius: 14px;
+    width: 26px;
+    height: 26px;
+    line-height: 26px;
+    text-align: center;
+    color: #fff;
+    margin-right: 5px;
+    display: inline-block;
+}
+#goodlistm .content .count{
+    height:37px;
+    border-bottom:1px solid #cccccc;
+}
+#goodlistm .content .count .name{
+    width:212px;
+    height:37px;
+    float: left;
+    line-height: 37px;
+    text-indent: 10px;
+
+}
+#goodlistm .content .count .tagname{
+    width:378px;
+    line-height: 37px;
+    float: left;
+    padding-left:100px;
+}
+#goodlistm .content .count .price{
+    width:200px;
+    line-height: 37px;
+    float: left;
+}
+#goodlistm .content .count .num{
+    width:200px;
+    line-height: 37px;
+    float: left;
+}
+#goodlistm .content .count .sum{
+    width:99px;
+    line-height: 37px;
+    float: left;
+}
+#goodlistm .content .sha{
+    height:37px;
+    border-bottom:1px solid #cccccc;
+    font-weight:900;
+    line-height: 39px;
+    font-size:20px;
+    text-indent: 100px;
+    color:#666666;
+}
+#goodlistm .content .main{
+    width:985px;
+
+}
+#goodlistm .content .main ul{
+    width:985px;
+    overflow: hidden;
+}
+#goodlistm  .main ul li{
+    width:935px;
+    height:60px;
+    border-bottom:1px dotted #ccc;
+    position:relative;
+    padding-left:100px;
+}
+#goodlistm .main ul  .img{
+    width:135px;
+    height: 135px;
+    float: left;
+    position:absolute;
+    top:-20px;
+    left:200px;
+    display:none;
+    z-index: 999;
+    box-shadow: 5px 5px 5px #ccc;
+}
+#goodlistm .main ul .img img{
+    width:120px;
+    height: 120px;
+    margin:15px 0 0 15px;
+}
+#goodlistm .content .main ul .goods-title{
+    width:378px;
+    height: 60px;
+    float: left;
+    line-height:60px;
+    cursor: pointer;
+}
+#goodlistm .content .main ul .goods-title:hover{
+       text-decoration: underline;
+    color:#3e3e3e;
+}
+#goodlistm .content .main ul  .goods-price{
+    width:200px;
+    height: 60px;
+    float: left;
+    line-height:60px;
+}
+#goodlistm .content .main ul .goods-num{
+    width:200px;
+    float: left;
+    line-height:60px;
+}
+#goodlistm .content .main ul .goods-num a{
+    display: none;
+    background-color: #eee;
+    color:#000;
+    border-color: #ccc;
+    width:22px;
+    height:22px;
+    line-height:22px;
+    text-align: center;
+    font-size:13px;
+
+}
+#goodlistm .content .main ul .goods-num input{
+    width:20px;
+    height: 20px;
+    border:none;
+    display: inline-block;
+}
+#goodlistm .content .main ul .goods-sum{
+    line-height:60px;
+    height:60px;
+    width:99px;
+    position:absolute;
+    top:0;
+    right:60px;
+    color:#ec3e7d;
+    font-weight: 900;
+}
+#goodlistm .content .main ul .goods-del {
+    width:50px;
+    line-height: 35px;
+    height:35px;
+    position:absolute;
+    top:0;
+    right:0;
+    cursor:pointer;
+    display: none;
+}
+#goodlistm .content .cutprice{
+    width:1000px;
+}
+#goodlistm .content .cutprice h3{
+    font-weight: 400;
+    line-height: 90px;
+    height: 90px;
+}
+#goodlistm .content .cutprice h3 span{
+    width:25px;
+    height:25px;
+    border:1px solid #cccccc;
+    border-radius: 50%;
+    background-color: #fff;
+    color: #666666;
+    line-height: 26px;
+    text-align: center;
+    margin-left:60px;
+}
+#goodlistm .content .cutprice .juan{
+    padding-left:30px;
+    padding-bottom:50px;
+    display:none;
+}
+#goodlistm .content .cutprice .juan1{
+    width:910px;
+    height:36px;
+}
+#goodlistm .content .cutprice .juan1 input{
+    height: 26px;
+    line-height: 26px;
+    padding: 4px;
+    border:1px solid #dddddd;
+    margin-left:50px;
+}
+#goodlistm .content .cutprice .juan1 a{
+    border: 0 none;
+    width:110px;
+    background-color: #ee407f;
+    display: inline-block;
+    height: 100%;
+    line-height: 35px;
+    font-size: inherit;
+    text-align: center;
+    color: #fff;
+}
+#goodlistm .content .cutprice .juan p{
+    width:100%;
+    height: 50px;
+    margin-left:50px;
+    line-height:50px;
+    font-size:16px;
+}
+#goodlistm .content .cutprice .select{
+    padding: 5px 0;
+    border: 1px solid #ccc;
+    color:#3e3e3e;
+    margin-left:50px;
+    width:280px;
+    height: 33px;
+    font-size:16px;
+}
+#goodlistm .content .ordersection{
+    overflow: hidden;
+    margin-bottom: 10px;
+    height:200px;
+    position: relative;
+    border-top:1px dotted #cccccc;
+}
+#goodlistm .content .ordersection .inner1{
+    width: 160px;
+    height:200px;
+    position:absolute;
+    top:10px;
+    right:50px;
+}
+#goodlistm .content .ordersection .inner1 ul{
+    height:120px;
+    width:160px;
+    border-bottom:1px dotted #cccccc;
+}
+#goodlistm .content .ordersection .inner1 ul li{
+    width:160px;
+    height:30px;
+}
+#goodlistm .content .ordersection .inner1 ul li em{
+    font-style: normal;
+    float:right;
+    margin-left:-10px;
+}
+#goodlistm .content .ordersection .inner2{
+    float: right;
+    height:50px;
+    width:160px;
+    position:absolute;
+    top:140px;
+    right:50px;
+    font-size:20px;
+}
+#goodlistm .content .ordersection .inner2 b,#goodlistm .content .ordersection .inner2 a {
+    display: inline-block;
+
+    color:#ec3e7d;
+    font-size:22px;
+}
+#goodlistm .content .ordersection .inner2 b{
+    margin-left:30px;
+}
+/*================================付款============================*/
+#pay{
+    width:100%;
+    margin-top:50px;
+    margin-bottom:50px;
+}
+#pay .content{
+    width:1000px;
+    margin:0 auto;
+    background-color: #fff;
+}
+#pay .content h3{
+    width:980px;
+    height:52px;
+    font-size: 18px;
+    color: #676767;
+    line-height:80px;
+    padding-left:20px;
+    padding-bottom:20px;
+}
+#pay .content h3 span{
+    background: #be9a5c;
+    border-radius: 14px;
+    width: 26px;
+    height: 26px;
+    line-height: 26px;
+    text-align: center;
+    color: #fff;
+    margin-right: 5px;
+    display: inline-block;
+}
+#pay .content .buycontent{
+    overflow: hidden;
+    width:940px;
+    margin:0 auto;
+}
+#pay .content .buycontent .paylist{
+    padding-bottom: 20px;
+    border-top: 1px solid #ececec;
+    clear: both;
+    margin-top: -1px;
+    overflow: hidden;
+    width:924px;
+    height:134px;
+}
+#pay .content .buycontent .paylist  input{
+    height: 13px;
+    width: 20px;
+    float: left;
+    margin-top:60px;
+}
+#pay .content .buycontent .paylist  img{
+    border:none;
+    display:inline-block;
+    float: left;
+    margin-right:20px;
+    margin-top:40px;
+}
+#card{
+   display:none;
+}
+#card table{
+    width: 92%;
+    margin: 0 auto;
+}
+tr{
+    line-height: 45px;
+}
+th{
+    padding-right: 6px;
+    font-weight: 400;
+    width: 12%;
+    white-space: nowrap
+}
+#card input{
+    height: 26px;
+    line-height: 26px;
+    padding: 4px;
+}
+#card select{
+    border-width: 1px;
+    border-color: #cccccc;
+    padding: 1px;
+    width: 80px;
+    height: 30px;
+}
+.ordersection2{
+    padding: 20px 30px;
+    overflow: hidden;
+    border-bottom: 1px dotted #cccccc;
+    border-top: 1px dotted #cccccc;
+}
+.ordersection2 .changeclause{
+    width: 268px;
+    float: left;
+}
+.ordersection2 .settlelist{
+    float: left;
+    width: 362px;
+    margin-left: 30px;
+}
+.ordersection2 .settlecheck{
+    width: 198px;
+    float: left;
+}
+.ordersection2 .settlecheck span{
+    font-size:20px;
+}
+.ordersection2 .settlecheck  a,.ordersection2 .settlecheck  b{
+    color:#ec3e7d;
+    font-size:24px;
+    font-weight: 900;
+}
+.ordersection2 .settlecheck  b{
+    margin-left:25px;
+}
+#pay . content .ordersectionm {
+    width:1000px;
+    float: right;
+    height:100px;
+}
+#pay . content .btnarea a{
+    padding: 8px 30px;
+    vertical-align: middle ;
+    margin-top:20px;
+}
+#pay   .paym{
+    border: 0 none;
+    padding-right: 30px;
+    padding-left: 0;
+    background: #ec3e7d;
+    width:116px;
+    height: 36px;
+    display: inline-block;
+    color:#fff;
+    line-height:36px;
+    text-align: center;
+}
+#pay  .btncancle{
+    background: #f2f2f2;
+    padding: 8px 50px;
+    display: inline-block;
+    color: #666;
+    border: 0;
+    margin-left:600px;
+    margin-top:20px;
+    margin-right:20px;
+    margin-bottom:20px;
+}
+/*=====================15分钟后出现的框============================*/
+#mainm{
+
+}
+#mainmm{
+    width:100%;
+    display: none;
+}
+#mainmm .content{
+    width:1090px;
+    height: 530px;
+    background-color: #fff;
+    margin:100px auto;
+}
+#mainmm .content .word1{
+    width:100%;
+    height:200px;
+}
+#mainmm .content h2{
+    font-size: 24px;
+    font-weight: bold;
+    line-height:350px;
+    margin:0 auto;
+    width:300px;
+}
+#mainmm .content .pic{
+    width:100%;
+    height:100px;
+}
+#mainmm .content .pic img{
+    margin-left:400px;
+}
+#mainmm .content p{
+    width:300px;
+    margin:0 auto;
+    line-height: 50px;
+}
+#mainmm .content h3{
+    width:700px;
+    margin:0 auto;
+}
+#mainmm .content .con{
+    display:inline-block;
+    border: 1px solid #c6c6c6;
+    color: #666;
+    width:118px;
+    height:40px;
+    line-height:40px;
+    text-align: center;
+    font-size:16px;
+    margin-top:60px;
+    margin-left:400px;
+}

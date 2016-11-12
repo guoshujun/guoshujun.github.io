@@ -1,0 +1,127 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<style>
+	*{margin:0;padding:0;}
+	#btn{display:inline; border:none;height:50px;line-height:50px;width:80px; background:#666;}
+	#tit{height:50px;width:500px;margin:0 auto;background:#666;}
+	#tit #fenshu{font-size:36px;line-height:50px;color:#FFF;display:inline;}
+	#box{width:500px;height:850px;background:#666;margin:0 auto;position:relative;overflow:hidden;background:url(bg.png) repeat-y;}
+	#feiji{width:66px;height:80px;background:url(p1.png) no-repeat;position:absolute;top:760px;}
+	b{display:block;height:68px;width:30px;position:absolute;text-align:center;background:url(wp3.png) no-repeat;left:-70px;top:-70px;}
+	.xfj{width:34px;height:34px;background:url(xiaofeiji.png) no-repeat;}
+</style>
+</head>
+
+<body>
+<div id="tit">
+<button id="btn">开始游戏</button>
+<strong>您的分数</strong>
+<p id="fenshu">0</p>
+</div>
+<div id="box">
+	<b></b><b></b><b></b><b></b><b></b>
+    <b></b><b></b><b></b><b></b><b></b>
+    
+    <b class="xfj"></b><b class="xfj"></b><b class="xfj"></b><b class="xfj"></b>
+    <b class="xfj"></b><b class="xfj"></b><b class="xfj"></b><b class="xfj"></b>
+    
+    <p id="feiji"></p>
+</div>
+</body>
+<script>
+window.onload=function(){
+	btn.onclick=function(){
+	var ball=document.getElementsByTagName("b");
+	var feiji=document.getElementById("feiji");
+	var box	=document.getElementById("box");
+	var xfj=document.getElementsByClassName("xfj");	
+	var fenshu=document.getElementById("fenshu");
+	var btn=document.getElementById("btn");
+	var x;
+	var x_zid;
+	var i_zid=0;
+	var y=0;
+	
+	var scor=0;
+	var timer_bg= setInterval(function(){
+		y+=1;
+		if(y==888){y=0}
+		box.style.backgroundPositionY=y+"px";
+		},50)
+	
+	for(var i=0;i<8;i++){
+		sp_xfj(xfj[i]);
+		}
+
+		box.onmousemove=function(){
+			x=event.x-430;
+			if(x>460){x=460}
+			else if(x<0){x=-20}
+		feiji.style.left=x+"px";
+		}		
+	
+	window.onclick=function(){
+		sp(ball[i_zid]);
+		i_zid++;
+		if(i_zid>9){i_zid=0}
+		}
+		
+	function sp(ags){
+		x_zid=event.x-410;
+		if(x_zid>470){x_zid=470}
+		else if(x_zid<0){x_zid=0}
+		ags.style.top=780+"px";
+		ags.style.left=x_zid+"px";
+		var timer=setInterval(function(){
+		ags.style.top=ags.offsetTop-10+"px";
+		if(ags.offsetTop<-60){
+			clearInterval(timer)
+			}
+		},10);	
+		}
+		
+	function sp_xfj(ags){
+		ags.style.left=parseInt(Math.random()*479)+"px";
+		ags.style.top=parseInt(Math.random()*400-400)+"px";
+		var timer=setInterval(function(){			
+			ags.style.top=ags.offsetTop+1+"px";
+			if(ags.offsetTop>800){
+				ags.style.left=parseInt(Math.random()*479)+"px";
+				ags.style.top=parseInt(Math.random()*300)+"px";
+				}
+			},10)
+		}
+	
+	var tiemr2=setInterval(function(){
+		for(var i=0;i<10;i++){
+			for(j=0;j<8;j++){
+				if(ball[i].offsetLeft>xfj[j].offsetLeft-20&&ball[i].offsetLeft<xfj[j].offsetLeft+24&&ball[i].offsetTop>xfj[j].offsetTop+30&&ball[i].offsetTop<xfj[j].offsetTop+40){
+					ball[i].style.left="-70px";
+					ball[i].style.top="-70px";
+					xfj[j].style.left=parseInt(Math.random()*479)+"px";
+					xfj[j].style.top=parseInt(Math.random()*300)+"px";
+					scor++;
+					fenshu.innerHTML=scor;
+					}
+				}
+			}
+		
+		},10)
+		
+	var tiemr3=setInterval(function(){
+			 
+		
+		for(var i=0;i<8;i++){
+			if(xfj[i].offsetLeft-34>feiji.offsetLeft&&xfj[i].offsetLeft<feiji.offsetLeft+66&&xfj[i].offsetTop>feiji.offsetTop){
+				alert("游戏结束");
+				}
+			 
+			}	
+		},10)
+ }	
+}
+</script>
+</html>

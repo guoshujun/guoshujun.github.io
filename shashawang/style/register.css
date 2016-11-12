@@ -1,0 +1,173 @@
+*{
+    margin:0;
+    padding:0;
+}
+body{
+    font: 14px/22px 'Microsoft Yahei',Helvetica,Arial,STXihei,SimSun,sans-serif;
+    color: #3e3e3e;
+    background: #fff;
+}
+a{
+    text-decoration: none;
+    color:#3e3e3e;
+}
+li{
+    list-style: none;
+    float: left;
+}
+input{
+    outline:none;
+    border:none;
+}
+img{
+    border:none;
+}
+/*=====================主题部分===================*/
+#main{
+    height:497px;
+    padding-top:100px;
+}
+#main .content{
+    width:1090px;
+    height:497px;
+    margin:0 auto;
+}
+#main .content .img{
+    width:600px;
+    height:497px;
+    float: left;
+}
+#main .content .img1{
+    width:600px;
+    height:355px;
+    background:url("../img/register.png");
+
+    margin-top:70px;
+}
+#main .content .form{
+    width: 400px;
+    margin-right: 68px;
+    box-shadow: 0 0 5px #e1e1e1,0 0 15px #e1e1e1;
+    float: left;
+}
+#main .content .form .content1{
+    padding: 35px;
+    width:420px;
+    height:487px;
+}
+#main .content .form .formtitle{
+    width:350px;
+    height:22px;
+}
+#main .content .form .formtitle .word1{
+    color: #5a5d6c;
+    font-size: 21px;
+    float: left;
+    width:195px;
+}
+#main .content .form .formtitle .word2{
+    font-size: 12px;
+    float: left;
+}
+#main .content .form .formtitle a{
+    color: #ec3e7d;
+}
+#main .content .form .text{
+    margin-top: 40px;
+}
+#main .content .form .text li{
+    height: 70px;
+    font-size: 13px;
+    margin-bottom:5px;
+    display: block;
+    float: left;
+}
+#main .content .form .text span{
+    background:url("../img/form1.png") no-repeat ;
+    width:400px;
+    height:30px;
+    text-indent: 30px;
+    display:none;
+}
+#main .content .form .text .span4{
+    position:absolute;
+    top:60px;
+    left:0;
+}
+#main .content .form .text li .tel,#main .content .form .text li .psd1,#main .content .form .text li .psd2{
+    width: 340px;
+    height:30px;
+    margin-bottom:10px;
+    display: block;
+    border:1px solid #cccccc;
+    color: #8d8d8d;
+    padding:5px;
+}
+#main .content .form .text li:hover li{
+    box-shadow: 5px 5px 5px #ec3e7d;
+}
+#main .content .form .number{
+    width: 120px;
+    display:block;
+    height:30px;
+    margin-bottom:10px;
+    border:1px solid #cccccc;
+    color: #8d8d8d;
+    padding:5px;
+    float: left;
+}
+#main .content .form li .number1{
+    cursor: pointer;
+    width: 80px;
+    height: 40px;
+    display: block;
+    float: left;
+    border:1px solid #cccccc;
+    margin:0 5px 0 5px;
+    font-size:30px;
+    color:#ec3e7d;
+    line-height:40px;
+}
+#main .content .form li .number2{
+    width: 80px;
+    line-height: 40px;
+    color: #666;
+    float: left;
+    display: block;
+}
+#main .content .form .agree{
+    width:350px;
+    height: 34px;
+    padding:30px 0 30px 0;
+    position:relative;
+    float: left;
+}
+#main .content .form .agree #xcheck{
+    height: 13px;
+    width: 20px;
+    box-shadow: none;
+    line-height:30px;
+    float: left;
+    margin-top:5px;
+}
+#main .content .form .agree p{
+    font-size: 14px;
+    width:300px;
+    float: left;
+    margin-left:10px;
+}
+#main .content .form .register{
+    width:350px;
+    height:40px;
+
+}
+#main .content .form #reg{
+    display: block;
+    width: 100%;
+    background: #ec3e7d;
+    line-height: 40px;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+}
+

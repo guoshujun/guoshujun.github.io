@@ -1,0 +1,1228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>莎莎网列表页</title>
+    <link rel="stylesheet" href="../style/headerend.css">
+    <link rel="stylesheet" href="../style/listpage.css">
+    <link rel="stylesheet" href="../style/font.css">
+    <script src="../js/jquery.js"></script>
+    <script src="../js/cookie.js"></script>
+    <script src="../js/listpage.js"></script>
+    <script src="../js/index.js"></script>
+    <script src="../js/cart.js"></script>
+
+</head>
+<body>
+<!--============================导航=======================-->
+<div id="header">
+    <div class="content">
+        <div class="login">
+            <span class="afterlogin">欢迎光临莎莎官网!</span>
+            <a href="login.html" class="first">登录</a>
+            <span class="two">或</span>
+            <a href="register.html" class="three">免费注册</a>
+            <a href="javascript:;" class="four">退出</a>
+        </div>
+        <div class="member">
+            <ul>
+                <li style="position:relative" class="user2"><a href="javascript:;"><i class="user">&#xe61b;</i>我的账户<i class="bottomarrow">&#xe638;</i></a>
+                    <dl class="user1">
+                        <dd><a href="javascript:;">我的订单</a></dd>
+                        <dd><a href="javascript:;">我的积分</a></dd>
+                        <dd><a href="javascript:;">我的优惠券</a></dd>
+                        <dd><a href="javascript:;">我的收藏</a></dd>
+                        <dd><a href="javascript:;">我的评价</a></dd>
+                    </dl>
+                </li>
+                <li style="position:relative" class="shopcart2"><a href="cart.html"><i class="shopcart">&#xe660;</i>我的购物车</a></li>
+                <li><a href="javascript:;"><i class="newtext">&#xe60e;</i>我的站内信</a></li>
+                <li><a href="javascript:;">积分中心</a></li>
+                <li><a href="javascript:;">Global Site</a></li>
+                <li style="position:relative"><a href="javascript:;">关于我们<i class="weibo"><img src="../img/weibo.png" alt=""></i><i class="weixin"><img
+                        src="../img/weixin.png" alt=""></i></a>
+                    <div class="wb">
+                        <img src="../img/wberweima.png" alt="">
+                    </div>
+                    <div class="wx">
+                        <img src="../img/wxerweima.png" alt="">
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<!--========================logo部分=========================-->
+<div id="logo">
+    <div class="content">
+        <div class="logo1">
+            <a href="homepage.html">
+                <img src="../img/logo.png" alt="">
+            </a>
+        </div>
+        <div class="search">
+            <form action="post">
+                <input type="text" value="面膜" class="text">
+                <button class="btn">搜索</button>
+            </form>
+            <ul>
+                <li><a href="javascript:;">防晒</a></li>
+                <li><span>|</span></li>
+                <li><a href="javascript:;">兰蔻</a></li>
+                <li><span>|</span></li>
+                <li><a href="javascript:;">雅诗兰黛</a></li>
+                <li><span>|</span></li>
+                <li><a href="javascript:;">兰芝</a></li>
+                <li><span>|</span></li>
+                <li><a href="javascript:;">眼霜</a></li>
+                <li><span>|</span></li>
+                <li><a href="javascript:;">保湿</a></li>
+                <li><span>|</span></li>
+                <li><a href="javascript:;">迪奥</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<!--========================banner图上半部分==================-->
+<div id="navlist">
+    <div class="content">
+        <div class="alllist">
+            <i class="sanheng">&#xe610;</i>
+            <span>全部分类</span>
+            <div class="allgood">
+                <ul>
+                    <li><p><a href="javascript:;"><i class="mianmo">&#xe630;</i>面部护肤</a><span> ></span></p>
+                        <div class="haha">
+                            <h4>洁面/磨砂</h4>
+                            <b>泡沫洁面乳</b><b>洁面摩丝</b><b>洁面啫喱</b><b style="color:#fa3778">洁面奶</b><b>洁面皂</b><b>洁面粉</b><b>磨砂膏</b><b>磨砂啫喱</b>
+                            <h4>眼部/唇部/颈部护理</h4>
+                            <b style="color:#fa3778">眼霜</b><b>眼胶</b><b>眼部精华/疗程</b><b>眼膜</b><b>睡眠免洗式眼膜</b><b>润唇膏</b><b>唇部精华</b><b>唇膜</b><b>唇部磨砂</b><b>颈霜</b><b>颈精华</b><b>颈膜</b>
+                            <h4>面膜</h4>
+                            <b>面膜贴</b><b>水洗式面膜</b><b>睡眠面膜</b><b>面膜粉</b><b>面膜泥</b>
+                            <h4>防晒护理</h4>
+                            <b>防晒乳液</b><b>防晒啫喱</b><b style="color:#fa3778">防晒喷雾</b><b>防晒膏</b><b>晒后护理</b><b>晒黑用品</b><b>防晒伞</b>
+                            <h4>暗疮护理</h4>
+                            <b>暗疮膏</b><b>暗疮精华</b><b>黑头导出液/膏</b><b>撕拉式鼻贴/鼻膜</b><b>暗疮针</b>
+                            <h4>精华/化妆水</h4>
+                            <b>精华液</b><b>精华素/疗程</b><b>柔肤水</b><b style="color:#fa3778">精华水</b><b>爽肤水</b><b>紧肤水</b><b style="color:#fa3778">保湿喷雾</b>
+                            <h4>卸妆</h4>
+                            <b>卸妆油</b><b>眼/唇专用卸妆液</b><b>卸妆水</b><b>卸妆乳</b><b>卸妆啫喱</b><b>卸妆纸巾</b>
+                        </div>
+                    </li>
+                    <li><p><a href="javascript:;"><i class="caizhuang">&#xe613;</i>彩妆</a><span> ></span></p>
+                        <div class="haha">
+                            <h4>面部彩妆</h4>
+                            <b>隔离霜</b><b>粉底</b><b>遮瑕</b><b>BB霜</b><b>CC霜</b><b>胭脂</b>
+                            <h4>眼部彩妆</h4>
+                            <b><a href="listpage.html">眉笔/眉粉</a></b><b>眼影</b><b>眼线</b><b>睫毛膏</b>
+                            <h4>其他</h4>
+                            <b>美唇</b><b>彩妆盒/套装</b><b>化妆棉</b><b>化妆工具</b><b>美甲</b>
+                        </div>
+                    </li>
+                    <li><p><a href="javascript:;"><i class="xiangshui">&#xe60e;</i>香水</a><span> ></span></p>
+                        <div class="haha">
+                            <h4>香水</h4>
+                            <b>女士香水</b><b>男士香水</b><b>香水套装</b><b>香水工具</b>
+                        </div>
+                    </li>
+                    <li><p><a href="javascript:;"><i class="shouxin">&#xe653;</i>健康美肤</a><span> ></span></p>
+                        <div class="haha">
+                            <h4>健康美肌</h4>
+                            <b>美容补充品</b><b>保健品</b><b>非处方药</b><b>健康零食</b><b>天然草本药</b>
+                        </div>
+                    </li>
+                    <li><p><a href="javascript:;"><i class="people">&#xe600;</i>纤体美胸</a><span> ></span></p>
+                        <div class="haha">
+                            <h4>纤体美胸</h4>
+                            <b>纤体护理</b><b>纤体食品</b><b>纤体工具</b><b>纤体套装</b><b>美胸用品</b>
+                        </div>
+                    </li>
+                    <li><p><a href="javascript:;"><i class="gehu">&#xe601;</i>个人护理</a><span> ></span></p>
+                        <div class="haha">
+                            <h4>身体护理</h4>
+                            <b>沐浴/润肤</b><b>洗发/护发</b><b>头发造型</b><b>手足部护理</b><b>脱毛用品</b><b>女性用品</b><b>止汗香体</b>
+                            <h4>其他</h4>
+                            <b>隐形眼镜</b><b>口腔护理</b><b>家具用品</b><b>头饰/饰物</b>
+                        </div>
+                    </li>
+                    <li><p><a href="javascript:;"><i class="man">&#xe645;</i>男士专区</a><span> ></span></p>
+                        <div class="haha">
+                            <h4>男士专区</h4>
+                            <b>男士洁面</b><b>男士护肤</b><b>剃须护理</b><b>男士头部护理</b>
+                        </div>
+                    </li>
+                    <li class="last" style="border-bottom:1px solid #fc3f83"><p><a href="javascript:;"><i class="yunying">&#xe8b5;</i>孕婴护理</a><span> ></span></p>
+                        <div class="haha">
+                            <h4>孕婴护理</h4>
+                            <b>母婴团</b><b>婴儿沐浴</b><b>婴儿护肤</b><b>婴儿食品</b><b>孕妇护肤</b><b>孕妇食品</b><b>其他孕婴工具</b>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <ul class="sub-nav">
+            <li><a href="javascript:;">面部护肤</a></li>
+            <li><i class="xiexian">&#xe60d;</i></li>
+            <li><a href="javascript:;">彩妆</a></li>
+            <li><i class="xiexian">&#xe60d;</i></li>
+            <li><a href="javascript:;">限时特卖<i class="hot">&#xe648;</i></a></li>
+            <li><i class="xiexian">&#xe60d;</i></li>
+            <li><a href="javascript:;">贵宾专享</a></li>
+            <li><i class="xiexian">&#xe60d;</i></li>
+            <li><a href="javascript:;">清仓特卖</a></li>
+            <li><i class="xiexian">&#xe60d;</i></li>
+            <li style="position: relative;" class="all lala"><a class="lala1" href="javascript:;">所有品牌<i class="sanjiao">&#xe7dd;</i></a>
+                <div class="clb">
+                    <h4>热卖品牌</h4>
+                    <div class="left1">
+                        <ul class="clbleft">
+                            <li><a href="javascript:;">森田药妆 SAM TIN</a></li>
+                            <li><a href="javascript:;">希思黎 Sisley</a></li>
+                            <li><a href="javascript:;">雅诗兰黛 Estee Lauder</a></li>
+                            <li><a href="javascript:;">兰蔻 Lancome</a></li>
+                            <li><a href="javascript:;">SK-II</a></li>
+                            <li><a href="javascript:;">资生堂 Shiseido</a></li>
+                            <li><a href="javascript:;">高丝 Kose</a></li>
+                            <li><a href="javascript:;">雅漾 Avence</a></li>
+                            <li><h5>查看全部品牌</h5></li>
+                        </ul>
+                    </div>
+                    <ul class="clbright">
+                        <li><a href="javascript:;"><img src="../img/nav1.png" alt=""></a></li>
+                        <li><a href="javascript:;"><img src="../img/nav2.png" alt=""></a></li>
+                        <li><a href="javascript:;"><img src="../img/nav3.png" alt=""></a></li>
+                        <li><a href="javascript:;"><img src="../img/nav4.png" alt=""></a></li>
+                        <li><a href="javascript:;"><img src="../img/nav1.png" alt=""></a></li>
+                        <li><a href="javascript:;"><img src="../img/nav2.png" alt=""></a></li>
+                        <li><a href="javascript:;"><img src="../img/nav3.png" alt=""></a></li>
+                        <li><a href="javascript:;"><img src="../img/nav4.png" alt=""></a></li>
+                    </ul>
+                </div>
+            </li>
+        </ul>
+
+    </div>
+</div>
+<!--========================主体部分========================-->
+<div id="main">
+    <div class="content">
+        <!--=======左半部分========-->
+        <div class="left">
+            <h3>产品分类</h3>
+            <div class="good1">
+                <h4><b></b><a href="javascript:;">面部护肤</a></h4>
+                <ul>
+                    <li><a href="javascript:;"><span class="right">&#xe625;</span>洁面</a></li>
+                    <li><a href="javascript:;"><span class="right">&#xe625;</span>磨砂</a></li>
+                    <li><a href="javascript:;"><span class="right">&#xe625;</span>卸妆</a></li>
+                    <li><a href="javascript:;"><span class="right">&#xe625;</span>化妆水</a></li>
+                    <li><a href="javascript:;"><span class="right">&#xe625;</span>精华</a></li>
+                    <li><a href="javascript:;"><span class="right">&#xe625;</span>面霜</a></li>
+                    <li><a href="javascript:;"><span class="right">&#xe625;</span>面膜</a></li>
+                    <li><a href="javascript:;"><span class="right">&#xe625;</span>颈部护理</a></li>
+                    <li><a href="javascript:;"><span class="right">&#xe625;</span>眼部护理</a></li>
+                    <li><a href="javascript:;"><span class="right">&#xe625;</span>暗疮护理</a></li>
+                    <li><a href="javascript:;"><span class="right">&#xe625;</span>唇部护理</a></li>
+                    <li><a href="javascript:;"><span class="right">&#xe625;</span>防晒护理</a></li>
+                    <li><a href="javascript:;"><span class="right">&#xe625;</span>高端美容工具</a></li>
+                    <li><a href="javascript:;"><span class="right">&#xe625;</span>套装</a></li>
+                    <li><a href="javascript:;"><span class="right">&#xe625;</span>小样</a></li>
+                </ul>
+                <h4><b></b><a href="javascript:;">彩妆</a></h4>
+                <ul>
+                    <li><a href="javascript:;"><span class="right">&#xe625;</span>隔离霜</a></li>
+                    <li><a href="javascript:;"><span class="right">&#xe625;</span>粉底</a></li>
+                    <li><a href="javascript:;"><span class="right">&#xe625;</span>遮瑕</a></li>
+                    <li><a href="javascript:;"><span class="right">&#xe625;</span>BB霜</a></li>
+                    <li><a href="javascript:;"><span class="right">&#xe625;</span>CC霜</a></li>
+                    <li><a href="javascript:;"><span class="right">&#xe625;</span>胭脂</a></li>
+                    <li><a href="javascript:;"><span class="right">&#xe625;</span>眉笔/眉粉</a></li>
+                    <li><a href="javascript:;"><span class="right">&#xe625;</span>眼影</a></li>
+                    <li><a href="javascript:;"><span class="right">&#xe625;</span>眼线</a></li>
+                    <li><a href="javascript:;"><span class="right">&#xe625;</span>睫毛膏</a></li>
+                    <li><a href="javascript:;"><span class="right">&#xe625;</span>美唇</a></li>
+                    <li><a href="javascript:;"><span class="right">&#xe625;</span>彩妆盒/套装</a></li>
+                    <li><a href="javascript:;"><span class="right">&#xe625;</span>化妆扫</a></li>
+                    <li><a href="javascript:;"><span class="right">&#xe625;</span>化妆工具</a></li>
+                    <li><a href="javascript:;"><span class="right">&#xe625;</span>美甲</a></li>
+                </ul>
+                <h4><b></b><a href="javascript:;">香水</a></h4>
+                <ul>
+                    <li><a href="javascript:;"><span class="right">&#xe625;</span>女士香水</a></li>
+                    <li><a href="javascript:;"><span class="right">&#xe625;</span>男士香水</a></li>
+                    <li><a href="javascript:;"><span class="right">&#xe625;</span>香水套装</a></li>
+                    <li><a href="javascript:;"><span class="right">&#xe625;</span>香水工具</a></li>
+                </ul>
+                <h4><b></b><a href="javascript:;">健康美肤</a></h4>
+                <ul>
+                    <li><a href="javascript:;"><span class="right">&#xe625;</span>美容补充品</a></li>
+                    <li><a href="javascript:;"><span class="right">&#xe625;</span>保健品</a></li>
+                    <li><a href="javascript:;"><span class="right">&#xe625;</span>非处方药</a></li>
+                    <li><a href="javascript:;"><span class="right">&#xe625;</span>健康零食</a></li>
+                    <li><a href="javascript:;"><span class="right">&#xe625;</span>天然草本药</a></li>
+                </ul>
+                <h4><b></b><a href="javascript:;">纤体美肤</a></h4>
+                <ul>
+                    <li><a href="javascript:;"><span class="right">&#xe625;</span>纤体护理</a></li>
+                    <li><a href="javascript:;"><span class="right">&#xe625;</span>纤体食品</a></li>
+                    <li><a href="javascript:;"><span class="right">&#xe625;</span>纤体工具</a></li>
+                    <li><a href="javascript:;"><span class="right">&#xe625;</span>纤体套装</a></li>
+                    <li><a href="javascript:;"><span class="right">&#xe625;</span>美胸工具</a></li>
+                </ul>
+                <h4><b></b><a href="javascript:;">个人护理</a></h4>
+                <ul>
+                    <li><a href="javascript:;"><span class="right">&#xe625;</span>沐浴/润肤</a></li>
+                    <li><a href="javascript:;"><span class="right">&#xe625;</span>洗发/护发</a></li>
+                    <li><a href="javascript:;"><span class="right">&#xe625;</span>头发造型</a></li>
+                    <li><a href="javascript:;"><span class="right">&#xe625;</span>手足部护理</a></li>
+                    <li><a href="javascript:;"><span class="right">&#xe625;</span>脱毛用品</a></li>
+                    <li><a href="javascript:;"><span class="right">&#xe625;</span>女性护理</a></li>
+                    <li><a href="javascript:;"><span class="right">&#xe625;</span>止汗香体</a></li>
+                    <li><a href="javascript:;"><span class="right">&#xe625;</span>隐形眼镜</a></li>
+                    <li><a href="javascript:;"><span class="right">&#xe625;</span>口腔护理</a></li>
+                    <li><a href="javascript:;"><span class="right">&#xe625;</span>家居用品</a></li>
+                    <li><a href="javascript:;"><span class="right">&#xe625;</span>头饰/饰物</a></li>
+                </ul>
+                <h4><b></b><a href="javascript:;">男士专区</a></h4>
+                <ul>
+                    <li><a href="javascript:;"><span class="right">&#xe625;</span>男士洁面</a></li>
+                    <li><a href="javascript:;"><span class="right">&#xe625;</span>男士护肤</a></li>
+                    <li><a href="javascript:;"><span class="right">&#xe625;</span>剃须护理</a></li>
+                    <li><a href="javascript:;"><span class="right">&#xe625;</span>男士头部护理</a></li>
+                </ul>
+                <h4><b></b><a href="javascript:;">孕婴护理</a></h4>
+                <ul>
+                    <li><a href="javascript:;"><span class="right">&#xe625;</span>婴儿沐浴</a></li>
+                    <li><a href="javascript:;"><span class="right">&#xe625;</span>婴儿护肤</a></li>
+                    <li><a href="javascript:;"><span class="right">&#xe625;</span>婴儿食品</a></li>
+                    <li><a href="javascript:;"><span class="right">&#xe625;</span>孕妇护肤</a></li>
+                    <li><a href="javascript:;"><span class="right">&#xe625;</span>孕妇食品</a></li>
+                    <li><a href="javascript:;"><span class="right">&#xe625;</span>其他孕婴工具</a></li>
+                </ul>
+            </div>
+        </div>
+        <!--========右半部分========-->
+        <div class="right-1">
+           <div class="galleryfilter">
+               <div class="galleryselected">
+                   <div class="filtertitle">已选</div>
+                   <div class="filterclean"><a href="javascript:;">重置筛选项</a></div>
+               </div>
+               <div class="filterlist">
+                   <dl class="filterclassfty filter1">
+                       <dt>分类</dt>
+                       <dd>
+                               <b><i></i><a href="javascript:;">眉笔</a></b>
+                               <b><i></i><a href="javascript:;">眉粉</a></b>
+                               <b><i></i><a href="javascript:;">眉膏/染眉膏</a></b>
+                                <!--<b class="select"><em></em><strong>X</strong></b>
+                                <b class="select"><em></em><strong>X</strong></b>
+                                <b class="select"><em></em><strong>X</strong></b>
+                                <b class="select"><em></em><strong>X</strong></b>
+                                <b class="select"><em></em><strong>X</strong></b>
+                                <b class="select"><em></em><strong>X</strong></b>
+                                <b class="select"><em></em><strong>X</strong></b>
+                                <b class="select"><em></em><strong>X</strong></b>
+                                <b class="select"><em></em><strong>X</strong></b>
+                                <b class="select"><em></em><strong>X</strong></b>
+                                <b class="select"><em></em><strong>X</strong></b>-->
+                           <div class="yesorno">
+                               <span class="yes">确定</span><span class="no">取消</span>
+                           </div>
+                           <div class="more">多选+</div>
+                       </dd>
+                       <div style="height:0;overflow: hidden;clear: both;"></div>
+                   </dl>
+                   <dl class="filterentry filter1">
+                       <dt>品牌</dt>
+                       <dd>
+                               <b><i></i><a href="javascript:;">植树秀</a></b>
+                               <b><i></i><a href="javascript:;">恋爱魔镜</a></b>
+                               <b><i></i><a href="javascript:;">齐士美</a></b>
+                               <b><i></i><a href="javascript:;">Heavy Rotation</a></b>
+                               <b><i></i><a href="javascript:;">Koji</a></b>
+                               <b><i></i><a href="javascript:;">韩妮采</a></b>
+                               <b><i></i><a href="javascript:;">资生堂</a></b>
+                               <b><i></i><a href="javascript:;">CYBER COLORS</a></b>
+                               <b><i></i><a href="javascript:;">Color Combos</a></b>
+                               <b class="hide"><i></i><a href="javascript:;">Giorgio Armani</a></b>
+                               <b class="hide"><i></i><a href="javascript:;">巴黎欧莱雅</a></b>
+                               <b class="hide"><i></i><a href="javascript:;">莎娜</a></b>
+                               <b class="hide"><i></i><a href="javascript:;">CLIO</a></b>
+                               <b class="hide"><i></i><a href="javascript:;">露华浓</a></b>
+                               <b class="hide"><i></i><a href="javascript:;">美宝莲</a></b>
+                               <b class="hide"><i></i><a href="javascript:;">乐玩美妍</a></b>
+                               <b class="hide"><i></i><a href="javascript:;">娜丽丝</a></b>
+                               <b class="hide"><i></i><a href="javascript:;">MEI LINDA</a></b>
+                               <b class="hide"><i></i><a href="javascript:;">东京丽人</a></b>
+                               <b class="hide"><i></i><a href="javascript:;">sasatinnie</a></b>
+                               <b class="hide"><i></i><a href="javascript:;">ZA</a></b>
+                               <b class="hide"><i></i><a href="javascript:;">齐士美</a></b>
+                               <b class="hide"><i></i><a href="javascript:;">VISEE</a></b>
+                               <b class="hide"><i></i><a href="javascript:;">moonshot</a></b>
+                               <b class="hide"><i></i><a href="javascript:;">EXCEL</a></b>
+                           <div class="yesorno">
+                               <span class="yes">确定</span><span class="no">取消</span>
+                           </div>
+                           <div class="most1"><a href="javascript:;">更多</a></div>
+                           <div class="more">多选+</div>
+                       </dd>
+                       <div style="height:0;overflow: hidden;clear: both;"></div>
+                   </dl>
+                   <dl class="filtereffect filter1">
+                       <dt>功效</dt>
+                       <dd>
+
+                               <b><i></i><a href="javascript:;">卷翘</a></b>
+                               <b><i></i><a href="javascript:;">纤长</a></b>
+                               <b><i></i><a href="javascript:;">浓密</a></b>
+                               <b><i></i><a href="javascript:;">定妆</a></b>
+                               <b><i></i><a href="javascript:;">持久</a></b>
+                               <b><i></i><a href="javascript:;">防晕染</a></b>
+                               <b><i></i><a href="javascript:;">防水</a></b>
+                               <b><i></i><a href="javascript:;">温水卸妆</a></b>
+                           <div class="yesorno">
+                               <span class="yes">确定</span><span class="no">取消</span>
+                           </div>
+                           <div class="more">多选+</div>
+                       </dd>
+                       <div style="height:0;overflow: hidden;clear: both;"></div>
+                   </dl>
+                   <dl class="filterprice filter1">
+                       <dt>价格</dt>
+                       <dd>
+                               <b><i></i><a href="javascript:;">1-99</a></b>
+                               <b><i></i><a href="javascript:;">100-199</a></b>
+                               <b><i></i><a href="javascript:;">100-249</a></b>
+                               <b><i></i><a href="javascript:;">250-399</a></b>
+                               <b><i></i><a href="javascript:;">400-1000</a></b>
+                           <div class="yesorno">
+                               <span class="yes">确定</span><span class="no">取消</span>
+                           </div>
+                           <div class="more">多选+</div>
+                       </dd>
+                       <div style="height:0;overflow: hidden;clear: both;"></div>
+                   </dl>
+                   <dl class="filtercolor filter1">
+                       <dt>色系</dt>
+                       <dd>
+                               <b><i></i><a href="javascript:;">灰色</a></b>
+                               <b><i></i><a href="javascript:;">黑色</a></b>
+                               <b><i></i><a href="javascript:;">咖啡色</a></b>
+                           <div class="yesorno">
+                               <span class="yes">确定</span><span class="no">取消</span>
+                           </div>
+                           <div class="more">多选+</div>
+                       </dd>
+                       <div style="height:0;overflow: hidden;clear: both;"></div>
+                   </dl>
+                   <dl class="filtercut filter1">
+                       <dt>优惠</dt>
+                       <dd>
+                               <b><i></i><a href="javascript:;">直降</a></b>
+                               <b><i></i><a href="javascript:;">送赠品</a></b>
+                           <div class="yesorno">
+                               <span class="yes">确定</span><span class="no">取消</span>
+                           </div>
+                           <div class="more">多选+</div>
+                       </dd>
+                       <div style="height:0;overflow: hidden;clear: both;"></div>
+                   </dl>
+                   <dl class="filtertag filter1">
+                       <dt>标签</dt>
+                       <dd>
+                               <b><i></i><a href="javascript:;">VIP价</a></b>
+                               <b><i></i><a href="javascript:;">德国制造</a></b>
+                               <b><i></i><a href="javascript:;">美国制造</a></b>
+                               <b><i></i><a href="javascript:;">法国制造</a></b>
+                               <b><i></i><a href="javascript:;">日本制造</a></b>
+                               <b><i></i><a href="javascript:;">台湾制造</a></b>
+                               <b class="hide"><i></i><a href="javascript:;">韩国制造</a></b>
+                               <b class="hide"><i></i><a href="javascript:;">好评中</a></b>
+                           <div class="yesorno">
+                               <span class="yes">确定</span><span class="no">取消</span>
+                           </div>
+                           <div class="most2"><a href="javascript:;">更多</a></div>
+                           <div class="more">多选+</div>
+                       </dd>
+                       <div style="height:0;overflow: hidden;clear: both;"></div>
+                   </dl>
+               </div>
+               <div class="showmore">
+                   <a href="javascript:;">显示更多筛选项</a><i class=""></i>
+               </div>
+           </div>
+           <div class="gallery-sortbar filter1">
+                <ul>
+                    <li class="active"><a href="javascript:;">排序</a></li>
+                    <li><a href="javascript:;">销售</a></li>
+                    <li><a href="javascript:;">人气</a></li>
+                    <li><a href="javascript:;">评分</a></li>
+                    <li><a href="javascript:;">上架事件</a></li>
+                    <li><a href="javascript:;">价格</a></li>
+                    <li><a href="javascript:;"><input type="checkbox">只看特卖</a></li>
+                    <li><a href="javascript:;">（共279件商品）</a></li>
+                </ul>
+                <div class="btn">
+                    <input type="button" class="btnleft">
+                    <a href="javascript:;"><span class="btnleftspan">1</span>/<span class="btnrightspan">5</span></a>
+                    <input type="button" class="btnright">
+                </div>
+            </div>
+            <div class="galleryshow">
+                <ul>
+                    <li>
+                        <div class="formall">
+                            <div class="formalltop">
+                                <div class="formallimg">
+                                    <ul>
+                                        <li class="select"><img src="../img/list1.jpg" alt=""></li>
+                                    </ul>
+                                    <div class="zhijiang"><img src="../img/zhijiang.png" alt=""></div>
+                                </div>
+                                <div class="price">
+                                    <div class="price1">￥32.0</div>
+                                    <div class="price2">￥48.0</div>
+                                    <div class="price3">6.7折</div>
+                                </div>
+                                <div class="decoration">
+                                    <div class="name1">
+                                        <b>[独家]</b>
+                                        <a href="detailpage.html">CYBER COLORS</a>
+                                    </div>
+                                    <div class="name2">
+                                        眼眉修饰笔1
+                                    </div>
+                                    <div class="name3">0.2克&nbsp;&nbsp;02 GRAY 灰色</div>
+                                    <div class="cont"><a href="javascript:;">直降</a></div>
+                                </div>
+                                <div class="tobuy">
+                                    <div class="tobuycontent">
+                                       <a href="javascript:;" class="add-cart" data-id="1" data-src="../img/list1.jpg" data-title="眼眉修饰笔1" data-price="32.0">加入购物车</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="formall">
+                            <div class="formalltop">
+                                <div class="formallimg">
+                                    <ul>
+                                        <li class="select"><img src="../img/list2.jpg" alt=""></li>
+                                    </ul>
+                                    <div class="zhijiang"><img src="../img/zhijiang.png" alt=""></div>
+                                    <div class="vip"><img src="../img/vip.png" alt=""></div>
+                                </div>
+                                <div class="price">
+                                    <div class="price1">￥50.0</div>
+                                    <div class="price2">￥48.0</div>
+                                    <div class="price3">6.7折</div>
+                                </div>
+                                <div class="decoration">
+                                    <div class="name1">
+                                        <b>[独家]</b>
+                                        <a href="detailpage.html">CYBER COLORS</a>
+                                    </div>
+                                    <div class="name2">
+                                        眼眉修饰笔2
+                                    </div>
+                                    <div class="name3">0.2克&nbsp;&nbsp;02 GRAY 灰色</div>
+                                    <div class="cont"><a href="javascript:;">直降</a></div>
+                                </div>
+                                <div class="tobuy">
+                                    <div class="tobuycontent">
+                                        <a href="javascript:;" class="add-cart"  data-id="2" data-src="../img/list2.jpg" data-title="眼眉修饰笔2" data-price="50.0">加入购物车</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="three">
+                        <div class="formall">
+                            <div class="formalltop">
+                                <div class="formallimg">
+                                    <ul>
+                                        <li class="select"><img src="../img/list3.jpg" alt=""></li>
+                                    </ul>
+                                    <div class="zhijiang"><img src="../img/zhijiang.png" alt=""></div>
+                                </div>
+                                <div class="price">
+                                    <div class="price1">￥20.0</div>
+                                    <div class="price2">￥48.0</div>
+                                    <div class="price3">6.7折</div>
+                                </div>
+                                <div class="decoration">
+                                    <div class="name1">
+                                        <b>[独家]</b>
+                                        <a href="detailpage.html">CYBER COLORS</a>
+                                    </div>
+                                    <div class="name2">
+                                        眼眉修饰笔3
+                                    </div>
+                                    <div class="name3">0.2克&nbsp;&nbsp;02 GRAY 灰色</div>
+                                    <div class="cont"><a href="javascript:;">直降</a></div>
+                                </div>
+                                <div class="tobuy">
+                                    <div class="tobuycontent">
+                                        <a href="javascript:;" class="add-cart"  data-id="3" data-src="../img/list3.jpg" data-title="眼眉修饰笔3" data-price="20.0">加入购物车</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="formall formall1">
+                                <div class="formallimg formallimg1">
+                                    <img src="../img/list2.jpg" alt="">
+                                    <div class="zhijiang"><img src="../img/zhijiang.png" alt=""></div>
+                                </div>
+                                <div class="formallimgright1">
+                                    <div class="active"><img src="../img/list2.jpg" alt=""></div>
+                                    <div><img src="../img/list22.jpg" alt=""></div>
+                                    <div><img src="../img/list23.jpg" alt=""></div>
+                                </div>
+                                <div class="price">
+                                    <div class="price1">￥30.0</div>
+                                    <div class="price2">￥48.0</div>
+                                    <div class="price3">6.7折</div>
+                                </div>
+                                <div class="decoration">
+                                    <div class="name1">
+                                        <b>[独家]</b>
+                                        <a href="detailpage.html">CYBER COLORS</a>
+                                    </div>
+                                    <div class="name2">
+                                        眼眉修饰笔4
+                                    </div>
+                                    <div class="name3">0.2克&nbsp;&nbsp;02 GRAY 灰色</div>
+                                    <div class="cont"><a href="javascript:;">直降</a></div>
+                                </div>
+                                <div class="tobuy">
+                                    <div class="tobuycontent">
+                                        <a href="javascript:;" class="add-cart"  data-id="4" data-src="../img/list2.jpg" data-title="眼眉修饰笔4" data-price="30.0">加入购物车</a>
+                                    </div>
+                                </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="formall">
+                            <div class="formalltop">
+                                <div class="formallimg">
+                                    <img src="../img/list4.jpg" alt="">
+                                    <div class="zhijiang"><img src="../img/zhijiang.png" alt=""></div>
+                                </div>
+                                <div class="price">
+                                    <div class="price1">￥32.0</div>
+                                    <div class="price2">￥48.0</div>
+                                    <div class="price3">6.7折</div>
+                                </div>
+                                <div class="decoration">
+                                    <div class="name1">
+                                        <b>[独家]</b>
+                                        <a href="detailpage.html">CYBER COLORS</a>
+                                    </div>
+                                    <div class="name2">
+                                        眼眉修饰笔5
+                                    </div>
+                                    <div class="name3">0.2克&nbsp;&nbsp;02 GRAY 灰色</div>
+                                    <div class="cont"><a href="javascript:;">直降</a></div>
+                                </div>
+                                <div class="tobuy">
+                                    <div class="tobuycontent">
+                                        <a href="javascript:;" class="add-cart"  data-id="5" data-src="../img/list4.jpg" data-title="眼眉修饰笔5" data-price="32.0">加入购物车</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="three">
+                        <div class="formall">
+                            <div class="formalltop">
+                                <div class="formallimg">
+                                    <img src="../img/list5.jpg" alt="">
+                                    <div class="zhijiang"><img src="../img/zhijiang.png" alt=""></div>
+                                </div>
+                                <div class="price">
+                                    <div class="price1">￥28.0</div>
+                                    <div class="price2">￥48.0</div>
+                                    <div class="price3">6.7折</div>
+                                </div>
+                                <div class="decoration">
+                                    <div class="name1">
+                                        <b>[独家]</b>
+                                        <a href="detailpage.html">CYBER COLORS</a>
+                                    </div>
+                                    <div class="name2">
+                                        眼眉修饰笔6
+                                    </div>
+                                    <div class="name3">0.2克&nbsp;&nbsp;02 GRAY 灰色</div>
+                                    <div class="cont"><a href="javascript:;">直降</a></div>
+                                </div>
+                                <div class="tobuy">
+                                    <div class="tobuycontent">
+                                        <a href="javascript:;" class="add-cart"  data-id="6" data-src="../img/list5.jpg" data-title="眼眉修饰笔6" data-price="28.0">加入购物车</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="formall">
+                            <div class="formalltop">
+                                <div class="formallimg">
+                                    <ul>
+                                        <li class="select"><img src="../img/list6.jpg" alt=""></li>
+                                    </ul>
+                                    <div class="zhijiang"><img src="../img/zhijiang.png" alt=""></div>
+                                </div>
+                                <div class="price">
+                                    <div class="price1">￥25.0</div>
+                                    <div class="price2">￥48.0</div>
+                                    <div class="price3">6.7折</div>
+                                </div>
+                                <div class="decoration">
+                                    <div class="name1">
+                                        <b>[独家]</b>
+                                        <a href="detailpage.html">CYBER COLORS</a>
+                                    </div>
+                                    <div class="name2">
+                                        眼眉修饰笔7
+                                    </div>
+                                    <div class="name3">0.2克&nbsp;&nbsp;02 GRAY 灰色</div>
+                                    <div class="cont"><a href="javascript:;">直降</a></div>
+                                </div>
+                                <div class="tobuy">
+                                    <div class="tobuycontent">
+                                        <a href="javascript:;" class="add-cart"  data-id="7" data-src="../img/list6.jpg" data-title="眼眉修饰笔7" data-price="25.0">加入购物车</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="formall">
+                            <div class="formalltop">
+                                <div class="formallimg">
+                                    <ul>
+                                        <li class="select"><img src="../img/list7.jpg" alt=""></li>
+                                    </ul>
+                                    <div class="zhijiang"><img src="../img/zhijiang.png" alt=""></div>
+                                    <div class="vip"><img src="../img/vip.png" alt=""></div>
+                                </div>
+                                <div class="price">
+                                    <div class="price1">￥22.0</div>
+                                    <div class="price2">￥48.0</div>
+                                    <div class="price3">6.7折</div>
+                                </div>
+                                <div class="decoration">
+                                    <div class="name1">
+                                        <b>[独家]</b>
+                                        <a href="detailpage.html">CYBER COLORS</a>
+                                    </div>
+                                    <div class="name2">
+                                        眼眉修饰笔8
+                                    </div>
+                                    <div class="name3">0.2克&nbsp;&nbsp;02 GRAY 灰色</div>
+                                    <div class="cont"><a href="javascript:;">直降</a></div>
+                                </div>
+                                <div class="tobuy">
+                                    <div class="tobuycontent">
+                                        <a href="javascript:;" class="add-cart"  data-id="8" data-src="../img/list7.jpg" data-title="眼眉修饰笔1" data-price="22.0">加入购物车</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="three">
+                        <div class="formall">
+                            <div class="formalltop">
+                                <div class="formallimg">
+                                    <ul>
+                                        <li class="select"><img src="../img/list8.jpg" alt=""></li>
+                                    </ul>
+                                    <div class="zhijiang"><img src="../img/zhijiang.png" alt=""></div>
+                                </div>
+                                <div class="price">
+                                    <div class="price1">￥29.0</div>
+                                    <div class="price2">￥48.0</div>
+                                    <div class="price3">6.7折</div>
+                                </div>
+                                <div class="decoration">
+                                    <div class="name1">
+                                        <b>[独家]</b>
+                                        <a href="detailpage.html">CYBER COLORS</a>
+                                    </div>
+                                    <div class="name2">
+                                        眼眉修饰笔9
+                                    </div>
+                                    <div class="name3">0.2克&nbsp;&nbsp;02 GRAY 灰色</div>
+                                    <div class="cont"><a href="javascript:;">直降</a></div>
+                                </div>
+                                <div class="tobuy">
+                                    <div class="tobuycontent">
+                                        <a href="javascript:;" class="add-cart"  data-id="9" data-src="../img/list8.jpg" data-title="眼眉修饰笔9" data-price="29.0">加入购物车</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="formall">
+                            <div class="formalltop">
+                                <div class="formallimg">
+                                    <ul>
+                                        <li class="select"><img src="../img/list9.jpg" alt=""></li>
+                                    </ul>
+                                    <div class="zhijiang"><img src="../img/zhijiang.png" alt=""></div>
+                                </div>
+                                <div class="price">
+                                    <div class="price1">￥23.0</div>
+                                    <div class="price2">￥48.0</div>
+                                    <div class="price3">6.7折</div>
+                                </div>
+                                <div class="decoration">
+                                    <div class="name1">
+                                        <b>[独家]</b>
+                                        <a href="detailpage.html">CYBER COLORS</a>
+                                    </div>
+                                    <div class="name2">
+                                        眼眉修饰笔10
+                                    </div>
+                                    <div class="name3">0.2克&nbsp;&nbsp;02 GRAY 灰色</div>
+                                    <div class="cont"><a href="javascript:;">直降</a></div>
+                                </div>
+                                <div class="tobuy">
+                                    <div class="tobuycontent">
+                                        <a href="javascript:;" class="add-cart"  data-id="10" data-src="../img/list9.jpg" data-title="眼眉修饰笔10" data-price="23.0">加入购物车</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="formall">
+                            <div class="formalltop">
+                                <div class="formallimg">
+                                    <ul>
+                                        <li class="select"><img src="../img/list10.jpg" alt=""></li>
+                                    </ul>
+                                    <div class="zhijiang"><img src="../img/zhijiang.png" alt=""></div>
+                                </div>
+                                <div class="price">
+                                    <div class="price1">￥21.0</div>
+                                    <div class="price2">￥48.0</div>
+                                    <div class="price3">6.7折</div>
+                                </div>
+                                <div class="decoration">
+                                    <div class="name1">
+                                        <b>[独家]</b>
+                                        <a href="detailpage.html">CYBER COLORS</a>
+                                    </div>
+                                    <div class="name2">
+                                        眼眉修饰笔11
+                                    </div>
+                                    <div class="name3">0.2克&nbsp;&nbsp;02 GRAY 灰色</div>
+                                    <div class="cont"><a href="javascript:;">直降</a></div>
+                                </div>
+                                <div class="tobuy">
+                                    <div class="tobuycontent">
+                                        <a href="javascript:;" class="add-cart"  data-id="11" data-src="../img/list10.jpg" data-title="眼眉修饰笔11" data-price="21.0">加入购物车</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="three">
+                        <div class="formall">
+                            <div class="formalltop">
+                                <div class="formallimg">
+                                    <ul>
+                                        <li class="select"><img src="../img/list1.jpg" alt=""></li>
+                                    </ul>
+                                    <div class="zhijiang"><img src="../img/zhijiang.png" alt=""></div>
+
+                                </div>
+                                <div class="price">
+                                    <div class="price1">￥18.0</div>
+                                    <div class="price2">￥48.0</div>
+                                    <div class="price3">6.7折</div>
+                                </div>
+                                <div class="decoration">
+                                    <div class="name1">
+                                        <b>[独家]</b>
+                                        <a href="detailpage.html">CYBER COLORS</a>
+                                    </div>
+                                    <div class="name2">
+                                        眼眉修饰笔12
+                                    </div>
+                                    <div class="name3">0.2克&nbsp;&nbsp;02 GRAY 灰色</div>
+                                    <div class="cont"><a href="javascript:;">直降</a></div>
+                                </div>
+                                <div class="tobuy">
+                                    <div class="tobuycontent">
+                                        <a href="javascript:;" class="add-cart" data-id="12"  data-src="../img/list1.jpg" data-title="眼眉修饰笔12" data-price="18.0">加入购物车</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="formall">
+                            <div class="formalltop">
+                                <div class="formallimg">
+                                    <ul>
+                                        <li class="select"><img src="../img/list2.jpg" alt=""></li>
+                                    </ul>
+                                    <div class="zhijiang"><img src="../img/zhijiang.png" alt=""></div>
+                                </div>
+                                <div class="price">
+                                    <div class="price1">￥25.0</div>
+                                    <div class="price2">￥48.0</div>
+                                    <div class="price3">6.7折</div>
+                                </div>
+                                <div class="decoration">
+                                    <div class="name1">
+                                        <b>[独家]</b>
+                                        <a href="detailpage.html">CYBER COLORS</a>
+                                    </div>
+                                    <div class="name2">
+                                        眼眉修饰笔13
+                                    </div>
+                                    <div class="name3">0.2克&nbsp;&nbsp;02 GRAY 灰色</div>
+                                    <div class="cont"><a href="javascript:;">直降</a></div>
+                                </div>
+                                <div class="tobuy">
+                                    <div class="tobuycontent">
+                                        <a href="javascript:;" class="add-cart"  data-id="13" data-src="../img/list2.jpg" data-title="眼眉修饰笔13" data-price="25.0">加入购物车</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="formall">
+                            <div class="formalltop">
+                                <div class="formallimg">
+                                    <ul>
+                                        <li class="select"><img src="../img/list3.jpg" alt=""></li>
+                                    </ul>
+                                    <div class="zhijiang"><img src="../img/zhijiang.png" alt=""></div>
+                                </div>
+                                <div class="price">
+                                    <div class="price1">￥24.0</div>
+                                    <div class="price2">￥48.0</div>
+                                    <div class="price3">6.7折</div>
+                                </div>
+                                <div class="decoration">
+                                    <div class="name1">
+                                        <b>[独家]</b>
+                                        <a href="detailpage.html">CYBER COLORS</a>
+                                    </div>
+                                    <div class="name2">
+                                        眼眉修饰笔14
+                                    </div>
+                                    <div class="name3">0.2克&nbsp;&nbsp;02 GRAY 灰色</div>
+                                    <div class="cont"><a href="javascript:;">直降</a></div>
+                                </div>
+                                <div class="tobuy">
+                                    <div class="tobuycontent">
+                                        <a href="javascript:;" class="add-cart"  data-id="14" data-src="../img/list3.jpg" data-title="眼眉修饰笔14" data-price="24.0">加入购物车</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="three">
+                        <div class="formall">
+                            <div class="formalltop">
+                                <div class="formallimg">
+                                    <ul>
+                                        <li class="select"><img src="../img/list4.jpg" alt=""></li>
+                                    </ul>
+                                    <div class="zhijiang"><img src="../img/zhijiang.png" alt=""></div>
+                                </div>
+                                <div class="price">
+                                    <div class="price1">￥19.0</div>
+                                    <div class="price2">￥48.0</div>
+                                    <div class="price3">6.7折</div>
+                                </div>
+                                <div class="decoration">
+                                    <div class="name1">
+                                        <b>[独家]</b>
+                                        <a href="detailpage.html">CYBER COLORS</a>
+                                    </div>
+                                    <div class="name2">
+                                        眼眉修饰笔15
+                                    </div>
+                                    <div class="name3">0.2克&nbsp;&nbsp;02 GRAY 灰色</div>
+                                    <div class="cont"><a href="javascript:;">直降</a></div>
+                                </div>
+                                <div class="tobuy">
+                                    <div class="tobuycontent">
+                                        <a href="javascript:;" class="add-cart"  data-id="15" data-src="../img/list4.jpg" data-title="眼眉修饰笔15" data-price="19.0">加入购物车</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="formall">
+                            <div class="formalltop">
+                                <div class="formallimg">
+                                    <ul>
+                                        <li class="select"><img src="../img/list5.jpg" alt=""></li>
+                                    </ul>
+                                    <div class="zhijiang"><img src="../img/zhijiang.png" alt=""></div>
+                                    <div class="vip"><img src="../img/vip.png" alt=""></div>
+                                </div>
+                                <div class="price">
+                                    <div class="price1">￥26.0</div>
+                                    <div class="price2">￥48.0</div>
+                                    <div class="price3">6.7折</div>
+                                </div>
+                                <div class="decoration">
+                                    <div class="name1">
+                                        <b>[独家]</b>
+                                        <a href="detailpage.html">CYBER COLORS</a>
+                                    </div>
+                                    <div class="name2">
+                                        眼眉修饰笔16
+                                    </div>
+                                    <div class="name3">0.2克&nbsp;&nbsp;02 GRAY 灰色</div>
+                                    <div class="cont"><a href="javascript:;">直降</a></div>
+                                </div>
+                                <div class="tobuy">
+                                    <div class="tobuycontent">
+                                        <a href="javascript:;" class="add-cart"  data-id="16" data-src="../img/list5.jpg" data-title="眼眉修饰笔16" data-price="26.0">加入购物车</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="formall">
+                            <div class="formalltop">
+                                <div class="formallimg">
+                                    <ul>
+                                        <li class="select"><img src="../img/list6.jpg" alt=""></li>
+                                    </ul>
+                                    <div class="zhijiang"><img src="../img/zhijiang.png" alt=""></div>
+                                </div>
+                                <div class="price">
+                                    <div class="price1">￥20.0</div>
+                                    <div class="price2">￥48.0</div>
+                                    <div class="price3">6.7折</div>
+                                </div>
+                                <div class="decoration">
+                                    <div class="name1">
+                                        <b>[独家]</b>
+                                        <a href="detailpage.html">CYBER COLORS</a>
+                                    </div>
+                                    <div class="name2">
+                                        眼眉修饰笔17
+                                    </div>
+                                    <div class="name3">0.2克&nbsp;&nbsp;02 GRAY 灰色</div>
+                                    <div class="cont"><a href="javascript:;">直降</a></div>
+                                </div>
+                                <div class="tobuy">
+                                    <div class="tobuycontent">
+                                        <a href="javascript:;" class="add-cart"  data-id="17" data-src="../img/list6.jpg" data-title="眼眉修饰笔17" data-price="20.0">加入购物车</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="last three">
+                           <div class="top1"></div>
+                            <p class="word1">下一页</p>
+                            <p class="word2">显示下一页结果</p>
+                            <b></b>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="btnlist">
+                <a href="javascript:;" class="btnlistleftbtn"><</a><a href="javascript:;" class="active select">1</a><a href="javascript:;" class="select">2</a><a href="javascript:;" class="select">3</a><a href="javascript:;" class="select">4</a><a href="javascript:;" class="select">5</a><a href="javascript:;" class="btnlistrightbtn">></a>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!--========================foot=============================-->
+<div id="foot">
+    <!--========================foot-promise=============================-->
+    <div class="foot-promise">
+        <div class="content">
+            <ul>
+                <li>
+                    <div class="img"><img src="../img/footp1.png" alt=""></div>
+                    <div class="word">
+                        <p class="word1">满249包邮</p>
+                        <p class="word2">全球采购 海购so easy</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="img"><img src="../img/footp2.png" alt=""></div>
+                    <div class="word">
+                        <p class="word1">正品保证</p>
+                        <p class="word2">专注美妆护肤38年</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="img"><img src="../img/footp3.png" alt=""></div>
+                    <div class="word">
+                        <p class="word1">香港直邮</p>
+                        <p class="word2">香港直发 美丽到家</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="img"><img src="../img/footp4.png" alt=""></div>
+                    <div class="word">
+                        <p class="word1">30天退换保证</p>
+                        <p class="word2">为您提供售后无忧保证</p>
+                    </div>
+                </li>
+                <li style="margin-right:0">
+                    <div class="img"><img src="../img/footp5.png" alt=""></div>
+                    <div class="word">
+                        <p class="word1">xiangg上市</p>
+                        <p class="word2">股票代码：HK00178</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!--=========================foot-list================================-->
+    <div class="foot-list">
+        <div class="content">
+            <ul class="leftlist">
+                <li>
+                    <b><a href="javascript:;">新手上路</a></b>
+                    <span><a href="javascript:;">购物流程</a></span>
+                    <span><a href="javascript:;">优惠券说明</a></span>
+                    <span><a href="javascript:;">常见问题</a></span>
+                    <span><a href="javascript:;">联络我们</a></span>
+                </li>
+                <li>
+                    <b><a href="javascript:;">付款方式</a></b>
+                    <span><a href="javascript:;">在线支付</a></span>
+                    <span><a href="javascript:;">积分支付</a></span>
+                </li>
+                <li>
+                    <b><a href="javascript:;">配送方式</a></b>
+                    <span><a href="javascript:;">配送说明</a></span>
+                    <span><a href="javascript:;">追踪订单</a></span>
+                </li>
+                <li>
+                    <b><a href="javascript:;">售后服务</a></b>
+                    <span><a href="javascript:;">正品保证</a></span>
+                    <span><a href="javascript:;">价格承诺</a></span>
+                    <span><a href="javascript:;">30日退换保证</a></span>
+                    <span><a href="javascript:;">退款程序</a></span>
+                    <span><a href="javascript:;">更改订单</a></span>
+                </li>
+                <li>
+                    <b><a href="javascript:;">莎莎会员</a></b>
+                    <span><a href="javascript:;">积分奖赏</a></span>
+                    <span><a href="javascript:;">会员计划</a></span>
+                </li>
+            </ul>
+            <div class="rightlist">
+                <div class="img1">
+                    <img src="../img/footlist1.jpg" alt="">
+                    <p class="word1">莎莎网官方微博</p>
+                    <div class="word2">@莎莎网</div>
+                </div>
+                <div class="img2">
+                    <img src="../img/footlist2.jpg" alt="">
+                    <p class="word1">莎莎网官方微信</p>
+                    <div class="word2">ID：hdksasadotcom</div>
+                </div>
+            </div>
+            <div class="largeimg"><img src="../img/foot1.jpg" alt=""></div>
+
+        </div>
+    </div>
+
+</div>
+<div id="foot2">
+    <div class="content">
+        <ul>
+            <li><a href="javascript:;">关于莎莎</a></li>
+            <li><span>|</span></li>
+            <li><a href="javascript:;">使用条款</a></li>
+            <li><span>|</span></li>
+            <li><a href="javascript:;">隐私策略</a></li>
+            <li><span>|</span></li>
+            <li><a href="javascript:;">批发服务</a></li>
+            <li><span>|</span></li>
+            <li><a href="javascript:;">招商合作</a></li>
+            <li><span>|</span></li>
+            <li><a href="javascript:;">帮助中心</a></li>
+            <li><span>|</span></li>
+            <li><a href="javascript:;">港澳店铺推广</a></li>
+            <li><span>|</span></li>
+            <li><a href="javascript:;">人才招聘</a></li>
+            <li><span>|</span></li>
+            <li><a href="javascript:;">联络我们</a></li>
+            <li><span>|</span></li>
+            <li><a href="javascript:;">其他送货地区</a></li>
+        </ul>
+        <p class="footer">Copyright 2000-2016 Sa Sa dot Com Limited  版权所有莎莎国际控股有限公司成员</p>
+    </div>
+</div>
+<!--==================右侧导航====================-->
+<div id="sidebar">
+    <div class="outside">
+        <a href="javascript:;">境外商品需知</a>
+    </div>
+    <div class="custom"><i class="kefu">&#xe613;</i>
+        <div class="xianshi"><p>我的账户</p><h3></h3></div>
+    </div>
+    <div class="car">
+        <a href="javaScript:;">
+            <i class="gouwuche">&#xe62d;</i>
+            <span>购物车</span>
+            <b>0</b>
+        </a>
+    </div>
+    <div class="service">
+        <div class="heart"><i class="xin">&#xe616;</i>
+            <div class="xianshi"><p>我的收藏</p><h3></h3></div>
+        </div>
+        <div class="jilu"><i class="jilu1">&#xe6bb;</i>
+            <div class="xianshi"><p>浏览记录</p><h3></h3></div>
+        </div>
+        <div class="erji"><i class="erji1">&#xe609;</i>
+            <div class="xianshi"><p>线上客服</p><h3></h3></div>
+        </div>
+        <div class="erweima"><i class="erweima1">&#xe61b;</i>
+            <div class="xianshi"><span><img src="../img/sibar1.png" alt=""></span><h3></h3></div>
+        </div>
+        <div class="backtop">TOP</div>
+    </div>
+</div>
+<div id="cartshops">
+    <div class="carttitle">
+        <span>购物车</span>
+        <a href="javascript:;">X</a>
+    </div>
+    <div class="main">
+        <div class="cartcontent">香港直送</div>
+        <ul class="cartlist">
+        </ul>
+    </div>
+    <div class="foots">
+        <div class="number">
+            共<span>0</span>件商品&nbsp;&nbsp;&nbsp;
+            <b>￥</b><strong>0</strong>
+        </div>
+        <div class="gotocart">
+            <a href="cart.html">去购物车结算</a>
+        </div>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,214 @@
+*{margin: 0;padding: 0}
+body{
+
+    overflow: hidden;
+}
+.box{
+    width:40px;
+    height:40px;
+    position: absolute;
+    background-size:40px 40px ;
+    z-index:10;
+}
+.box img{
+    width:40px;
+    height:40px;
+}
+#gongxi{
+    width: 673px;
+    height: 400px;
+    position: absolute;
+    top: 250px;
+    left: 25%;
+    z-index: 200;
+    border: 3px solid tomato;
+    background-color: #fefefe;
+    display: none
+}
+#wandan{
+    width: 673px;
+    height: 400px;
+    position: absolute;
+    top: 250px;
+    left: 25%;
+    z-index: 100;
+    border: 3px solid tomato;
+    background-color: #fefefe;
+    display: none;
+    text-align: center;
+}
+.wenz{
+    width: 673px;
+    height: 128px;
+    line-height: 128px;
+    font-size: 60px;
+    font-weight: bolder;
+    color: crimson;
+    text-align: center
+}
+.wenz1{
+    width: 673px;
+    height: 108px;
+    line-height: 58px;
+    font-size: 60px;
+    font-weight: bolder;
+    color: crimson;
+    text-align: center
+}
+.but1{
+    background-color: coral;
+    outline: none;
+    width: 119px;
+    height: 50px;
+    float: left;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    margin-left: 120px;
+    margin-top: 20px
+}
+.but2{
+    background-color: coral;
+    outline: none;
+    width: 119px;
+    height: 50px;
+    float: right;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    margin-right: 120px;
+    margin-top: 20px
+}
+.but3{
+    background-color: darkgrey;
+    outline: none;
+    width: 119px;
+    height: 50px;
+    float: left;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    margin-left: 120px;
+    margin-top: 0
+}
+.but4{
+    background-color: darkgray;
+    outline: none;
+    width: 119px;
+    height: 50px;
+    float: right;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    margin-right: 120px;
+    margin-top: 0
+}
+#wuyun{
+    overflow:hidden;
+    height: 150px
+}
+#rold{
+    width: 100%;
+    height: 20px;
+    margin-top: 450px;
+    position: relative;
+    background:#e6a7c6 url("../images/lu.jpg") no-repeat;
+}
+#rold img{
+    width: 150px;
+    position: absolute;
+    top: 0;
+    left: -50px
+}
+.hehe{
+    width: 50px;
+    height: 150px;
+    overflow: hidden;
+    position: absolute;
+    top: -150px;
+    left: 0;
+    z-index: 50;
+    background: url("../images/right3.png") -95px 0;
+    background-size: 80px 150px
+}
+.img1{
+    width: 600px;
+    float: left;
+    height: 150px
+}
+.img2{
+    width: 700px;
+    float: left;
+    height: 150px;
+    margin-left: -80px
+}
+#heshui{
+    width: 100%;
+    height: 300px;
+    background: url("../images/hehua.png") right top no-repeat;
+    background-size: 400px 160px;
+    position: relative;
+}
+.hehua1{
+    position: absolute;
+    width: 250px;
+    top: -90px;
+    left: 0;
+}
+.hehua2{
+    position: absolute;
+    width: 170px;
+    bottom:0;
+    left: 150px;
+}
+.hehua2a{
+    position: absolute;
+    width: 170px;
+    bottom:0;
+    left: 720px;
+}
+.hehua3{
+    position: absolute;
+    top: 120px;
+    left: 350px;
+}
+.hehua3a{
+    position: absolute;
+    top: 120px;
+    left: 550px;
+}
+.hehua3b{
+    position: absolute;
+    bottom: 0;
+    left: 10px;
+}
+.hehua3d{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+.hehua4{
+    position: absolute;
+    width: 90px;
+    top: 10px;
+    left: 300px;
+}
+.bax{
+    width:80px;
+    height:80px;
+    position: absolute;
+    bottom: 60px;
+    background:url("../images/shui.jpg") -10px center;
+    background-size:80px 80px ;
+    display: none;
+}
+.max,.baz{
+    width:80px;
+    height:80px;
+    position: absolute;
+    z-index:10;
+}
+.max img,.baz img{
+    width:80px;
+    height:80px;
+}

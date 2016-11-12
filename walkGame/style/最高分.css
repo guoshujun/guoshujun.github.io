@@ -1,0 +1,116 @@
+*{
+    margin:0;
+    padding:0;
+}
+.left{
+    float:left;
+}
+.right{
+    float:right;
+}
+img{
+    border:none;
+}
+a{
+    text-decoration:none;
+}
+#main{
+    width:100%;
+    height:100%;
+    text-align: center;
+    overflow: hidden;
+}
+#main img{
+    top:0;
+    left:0;
+    position:absolute;
+    width:100%;
+    height:100%;
+}
+#main h2{
+    color:#FF4400;
+    font-style: italic;
+    line-height:600px;
+    font-size:50px;
+}
+#main .input{
+    width:500px;
+    height:300px;
+    position: absolute;
+    left:30%;
+    top:20%;
+    z-index: 10;
+}
+#main .input .shuru{
+    width:500px;
+    height:40px;
+}
+#main .input input{
+    outline:none;
+    margin:0 auto;
+    width:288px;
+    height:38px;
+    color:darkgray;
+    float:left;
+    border: 2px solid #FF4400;
+    text-indent: 10px;
+    font-size: 15px;
+}
+#main .input button{
+    float:left;
+    width:120px;
+    height:42px;
+    background:#FF4400;
+    border:none;
+    outline:none;
+    z-index: 10;
+    color:white;
+    font-weight: bold;
+}
+#main .line{
+    width:200px;
+    position:absolute;
+    right:30px;
+    top:20%;
+    z-index: 200;
+    height:80%;
+    overflow: hidden;
+}
+#main .line .first{
+    width:200px;
+    height:60px;
+    line-height:60px;
+    background:#F40;
+    color:#FFF;
+    font-weight: bold;
+    font-size: 25px;
+}
+#main .line ul{
+    border:1px solid #CCC;
+    width:198px;
+    min-height:0;
+}
+#main .line ul li{
+    width:198px;
+    height:60px;
+    line-height:60px;
+    overflow: hidden;
+    color: black;
+    font-size: 20px;
+    font-weight: bold;
+}
+#main .return{
+    position:absolute;
+    left:20px;
+    bottom:20px;
+    width:200px;
+    height:60px;
+    color: #FFF;
+    background:#F40;
+    border-radius: 5%;
+    text-align: center;
+    line-height:60px;
+
+}
+
+

@@ -1,0 +1,581 @@
+*{
+    margin:0;
+    padding:0;
+}
+body{
+    font: 14px/22px 'Microsoft Yahei',Helvetica,Arial,STXihei,SimSun,sans-serif;
+    color: #3e3e3e;
+    background: #fff;
+}
+a{
+    text-decoration: none;
+    color:#3e3e3e;
+    font-size:12px;
+}
+li{
+    list-style: none;
+    float: left;
+}
+input{
+    outline:none;
+    border:none;
+}
+button{
+    border:none;
+}
+img{
+    border:none;
+}
+
+
+#navlist .allgood{
+    display:none;
+}
+/*=======================主题部分========================*/
+#main{
+    background-color: #F2F2F2;
+}
+#main .content{
+    width:1090px;
+   height:3212px;
+    margin:0 auto;
+}
+#main .content .left{
+    width:253px;
+    float: left;
+    margin-top:50px;
+    margin-right:20px;
+}
+#main .content .left h3{
+    height: 48px;
+    border-left: 5px solid #c69a62;
+    background: #fff;
+    line-height: 48px;
+    font-size: 18px;
+    color: #404040;
+    padding-left: 30px;
+    font-weight: normal;
+}
+#main .content .left h4{
+    background: #e8e6e7;
+    width:253px;
+    height:51px;
+    border-top: 1px dotted #f2f2f2;
+    position: relative;
+    margin-top: -1px;
+    overflow: hidden;
+}
+#main .content .left h4 a{
+    text-indent: 34px;
+    color: #565d67;
+    font: normal 14px/50px \5fae\8f6f\96c5\9ed1;
+    display: inline-block;
+    float: left;
+}
+#main .content .left h4 b{
+    width:16px;
+    height:16px;
+    position:absolute;
+    top:15px;
+    left:10px;
+    background: url("../img/icon-jt.png") no-repeat 0 0;
+}
+#main .content .left ul{
+    padding-top:30px;
+    background-color: #fff;
+    display: none;
+}
+#main .content .left ul li{
+    text-indent: 35px;
+    background: #fff;
+    width: 253px;
+    height:40px;
+    border-left: 1px dotted #ddd;
+}
+#main .content .left ul li:hover a,#main .content .left ul li:hover span{
+    color: #c69a62;
+}
+
+
+
+/*====================右侧===================*/
+/*===================右侧导航栏=============*/
+#main .content .right-1{
+    width:811px;
+    margin-top:50px;
+    float: left;
+}
+#main .content .right-1 .galleryfilter{
+    width:811px;
+    background-color: #fff;
+}
+#main .content .right-1 .galleryfilter .galleryselected{
+    width:811px;
+    height:44px;
+    border-bottom: 1px solid #d7d7d7;
+}
+#main .content .right-1 .galleryfilter .galleryselected .filtertitle{
+    float: left;
+    margin-right: 3px;
+    width: 115px;
+    text-indent: 16px;
+    color: #8d8d8d;
+    line-height:44px;
+}
+#main .content .right-1 .galleryfilter .galleryselected .filterclean a{
+    color: #c69a62;
+}
+#main .content .right-1 .galleryfilter .galleryselected .filterclean{
+    margin-top: 10px;
+    margin-right: 16px;
+    float: right;
+}
+#main .content .right-1 .galleryfilter .filterlist{
+    width:811px;
+}
+#main .content .right-1 .galleryfilter .filterlist dl{
+    width:790px;
+    min-height:40px;
+    border-bottom: 1px dotted #e9e9e9;
+    padding-bottom:20px;
+}
+#main .content .right-1 .galleryfilter .filterlist dt{
+    position: relative;
+    float: left;
+    width: 106px;
+    padding: 8px 30px 0 0;
+    text-indent: 20px;
+    color: #8d8d8d;
+}
+#main .content .right-1 .galleryfilter .filterlist .filtertag, #main .content .right-1 .galleryfilter .filterlist .filtercut, #main .content .right-1 .galleryfilter .filterlist .filtercolor, #main .content .right-1 .galleryfilter .filterlist .filterprice{
+    display:none;
+}
+#main .content .right-1 .galleryfilter .filterlist dd{
+    width:600px;
+    float: left;
+    position:relative;
+}
+#main .content .right-1 .galleryfilter .filterlist dd b{
+    width:160px;
+    display:block;
+    position:relative;
+    font-weight: normal;
+    float: left;
+}
+#main .content .right-1 .galleryfilter .filterlist dd b a{
+    text-indent: 20px;
+}
+#main .content .right-1 .galleryfilter .filterlist dd a{
+    float: left;
+    margin: 4px 0;
+    line-height: 30px;
+    height: 16px;
+    white-space: nowrap;
+    width: 180px;
+    padding: 5px 0 0 0;
+}
+/*<b class="select"><em>123456</em><strong>X</strong></b>*/
+#main .content .right-1 .galleryfilter .filterlist dd .select{
+    background-color: white;
+    margin: 5px 3px 3px 3px;
+    color: #c69a62;
+    display: inline-block;
+    border: 1px solid #c69a62;
+    border-radius: 12px;
+    width:100px;
+    height:30px;
+    position:relative;
+}
+#main .content .right-1 .galleryfilter .filterlist dd .select strong{
+    color: #c69a62;
+    margin: 4px 0 0 4px;
+    display: inline-block;
+    line-height:15px;
+    text-align: center;
+    cursor: pointer;
+    border:1px solid #c69a62;
+    border-radius: 50%;
+    width:15px;
+    height:15px;
+    position:absolute;
+    top:3px;
+    right:5px;
+}
+#main .content .right-1 .galleryfilter .filterlist dd .select em{
+    max-width: 107px;
+    overflow: hidden;
+    float: left;
+    font-style: normal;
+    padding:2px 5px 0 5px;
+    /*width:120px;*/
+}
+#main .content .right-1 .galleryfilter .filterlist .hide{
+    display:none
+}
+#main .content .right-1 .galleryfilter .filterlist dd .more{
+    position:absolute;
+    top:0;
+    right:0;
+    color: #b4b5b8;
+    margin: 0 10px 0 0;
+    float: right;
+    border: 1px solid #e9e9e9;
+    border-top: none;
+    padding: 10px 6px 2px 6px;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    cursor: pointer;
+}
+#main .content .right-1 .galleryfilter .filterlist dd .yesorno{
+    position:absolute;
+    bottom:-20px;
+    right:200px;
+    display: none;
+    cursor: pointer;
+}
+#main .content .right-1 .galleryfilter .filterlist dd .yes{
+    padding: 1px 8px;
+    background: #ec3e7d;
+    color: #fff;
+    display: inline-block;
+    cursor: pointer;
+}
+#main .content .right-1 .galleryfilter .filterlist dd .no{
+    padding: 1px 8px;
+    background: #bababa;
+    color: #fff;
+    display: inline-block;
+    margin-left: 10px;
+    cursor: pointer;
+}
+#main .content .right-1 .galleryfilter .filterlist  b i{
+    background: url(../img/checkbox_all.gif) no-repeat  0 -30px;
+    /*0 0 选中状态  0 -15px 消失状态  0 -30PX 框出现但没选*/
+    width: 15px;
+    height: 15px;
+    display: none;
+    vertical-align: middle;
+    float: left;
+    margin-right: 5px;
+    margin-top: 14px;
+    position:absolute;
+    top:0;
+    left:0;
+}
+#main .content .right-1 .galleryfilter .filterlist .most1,#main .content .right-1 .galleryfilter .filterlist .most2{
+    position:absolute;
+    top:0;
+    right:80px;
+    border: 1px solid #c69a62;
+    border-radius: 5px;
+    cursor: pointer;
+    width:50px;
+    height:30px;
+}
+#main .content .right-1 .galleryfilter .filterlist .most1 a,#main .content .right-1 .galleryfilter .filterlist .most2 a{
+    color: #c69a62;
+    line-height:20px;
+    text-indent: 10px;
+}
+#main .content .right-1 .galleryfilter .showmore{
+    width:811px;
+    height:30px;
+    border-bottom: 1px dotted #e9e9e9;
+    position:relative;
+}
+#main .content .right-1 .galleryfilter .showmore a{
+    float: right;
+    margin-right:50px;
+}
+#main .content .right-1 .galleryfilter .showmore a i{
+    width:16px;
+    height:16px;
+    position:absolute;
+    top:5px;
+    right:35px;
+    background: url("../img/icon-jt.png") no-repeat 0 0;
+}
+
+
+
+/*=====================排序===========================*/
+#main .content .right-1  .gallery-sortbar{
+    background-color: #fff;
+    height: 30px;
+    margin:10px 0  25px 0;
+    font-size: 12px;
+}
+#main .content .right-1  .gallery-sortbar li{
+    border-right:1px solid #F2F2F2;
+    height:30px;
+}
+#main .content .right-1  .gallery-sortbar ul a{
+    padding:0 20px 0 20px;
+    line-height:30px;
+}
+#main .content .right-1  .gallery-sortbar ul .active a{
+    color: #c69a62;
+}
+#main .content .right-1  .gallery-sortbar ul .active{
+    background: url('../img/arrs.gif') right -208px no-repeat;
+}
+#main .content .right-1  .gallery-sortbar input{
+    display: inline-block;
+    margin-right:5px;
+    line-height:35px;
+}
+#main .content .right-1  .gallery-sortbar .btn{
+    float: right;
+    margin-left:10px;
+    width:80px;
+    line-height:30px;
+}
+#main .content .right-1  .gallery-sortbar .btn a{
+    line-height:30px;
+    float: left;
+}
+#main .content .right-1  .gallery-sortbar .btnleft{
+    background:url("../img/leftarrow.png") no-repeat;
+    width:20px;
+    height:30px;
+    float: left;
+    cursor: pointer;
+}
+#main .content .right-1  .gallery-sortbar .btnright{
+    background:url("../img/rightarrow.png") no-repeat;
+    width:20px;
+    height:30px;
+    float: left;
+    cursor: pointer;
+}
+/*=====================商品列表======================*/
+#main .content .right-1 .galleryshow{
+
+}
+#main .content .right-1 .galleryshow ul{
+
+}
+#main .content .right-1 .galleryshow ul li{
+    width: 253px;
+    background: #fff;
+    height:422px;
+    position:relative;
+    margin: 0 26px 20px 0;
+}
+#main .content .right-1 .galleryshow ul .three{
+     margin-right:0;
+ }
+#main .content .right-1 .galleryshow ul .formall .formallimg{
+    position: relative;
+    width: 253px;
+    height: 253px;
+    overflow: hidden;
+    border-bottom:1px solid #eeeeee;
+    z-index: 1;
+    transition: all .3s linear;
+}
+#main .content .right-1 .galleryshow ul li:hover{
+    box-shadow: 10px 10px 10px #dddddd;
+}
+#main .content .right-1 .galleryshow ul li:hover .tobuy{
+    box-shadow: 10px 10px 10px #dddddd;
+}
+#main .content .right-1 .galleryshow ul .formall .formallimg .zhijiang{
+    position:absolute;
+    top:10px;
+    left:10px;
+}
+#main .content .right-1 .galleryshow ul .formall .formallimg  .vip{
+    position:absolute;
+    right:10px;
+    bottom:10px;
+}
+#main .content .right-1 .galleryshow ul .formall .formallimg ul{
+    width:253px;
+    height:253px;
+}
+#main .content .right-1 .galleryshow ul .formall .formallimg ul li{
+    position:absolute;
+    top:0;
+    left:0;
+    display:none;
+}
+#main .content .right-1 .galleryshow ul .formall .formallimg ul li img{
+    width:243px;
+    height:243px;
+}
+#main .content .right-1 .galleryshow ul .formall .formallimg ul .select{
+    display:block;
+}
+#main .content .right-1 .galleryshow ul .formallimgright1{
+    position:absolute;
+    width: 88px;
+    height: 422px;
+    right: 0;
+    top:0;
+    background-color: #fff;
+    z-index: 20;
+    display: none;
+    box-shadow: 5px 0px 10px #dddddd;
+}
+#main .content .right-1 .galleryshow ul .formallimgright1 div{
+    width: 80px;
+    height: 80px;
+    /*border-top: 1px solid #e0e0e0;*/
+    border: 4px solid #fff;
+}
+#main .content .right-1 .galleryshow ul .formallimgright1 div img{
+    display: inline-block;
+    width: 76px;
+    height: 76px;
+    cursor: pointer;
+}
+#main .content .right-1 .galleryshow ul .formallimgright1 .active{
+    border: 4px solid #c69a62;
+}
+#main .content .right-1 .galleryshow ul .formall .price{
+    border-bottom: 1px solid #eee;
+    color: #858587;
+    margin-left:20px;
+    width:233px;
+    background-color: #fff;
+    overflow: hidden;
+}
+#main .content .right-1 .galleryshow ul .formall .price1{
+    font-size: 24px;
+    margin-right: 10px;
+    color: #ec3e7d;
+    float: left;
+}
+#main .content .right-1 .galleryshow ul .formall .price2{
+    float: left;
+    text-decoration: line-through;
+    margin-top:5px;
+    margin-right:55px;
+}
+#main .content .right-1 .galleryshow ul .formall .price3{
+    color: #c69a62;
+    margin-top: 5px;
+}
+#main .content .right-1 .galleryshow ul .formall .decoration {
+    margin-left:20px;
+    width:233px;
+    background-color: #fff;
+    height:140px;
+}
+#main .content .right-1 .galleryshow ul .formall .decoration .name1{
+    height: 20px;
+    overflow: hidden;
+    white-space: nowrap;
+    padding: 0;
+    line-height: 20px;
+    font-size: 13px;
+    text-overflow: ellipsis;
+    font-weight: bold;
+}
+#main .content .right-1 .galleryshow ul .formall .decoration .name1 b{
+    color: #ee9c23;
+}
+#main .content .right-1 .galleryshow ul .formall .decoration .name2{
+    overflow: hidden;
+    line-height: 20px;
+    font-size: 13px;
+    height: 40px;
+}
+#main .content .right-1 .galleryshow ul .cont {
+    margin-left:10px;
+    margin-top:20px;
+    border-radius: 5px;
+    width:40px;
+    height: 22px;
+    background:#c69a62;
+}
+#main .content .right-1 .galleryshow ul .cont a{
+    color:#ffffff;
+    font-size: 12px;
+    display: inline-block;
+    text-indent: 5px;
+}
+#main .content .right-1 .galleryshow ul .tobuy{
+    width:100%;
+    height:63px;
+    margin-top:10px;
+    display:none;
+    position:absolute;
+    top:349px;
+    left:0;
+    background-color: #fff;
+    z-index: 10;
+}
+#main .content .right-1 .galleryshow ul .tobuycontent{
+    vertical-align: middle;
+    text-align: center;
+}
+#main .content .right-1 .galleryshow ul .tobuy a{
+    width: 223px;
+    text-align: center;
+    background: #f06597;
+    display: inline-block;
+    height: 39px;
+    line-height: 35px;
+    color:#fff;
+    font-size:16px;
+}
+#main .content .right-1 .galleryshow .last{
+    background: #fff;
+    text-align: center;
+    cursor: pointer;
+    position:relative;
+}
+#main .content .right-1 .galleryshow .last .top1{
+    width:140px;
+    height:130px;
+    margin:130px auto 30px;
+    background:url("../img/tips.png") no-repeat -130px -352px
+}
+#main .content .right-1 .galleryshow .last .word1{
+    color: #c69a62;
+    font-size: 24px;
+    line-height: 35px;
+}
+#main .content .right-1 .galleryshow .last .word2{
+    color: #cacaca;
+    font-size: 14px;
+    line-height: 25px;
+}
+#main .content .right-1 .galleryshow .last b{
+    width: 72px;
+    height: 36px;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    background:url("../img/right1.png")
+}
+#main .content .right-1 .btnlist{
+    margin: 10px 0;
+    text-align: right;
+    line-height: 20px;
+    font-size: 12px;
+    clear: both;
+    padding: 20px 0;
+}
+#main .content .right-1 .btnlist a,#main .content .right-1 .btnlist a{
+    border: 1px solid #dddddd;
+    color: #666666;
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 5px;
+    width: auto;
+    letter-spacing: 0;
+    border-radius: 14px;
+    padding: 0 7px;
+    cursor:pointer;
+}
+#main .content .right-1 .btnlist .active{
+    border-color: #ec3e7d;
+    color: #ec3e7d;
+}
+#main .content .right-1 .btnlist a:hover{
+    border-color: #ec3e7d;
+    color: #ec3e7d;
+}

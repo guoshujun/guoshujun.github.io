@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>订单页面</title>
+    <link rel="stylesheet" href="../style/headerend.css">
+    <link rel="stylesheet" href="../style/orderpage.css">
+    <link rel="stylesheet" href="../style/font.css">
+    <script src="../js/jquery.js"></script>
+    <script src="../js/cookie.js"></script>
+    <script src="../js/cart.js"></script>
+    <script src="../js/index.js"></script>
+    <script src="../js/orderpage.js"></script>
+    <script src="../js/area.js"></script>
+</head>
+<body>
+<!--============================导航=======================-->
+<div id="header">
+    <div class="content">
+        <div class="login">
+            <span class="afterlogin">欢迎光临莎莎官网!</span>
+            <a href="login.html" class="first">登录</a>
+            <span class="two">或</span>
+            <a href="register.html" class="three">免费注册</a>
+            <a href="javascript:;" class="four">退出</a>
+        </div>
+        <div class="member">
+            <ul>
+                <li style="position:relative" class="user2"><a href="javascript:;"><i class="user">&#xe61b;</i>我的账户<i class="bottomarrow">&#xe638;</i></a>
+                    <dl class="user1">
+                        <dd><a href="javascript:;">我的订单</a></dd>
+                        <dd><a href="javascript:;">我的积分</a></dd>
+                        <dd><a href="javascript:;">我的优惠券</a></dd>
+                        <dd><a href="javascript:;">我的收藏</a></dd>
+                        <dd><a href="javascript:;">我的评价</a></dd>
+                    </dl>
+                </li>
+                <li class="shopcart2"><a href="cart.html"><i class="shopcart">&#xe660;</i>我的购物车</a></li>
+                <li><a href="javascript:;"><i class="newtext">&#xe60e;</i>我的站内信</a></li>
+                <li><a href="javascript:;">积分中心</a></li>
+                <li><a href="javascript:;">Global Site</a></li>
+                <li style="position:relative"><a href="javascript:;">关于我们<i class="weibo"><img src="../img/weibo.png" alt=""></i><i class="weixin"><img
+                        src="../img/weixin.png" alt=""></i></a>
+                    <div class="wb">
+                        <img src="../img/wberweima.png" alt="">
+                    </div>
+                    <div class="wx">
+                        <img src="../img/wxerweima.png" alt="">
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<!--============================logox=============-->
+<div id="logox">
+    <div class="content">
+        <div class="logo1">
+            <a href="homepage.html">
+                <img src="../img/logo.png" alt="">
+            </a>
+        </div>
+        <div class="middle"></div>
+        <div class="img">
+            <img src="../img/cart1.png" alt="">
+            <img src="../img/cart2.png" alt="">
+            <img src="../img/cart3.png" alt="">
+        </div>
+    </div>
+</div>
+<!--============================收货地址==============-->
+<div id="mainm">
+   <div id="sure"><h2>确定订单信息</h2></div>
+   <div id="address">
+       <div class="content">
+          <h3><span>1</span>收货地址</h3>
+           <div class="olds">
+               <div class="del">
+                   <div class="write">编辑</div>
+                   <div class="dels">删除</div>
+               </div>
+               <div class="username">王晓红</div>
+               <div class="add">河南省郑州市金水区</div>
+               <div class="longadd">河南省郑州市金水区经八路街道经七路223号</div>
+               <div class="tel">12345678900</div>
+           </div>
+           <ul class="oldaddress">
+
+           </ul>
+       </div>
+       <div class="contentn">
+         <h4>+填写新收货地址</h4>
+           <div class="newaddress">
+               <div class="content">
+                   <div class="box1">
+                       <div class="newname">
+                           收件人
+                           <input type="text">
+                       </div>
+                       <div class="email">
+                           电邮
+                           <input type="text">
+                       </div>
+                   </div>
+                   <div class="newadd">
+                       收货地址
+                       <select id="s_province" name="s_province"></select>  
+                       <select id="s_city" name="s_city" ></select>  
+                       <select id="s_county" name="s_county"></select>
+                       <!--<input type="text" class="tx1">
+                       <input type="text" class="tx2">
+                       <input type="text" class="tx3">-->
+                   </div>
+                   <div class="detailadd">
+                       详细地址
+                       <input type="text">
+                   </div>
+                   <div class="box2">
+                       <div class="tels">
+                           手机号
+                           <input type="text">
+                       </div>
+                       <div class="tela">
+                           或固定电话
+                           <input type="text" value="区号" class="one">
+                           <input type="text" value="电话号码" class="two">
+                           <input type="text" value="分机" class="three">
+                       </div>
+                   </div>
+                   <div class="yesorno">
+                       <a href="javascript:;" class="yes">确定</a>
+                       <a href="javascript:;" class="no">取消</a>
+                   </div>
+               </div>
+           </div>
+       </div>
+   </div>
+   <!--====================商品清单========================-->
+    <div id="goodlistm">
+        <div class="content">
+           <h3><span>1</span>商品清单</h3>
+            <div class="count">
+                <!--<div class="name">香港直送</div>-->
+                <div class="tagname">商品名称</div>
+                <div class="price">单价</div>
+                <div class="num">数量</div>
+                <div class="sum">小计</div>
+            </div>
+            <div class="sha">秒杀商品</div>
+            <div class="main">
+                <ul class="mains">
+                    <!--<li>
+                            <div class="img"><img src="../img/list1.jpg"></div>
+                            <div class="goods-title">商品名称</div>
+                            <div class="goods-price">单价</div>
+                            <div class="goods-num">
+                            数量
+                            <a href="javascript:;" class="countleft">-</a>
+                            <input type="text" value="1">
+                            <a href="javascript:;" class="countright">+</a>
+                            </div>
+                            <div class="sum">小计</div>
+                            <div class="del">删除</div>
+                    </li>-->
+                </ul>
+            </div>
+            <div class="cutprice">
+                <h3><a href="javascript:;"><span>-</span>现金卷代码</a></h3>
+                <div class="juan">
+                    <div class="juan1">
+                        <input type="text">
+                        <a href="javascript:;">确定</a>
+                    </div>
+                    <p>或使用优惠券</p>
+                    <select class="select" style="padding:5px 0; border:1px solid #ccc;">
+                        <option value="" selected="selected">-- 选择优惠券 --</option>
+                        <option value="1">[BAQ02NEW1609A] 新人满￥599立减￥20优惠券</option>
+                        <option value="2">[BAQ02NEW1609B] 新人满￥999立减￥40优惠券</option>
+                        <option value="3">[BAQ02NEW1609C] 新人满￥1099立减￥50优惠券</option>
+                        <option value="4">[BAQ02NEW1609D] 新人满￥1699立减￥80优惠券</option>
+                        <option value="5">[BAQ02NEW1609E] 新人满￥2000立减￥100优惠券</option>
+                        <option value="6">[BAQ02NEW1609F] 新人满￥3000立减￥150优惠券</option>
+                        <option value="7">[BAQ02NEW1609G] 新人满￥3888立减￥188优惠券成功购物再送1000可消费积分</option>
+                        <option value="8">[BAQ02NEW1609H] 新人满￥4999立减￥249优惠券成功购物再送1200可消费积分</option>
+                    </select>
+                </div>
+            </div>
+            <div class="ordersection">
+                <div class="inner1">
+                    <ul class="left">
+                        <li class="first"><span>商品总值</span><em>￥<a href="javascript:;"></a></em></li>
+                        <li><span>运费</span><em>￥90.0</em></li>
+                        <li><span>折扣优惠</span><em>-￥90.0</em></li>
+                        <li class="four"><span>获得积分</span><em><a href="javascript:;"></a></em></li>
+                    </ul>
+                </div>
+                <div class="inner2">
+                    <span>总计</span>
+                    <b>￥<a href="javascript:;"></a></b>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+
+
+
+
+<!--=======================付款=========================-->
+
+    <div id="pay">
+        <div class="content">
+            <h3><span>3</span>付款</h3>
+            <div class="buycontent">
+                <div class="paylist">
+                    <div class="paymenttext">以人民币支付</div>
+                        <form action="" class="first">
+                            <input type="radio" name="1" id="zhifubao" value="1">
+                            <label for="zhifubao" >
+                                <img src='../img/zhifubao.png'>
+                            </label>
+                            <input type="radio" name="1" id="weixinzhifu" value="2">
+                            <label  for="weixinzhifu">
+                                <img src='../img/weixinzhifu.png'>
+                            </label>
+                            <input type="radio" name="1" id="caifutong" value="3">
+                            <label  for="caifutong">
+                                <img src='../img/caifutong.png'>
+                            </label>
+                        </form>
+                </div>
+                <div class="paylist">
+                    <div class="payment-text">以港币支付</div>
+                    <ul>
+                        <li>
+                            <input type="radio">
+                            <label>
+                                <img src='../img/car.png'>
+                            </label>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="paylist dollarpeople">
+                    <div class="payment-text">以美元支付</div>
+                    <ul>
+                        <li>
+                            <input type="radio" name="2" value='4' id="dollar" >
+                            <label for="dollar" >
+                                <img src='../img/dollar.png'>
+                            </label>
+                        </li>
+                        <li>
+                            <input type="radio" name="2" value='5' id="dollars" class="action-change-payment">
+                            <label for="dollars" >
+                                <img src='../img/dollars.png'>
+                            </label>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!--信用卡信息-->
+            <div id="card">
+                <table>
+                    <tbody>
+                    <tr>
+                        <th>信用卡号码：</th>
+                        <td><input class="x-input" size="50" maxlength="16" vtype="required" name="payment[card][cardNo]" id="dom_el_b084790" type="text" /></td>
+                    </tr>
+                    <tr>
+                        <th rowspan="2" style="vertical-align:top;">持卡人姓名：</th>
+                        <td style="padding-bottom:0;"><input class="x-input" size="50" maxlength="16" vtype="required" name="payment[card][cardHolderName]" id="dom_el_b084791" type="text" /></td>
+                    </tr>
+                    <tr>
+                        <td class="f12" style="vertical-align:top; padding:0;">信用卡上所显示的姓名，请输入2个或以上的名字，如持卡人名字为中文，可以用拼音输入</td>
+                    </tr>
+                    <tr>
+                        <th>有效日期：</th>
+                        <td>
+                            <select >
+                                <option value="1">01</option>
+                                <option value="2">02</option>
+                                <option value="3">03</option>
+                                <option value="4">04</option>
+                                <option value="5">05</option>
+                                <option value="6">06</option>
+                                <option value="7">07</option>
+                                <option value="8">08</option>
+                                <option value="9">09</option>
+                                <option value="10">10</option>
+                                <option value="11">11</option>
+                                <option value="12">12</option>
+                            </select>
+                            <select >
+                                <option value="2015">2015</option>
+                                <option value="2016">2016</option>
+                                <option value="2017">2017</option>
+                                <option value="2018">2018</option>
+                                <option value="2019">2019</option>
+                                <option value="2020">2020</option>
+                                <option value="2021">2021</option>
+                                <option value="2022">2022</option>
+                                <option value="2023">2023</option>
+                                <option value="2024">2024</option>
+                                <option value="2025">2025</option>
+                                <option value="2026">2026</option>
+                                <option value="2027">2027</option>
+                                <option value="2028">2028</option>
+                                <option value="2029">2029</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>CVV/CVC：</th>
+                        <td>
+                            <input type="password" size="20" maxlength="4" vtype="required" name="payment[card][securityCode]">
+                            <div id="whatsthat" class="whatsthat">
+                                这是什么？
+                                <div class="whatsthatcontent" id="whatsthatcontent" style="display:none">
+                                    <i>◆</i>
+                                    CVV和MC CVC都是由卡号、有效期和服务约束代码生成的3位或4位数字，一般写在卡片磁条的2磁道用户自定义数据区里面。CVV和CVC的生成方法是一样的，只是叫法不一样而已。CVV2是打印在 Visa/MasterCard 卡签名区的一个数字.它位于信用卡号后的3位数字。我们通常在信用卡背面看到的后三位数字，其实是CVV2，并非CVV代码。
+                                </div>
+                            </div>
+
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+
+
+            <div class="ordersection2" >
+                <div class="ordersection3">
+                    <div class="changeclause">
+                        <input type="checkbox" checked="checked" name="clause" id="" vtype="required" class="action-check-clause">
+                        <span>我同意接受莎莎网<a target="_blank" href="http://www.sasa.com/terms">的使用条款。</a></span>
+                    </div>
+                    <div class="settlelist">
+                        <p><span>香港直送，运送时间一般为7-14个工作天。</span></p>
+                        <p><span>送货安排可参阅<a target="_blank" href="http://www.sasa.com/help/delivery_information">配送说明</a>或<a target="_blank" href=" http://www.sasa.com/cs">联络我们。</a></span></p>
+                        <p><span>兑换价格跟随当天的汇率兑换，谨供参考。</span></p>
+                        <p><span>收费以信用卡发卡行帐单为准。</span></p>
+                    </div>
+                    <div class="settlecheck">
+                        <ul>
+                            <li><span>结账金额</span></li>
+                            <li>
+                                <b>￥<a href="javascript:;"></a></b>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="ordersectionm">
+                <div class="btnarea">
+                    <a href="cart.html" class="btncancle">返回购物车</a>
+                    <a href="javascript:;" class="paym">进行结账</a>
+                </div>
+            </div>
+         </div>
+    </div>
+</div>
+<div id="mainmm">
+    <div class="content">
+        <div class="word1">
+            <h2>浏览器超时</h2>
+        </div>
+        <div class="pic">
+            <img src="../img/mmm.png" alt="">
+        </div>
+         <p>您的浏览器会话已过期</p>
+        <h3>为了保护您的个人信息，本次浏览器会话将在处于非活动状态15分钟后过期。</h3>
+        <a href="homepage.html" class="con">继续购物</a>
+    </div>
+</div>
+<!--========================foot=============================-->
+<div id="foot">
+    <!--========================foot-promise=============================-->
+    <div class="foot-promise">
+        <div class="content">
+            <ul>
+                <li>
+                    <div class="img"><img src="../img/footp1.png" alt=""></div>
+                    <div class="word">
+                        <p class="word1">满249包邮</p>
+                        <p class="word2">全球采购 海购so easy</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="img"><img src="../img/footp2.png" alt=""></div>
+                    <div class="word">
+                        <p class="word1">正品保证</p>
+                        <p class="word2">专注美妆护肤38年</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="img"><img src="../img/footp3.png" alt=""></div>
+                    <div class="word">
+                        <p class="word1">香港直邮</p>
+                        <p class="word2">香港直发 美丽到家</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="img"><img src="../img/footp4.png" alt=""></div>
+                    <div class="word">
+                        <p class="word1">30天退换保证</p>
+                        <p class="word2">为您提供售后无忧保证</p>
+                    </div>
+                </li>
+                <li style="margin-right:0">
+                    <div class="img"><img src="../img/footp5.png" alt=""></div>
+                    <div class="word">
+                        <p class="word1">xiangg上市</p>
+                        <p class="word2">股票代码：HK00178</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!--=========================foot-list================================-->
+    <div class="foot-list">
+        <div class="content">
+            <ul class="leftlist">
+                <li>
+                    <b><a href="javascript:;">新手上路</a></b>
+                    <span><a href="javascript:;">购物流程</a></span>
+                    <span><a href="javascript:;">优惠券说明</a></span>
+                    <span><a href="javascript:;">常见问题</a></span>
+                    <span><a href="javascript:;">联络我们</a></span>
+                </li>
+                <li>
+                    <b><a href="javascript:;">付款方式</a></b>
+                    <span><a href="javascript:;">在线支付</a></span>
+                    <span><a href="javascript:;">积分支付</a></span>
+                </li>
+                <li>
+                    <b><a href="javascript:;">配送方式</a></b>
+                    <span><a href="javascript:;">配送说明</a></span>
+                    <span><a href="javascript:;">追踪订单</a></span>
+                </li>
+                <li>
+                    <b><a href="javascript:;">售后服务</a></b>
+                    <span><a href="javascript:;">正品保证</a></span>
+                    <span><a href="javascript:;">价格承诺</a></span>
+                    <span><a href="javascript:;">30日退换保证</a></span>
+                    <span><a href="javascript:;">退款程序</a></span>
+                    <span><a href="javascript:;">更改订单</a></span>
+                </li>
+                <li>
+                    <b><a href="javascript:;">莎莎会员</a></b>
+                    <span><a href="javascript:;">积分奖赏</a></span>
+                    <span><a href="javascript:;">会员计划</a></span>
+                </li>
+            </ul>
+            <div class="rightlist">
+                <div class="img1">
+                    <img src="../img/footlist1.jpg" alt="">
+                    <p class="word1">莎莎网官方微博</p>
+                    <div class="word2">@莎莎网</div>
+                </div>
+                <div class="img2">
+                    <img src="../img/footlist2.jpg" alt="">
+                    <p class="word1">莎莎网官方微信</p>
+                    <div class="word2">ID：hdksasadotcom</div>
+                </div>
+            </div>
+            <div class="largeimg"><img src="../img/foot1.jpg" alt=""></div>
+
+        </div>
+    </div>
+
+</div>
+<div id="foot2">
+    <div class="content">
+        <ul>
+            <li><a href="javascript:;">关于莎莎</a></li>
+            <li><span>|</span></li>
+            <li><a href="javascript:;">使用条款</a></li>
+            <li><span>|</span></li>
+            <li><a href="javascript:;">隐私策略</a></li>
+            <li><span>|</span></li>
+            <li><a href="javascript:;">批发服务</a></li>
+            <li><span>|</span></li>
+            <li><a href="javascript:;">招商合作</a></li>
+            <li><span>|</span></li>
+            <li><a href="javascript:;">帮助中心</a></li>
+            <li><span>|</span></li>
+            <li><a href="javascript:;">港澳店铺推广</a></li>
+            <li><span>|</span></li>
+            <li><a href="javascript:;">人才招聘</a></li>
+            <li><span>|</span></li>
+            <li><a href="javascript:;">联络我们</a></li>
+            <li><span>|</span></li>
+            <li><a href="javascript:;">其他送货地区</a></li>
+        </ul>
+        <p class="footer">Copyright 2000-2016 Sa Sa dot Com Limited  版权所有莎莎国际控股有限公司成员</p>
+    </div>
+</div>
+<!--==================右侧导航====================-->
+<div id="sidebar">
+    <div class="outside">
+        <a href="javascript:;">境外商品需知</a>
+    </div>
+    <div class="custom"><i class="kefu">&#xe613;</i>
+        <div class="xianshi"><p>我的账户</p><h3></h3></div>
+    </div>
+    <div class="car">
+        <a href="javascript:;">
+            <i class="gouwuche">&#xe62d;</i>
+            <span>购物车</span>
+            <b>0</b>
+        </a>
+    </div>
+    <div class="service">
+        <div class="heart"><i class="xin">&#xe616;</i>
+            <div class="xianshi"><p>我的收藏</p><h3></h3></div>
+        </div>
+        <div class="jilu"><i class="jilu1">&#xe6bb;</i>
+            <div class="xianshi"><p>浏览记录</p><h3></h3></div>
+        </div>
+        <div class="erji"><i class="erji1">&#xe609;</i>
+            <div class="xianshi"><p>线上客服</p><h3></h3></div>
+        </div>
+        <div class="erweima"><i class="erweima1">&#xe61b;</i>
+            <div class="xianshi"><span><img src="../img/sibar1.png" alt=""></span><h3></h3></div>
+        </div>
+        <div class="backtop">TOP</div>
+    </div>
+</div>
+<div id="cartshops">
+    <div class="carttitle">
+        <span>购物车</span>
+        <a href="javascript:;">X</a>
+    </div>
+    <div class="main">
+        <div class="cartcontent">香港直送</div>
+        <ul class="cartlist">
+        </ul>
+    </div>
+    <div class="foots">
+        <div class="number">
+            共<span>0</span>件商品&nbsp;&nbsp;&nbsp;
+            <b>￥</b><strong>0</strong>
+        </div>
+        <div class="gotocart">
+            <a href="cart.html">去购物车结算</a>
+        </div>
+    </div>
+</div>
+</body>
+<script type="text/javascript">_init_area();</script>
+</html>

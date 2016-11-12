@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>滑动解锁</title>
+    <style>
+        body,div{
+            margin:0;
+            padding:0;
+        }
+        #content{
+            width:426px;
+            height:640px;
+            background:url("iphone.jpg");
+            position: relative;
+        }
+        #imgs{
+            position: absolute;
+            width:93px;
+            height:62px;
+            top:545px;
+            left:28px;
+            background: url("unlock_btn.jpg");
+        }
+        #content1{
+            width:426px;
+            height:640px;
+            background:url("iphone2.jpg");
+            display: none;
+        }
+    </style>
+</head>
+<body>
+     <div id="content"></div>
+     <div id="imgs"></div>
+     <div id="content1"></div>
+     <script>
+         var content=document.getElementById("content");
+         var imgs=document.getElementById("imgs");
+         var content1 =document.getElementById("content1");
+         var maxleft=content.clientWidth-123;
+         imgs.onmousedown= function (evt) {
+             var event=evt||window.event;
+             var pointx=event.clientX-imgs.offsetLeft;
+             document.onmousemove= function (evt1) {
+                 var event1=evt1||window.event;
+                 var movex = event1.clientX - pointx ;
+                 if(movex<=30) {
+                     movex = 30;
+                 }
+                 if(movex>=maxleft) {
+                     movex=maxleft;
+                 }
+                 imgs.style.left = movex + "px";
+                 console.log(movex);
+                 document.onmouseup = function () {
+                    document.onmousemove = null;
+                     //不到一半时自动回到头
+                     if(movex<maxleft/2){
+                         var timer1=setInterval(function () {
+                             movex-=10;
+                             imgs.style.left = movex + "px";
+                         if(movex<=30){
+                             imgs.style.left = 30 + "px";
+                             clearInterval(timer1)
+                         }
+                     },100)
+                     }
+                     //右划到一半不到底时
+                      if(movex>=maxleft/2) {
+                          var timer2=setInterval(function () {
+                              movex+=10;
+                              imgs.style.left = movex + "px";
+                              if(movex>=300){
+                                  imgs.style.left = 300 + "px";
+                                  clearInterval(timer2);
+                                  imgs.style.display="none";
+                                  content.style.display="none";
+                                  content1.style.display="block";
+                              }
+                          },100)
+                      }
+                 }
+             }
+         }
+     </script>
+</body>
+</html>
