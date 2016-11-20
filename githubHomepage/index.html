@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<!-- SEO  -->
+		<meta name="keywords" content="" />
+		<meta name="description" content="" />
+		<meta name="author" content="" />
+		<!-- 苹果专用 -->
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="blank" />
+		<meta name="format-detection" content="telephone=no" />
+		<!-- 简单移动端适配 -->
+		<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+		<!-- 图标 -->
+		<link rel="shortcut icon" href="">
+
+		<title>个人主页</title>
+		<link rel="stylesheet" href="css/swiper.css" />
+		<link rel="stylesheet" href="css/animate.css" />
+		<script src='js/jquery.js'></script>
+		<script src="js/app.js"></script>
+		<script src="js/swiper.js"></script>
+		<script src="js/animate.js"></script>
+		<style>
+			* {
+				padding: 0;
+				margin: 0;
+			}
+			
+			html {
+				overflow: hidden;
+			}
+			
+			li {
+				list-style: none;
+				float: left;
+			}
+			
+			header {
+				width: 100%;
+				height: 34px;
+				background: url('img/intro_bg.jpg');
+				opacity: 0.5;
+				box-shadow: 5px 5px 5px #000000;
+			}
+			
+			header ul {
+				width: 500px;
+				margin: 0 auto;
+			}
+			
+			header ul li {
+				width: 100px;
+				height: 100%;
+				line-height: 34px;
+				text-align: center;
+				font-size: 20px;
+				color: #000;
+			}
+			
+			.swiper {
+				width: 100%;
+				height: 100%;
+			}
+			
+			.wrapper {
+				width: 100%;
+				height: 100%;
+			}
+			
+			.slide {
+				width: 100%;
+				height: 100%;
+			}
+			
+			#home {
+				width: 100%;
+				height: 800px;
+				position:relative;
+			}
+			
+			#home .home-top {
+				width: 100%;
+				height: 90px;
+				background: url(img/intro_bg.jpg);
+			}
+			
+			#home .home-middle {
+				width: 100%;
+				height: 30px;
+				background: url(img/intro_bg.jpg);
+				opacity: 0.3;
+			}
+			
+			#home .home-bottom {
+				width: 100%;
+				height: 1000px;
+				background: url(img/intro_bg.jpg);
+			}
+			
+			#home .home-bottom .container {
+				width: 80%;
+				height: 100%;
+				margin: 0 auto;
+			}
+			#home .home-bottom .container img{
+				position:absolute;
+				top:30px;
+				left:50px;
+				width: 200px;
+				transform:rotate(-30deg);
+				border-radius: 30px;
+				box-shadow: 5px 5px 5px #B46B6B;
+			}
+			#home .home-bottom .container p {
+				font-size: 70px;
+				color: #fff;
+				line-height: 100px;
+				text-align: center;
+				font-family: "Times New Roman", Georgia, Serif;
+				text-shadow: 5px 5px 5px #948E8B;
+			}
+			
+			#home .home-bottom .container p:nth-of-type(1) {
+				font-size: 90px;
+			}
+			
+			#home .home-bottom .container p:nth-of-type(2) {
+				font-size: 60px;
+			}
+			
+			#home .home-bottom .container p:nth-of-type(3) {
+				color: #B46B6B;
+				text-shadow: 5px 5px 5px #92827F;
+			}
+			
+			#home .home-bottom .container p:nth-of-type(4) {
+				font-weight: bolder;
+			}
+			#mywork{
+				width: 100%;
+				height: 100%;
+				background-color: #F1F1F1;
+			}
+			#mywork .subheader{
+				width: 80%;
+				height: 80px;
+				margin:0 auto;
+			}
+			#mywork .subheader .line{
+				width: 35%;
+				height: 80px;
+				float: left;
+				background: url(img/subheader_line.png) no-repeat;
+				background-position: center;
+			}
+			#mywork .subheader h3{
+				font-size: 36px;
+				float: left;
+				line-height: 80px;
+			}
+			#mywork .container{
+				margin-top:5%;
+				width: 80%;
+				height: 100%;
+				margin:0 auto;
+			}
+			#mywork .container .work {
+				width: 25%;
+				float: left;
+			}
+			#mywork .container .work img{
+				width: 100%;
+			}
+			#mywork .container .work .title{
+				color:#4B4A4A;
+				width: 100%;
+				font-size: 20px;
+				text-align: center;
+				line-height: 30px;
+			}
+			#mywork .container .work1{
+				transform: rotate(-15deg);
+			}
+			#mywork .container .work2{
+				margin-left:10%;
+				width: 20%;
+			}
+			#mywork .container .work3{
+				transform: rotate(15deg);
+				margin-left:10%;
+			}
+			#mywork .container .work4{
+				width: 40%;
+			}
+			#about{
+				background-color: #F1F1F1;
+			}
+			#about .subheader{
+				width: 80%;
+				height: 80px;
+				margin:0 auto;
+			}
+			#about .subheader .line{
+				width: 40%;
+				height: 80px;
+				float: left;
+				background: url(img/subheader_line.png) no-repeat;
+				background-position: center;
+			}
+			#about .subheader h3{
+				font-size: 36px;
+				float: left;
+				line-height: 80px;
+			}
+			#about .container{
+				width: 80%;
+				margin:0 auto;
+				height: 1000px;
+			}
+			#about .container img{
+				width: 400px;
+				float: left;
+			}
+			#about .container .middle{
+				float: left;
+				margin-left:5%;
+				margin-right:5%;
+				width: 20%;
+				font-size: 20px;
+			}
+			#about .container .middle p{
+				width: 100%;
+				margin:5%;
+				color:#92827F;
+				line-height: 30px;
+			}
+			#about .container .right{
+				float: left;
+			}
+			#about .container .right p{
+				color:#fff;
+				margin-top:20px;
+			}
+			#contact{
+				width: 100%;
+				height: 100%;
+				background-color: #F1F1F1;
+			}
+			#contact .subheader{
+				width: 80%;
+				height: 80px;
+				margin:0 auto;
+			}
+			#contact .subheader .line{
+				width: 40%;
+				height: 80px;
+				float: left;
+				background: url(img/subheader_line.png) no-repeat;
+				background-position: center;
+			}
+			#contact .subheader h3{
+				font-size: 36px;
+				float: left;
+				line-height: 80px;
+			}
+			#contact .container{
+				width: 80%;
+				height: 1000px;
+				margin:0 auto;
+			}
+			#contact .container .word{
+				margin-top:10%;
+				float: left;
+				width: 60%;
+			}
+			#contact .container p{
+				color:#333;
+				font-size: 40px;
+				line-height: 60px;
+			}
+			#contact .container img{
+				margin-top:10%;
+				margin-left:10%;
+				width: 300px;
+				display: block;
+			}
+		</style>
+	</head>
+
+	<body>
+		<!--<header>
+			<ul>
+				<li><a href="#1F" name="1F">HOME</a></li>
+				<li><a href="#2F" name="2F">WORK</a></li>
+				<li><a href="#3F" name="3F">ABOUT</a></li>
+				<li><a href="#4F" name="4F">CONTACT</a></li>
+			</ul>
+		</header>-->
+		<div class="swiper-container swiper">
+			<div class="swiper-wrapper wrapper">
+				<div class="swiper-slide slide"  name="1F" id="1F">
+					<div id="home">
+						<div class="home-top"></div>
+						<div class="home-middle"></div>
+						<div class="home-bottom">
+							<div class="container">
+								<img src="img/1.jpg" alt="" class="ani" swiper-animate-effect="fadeIn" swiper-animate-duration="1.5s" swiper-animate-delay="0.3s"/>
+								<p class="ani" swiper-animate-effect="wobble" swiper-animate-duration="0.5s" swiper-animate-delay="0.3s">HELLO</p>
+								<p class="ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.5s" swiper-animate-delay="0.6s">MY NAME IS</p>
+								<p class="ani" swiper-animate-effect="bounceInRight" swiper-animate-duration="1s" swiper-animate-delay="0.9s">郭淑君</p>
+								<p class="ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.5s" swiper-animate-delay="1.2s">I'M A WEB DEVELOPER</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="swiper-slide slide"  name="2F" id="2F">
+					<div id="mywork">
+						<div class="subheader">
+							<div class="line"></div>
+							<h3 class="ani" swiper-animate-effect="zoomIn" swiper-animate-duration="0.5s" swiper-animate-delay="0.3s">RECENT WORK</h3>
+							<div class="line"></div>
+						</div>
+						<div class="container ani" swiper-animate-effect="bounceInLeft" swiper-animate-duration="0.5s" swiper-animate-delay="0.6s">
+							<div class="work work1 ani">
+								<img src="img/web1.png" alt="" />
+								<div class="title">欢乐购(移动端)</div>
+							</div>
+							<div class="work work2 ani"  swiper-animate-effect="flip" swiper-animate-duration="0.5s" swiper-animate-delay="0.9s">
+								<img src="img/web2.png" alt="" />
+								<div class="title">完美世界(微场景)</div>
+							</div>
+							<div class="work work3 ani"  swiper-animate-duration="0.5s" swiper-animate-delay="1.2s">
+								<img src="img/web3.png" alt="" />
+								<div class="title">苏格时代商城(移动端)</div>
+							</div>
+							<div class="work work4 ani" swiper-animate-effect="bounceInUp" swiper-animate-duration="0.5s" swiper-animate-delay="1.5s">
+								<img src="img/web4.png" alt="" />
+								<div class="title">欧驰沙发(PC端)</div>
+							</div>
+							<!--http://www.harborhousehome.com/product-list-single-497/5#pg-->
+						</div>
+					</div>	
+				</div>
+				<div class="swiper-slide slide"  name="3F" id="3F">
+					<div id="about">
+						<div class="subheader">
+							<div class="line"></div>
+							<h3 class="ani" swiper-animate-effect="zoomIn" swiper-animate-duration="0.5s" swiper-animate-delay="0.3s">ABOUT</h3>
+							<div class="line"></div>
+						</div>
+						<div class="container">
+							<img src="img/1.jpg" alt="" class="ani" swiper-animate-effect="zoomIn" swiper-animate-duration="0.5s" swiper-animate-delay="0.5s"/>
+						    <div class="middle">
+						    	<p class="ani" style="font-size: 30px;" swiper-animate-effect="bounceInUp" swiper-animate-duration="0.5s" swiper-animate-delay="1s">Who am I?</p>
+						    	<p class="ani" swiper-animate-effect="bounceInUp" swiper-animate-duration="0.5s" swiper-animate-delay="1.5s">学习能力强,学习效率高，反应能力快;遇事沉稳，有较强的组织能力;有极高的工作热情，性情开朗，为人友善，待人诚恳，责任心强，积极上进，刻苦耐劳，耐心细致;善于与人沟通，有较好的人际关系，沟通能力较强;有较好的团队和集体主义精神。</p>
+						    </div>
+						    <div class="right">
+						    	<p  class="ani" swiper-animate-effect="lightSpeedIn" swiper-animate-duration="0.5s" swiper-animate-delay="2.0s" style="color:dodgerblue;font-weight: bolder;font-size: 40px;">SKILL</p>
+						    	<p  class="ani" swiper-animate-effect="bounceInRight" swiper-animate-duration="0.5s" swiper-animate-delay="2.0s" style="background:url(img/skill1.png);width:250px;">HTML</p>
+						    	<p  class="ani" swiper-animate-effect="bounceInRight" swiper-animate-duration="0.5s" swiper-animate-delay="2.3s" style="background:url(img/skill2.png);width:235px;">CSS</p>
+						    	<p  class="ani" swiper-animate-effect="bounceInRight" swiper-animate-duration="0.5s" swiper-animate-delay="2.6s" style="background:url(img/skill3.png);width:245px;">javascript</p>
+						    	<p  class="ani" swiper-animate-effect="bounceInRight" swiper-animate-duration="0.5s" swiper-animate-delay="2.9s" style="background:url(img/skill4.png);width:285px;">Jquery</p>
+						    	<p  class="ani" swiper-animate-effect="bounceInRight" swiper-animate-duration="0.5s" swiper-animate-delay="3.2s" style="background:url(img/skill5.png);width:250px;">Bootstrap</p>
+						    	<p  class="ani" swiper-animate-effect="bounceInRight" swiper-animate-duration="0.5s" swiper-animate-delay="3.5s" style="background:url(img/skill6.png);width:245px;">MUI</p>
+						    </div>
+						</div>
+					</div>	
+				</div>
+				<div class="swiper-slide slide"  name="4F"  id="4F">
+					<div id="contact">
+						<div class="subheader">
+							<div class="line"></div>
+							<h3 class="ani" swiper-animate-effect="zoomIn" swiper-animate-duration="0.5s" swiper-animate-delay="0.3s">CONTACT</h3>
+							<div class="line"></div>
+						</div>
+						<div class="container">
+							<div class="word">
+							   <p class="ani" swiper-animate-effect="fadeInLeft" swiper-animate-duration="0.5s" swiper-animate-delay="0.6s">TEL:13598527956</p>
+							   <p class="ani" swiper-animate-effect="fadeInLeft" swiper-animate-duration="0.5s" swiper-animate-delay="0.9s">EMAIL:13598527956@163.com</p>
+							   <p class="ani" swiper-animate-effect="fadeInLeft" swiper-animate-duration="0.5s" swiper-animate-delay="1.2s">微信：guo13598527956</p>
+							</div>
+						   <img src="img/er.png" alt=""  class="ani" swiper-animate-effect="fadeInRightBig" swiper-animate-duration="2.5s" swiper-animate-delay="0.3s"/>
+						</div>
+					</div>
+				</div>	
+			</div>
+		</div>
+		<script type="text/javascript">
+			var mySwiper = new Swiper('.swiper-container', {
+				direction: 'vertical',
+				onInit: function(swiper) { //Swiper2.x的初始化是onFirstInit
+					swiperAnimateCache(swiper); //隐藏动画元素 
+					swiperAnimate(swiper); //初始化完成开始动画
+				},
+				onSlideChangeEnd: function(swiper) {
+					swiperAnimate(swiper); //每个slide切换结束时也运行当前slide动画
+				}
+			})
+		</script>
+	</body>
+
+</html>
+						 
