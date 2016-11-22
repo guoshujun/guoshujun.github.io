@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>注册</title>
+    <link rel="stylesheet" href="css/registered.css" />
+    <script src="libs/jquery-1.11.3.js"></script>
+    <script src="js/jquery.cookie.js"></script>
+    <script src="js/registered.js"></script>
+</head>
+<body>
+    <div class="header"></div>
+    <div class="regs">
+        <div class="regs_con">
+            <div class="regs_con_top">
+                <p><span>新用户注册</span><i>/</i><em>注册卷皮网，赢积分换好礼！</em></p>
+                <b><em>已有账号，</em><a class="clicklog" href="login.html">立即登录</a></b>
+            </div>
+                <form>
+                    手机号码：<input class="phonenum" type="text"/><em><img /></em><i>或</i><a href="##">邮箱注册</a><br/>
+                    <span class="phonespan">请输入11位手机号</span><br><br>
+                    创建密码：<input type="password"/><em><img src="images/error.jpg"/></em><br/>
+                    <span class="pwdspan">6-16个数字，字母或符号，字母区分大小写</span><br><br>
+                    确认密码：<input type="password"/><em><img src="images/error.jpg"/></em><br>
+                    <span class="againspan">请再次输入密码</span><br>
+                    <input class="regsbtn" type="button" value="注册"/><br>
+                   <div class="accept"> <input class="checkbox" type="checkbox" checked/><i>我已阅读并接受《卷皮用户协议》</i></div>
+                </form>
+            <div class="regs_con_right">
+                <img src="images/regsiter.jpg"/>
+                <div class="regs_con_bottom">
+                    <p>无需注册,快速登录</p>
+                    <ul>
+                        <li><img src="images/qq.jpg"/></li>
+                        <li><img class="weixin" src="images/weixin.jpg"/></li>
+                        <li><img src="images/xinlang.jpg"/></li>
+                        <li> <img class="tao" src="images/tao.jpg"/></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer"></div>
+    <div id="cover"> </div>
+        <div class="cover_con">
+            <p class="cover_con_top"><span>请输入图片验证码</span><em class="cancel"><img src="images/icon9.jpg"/></em></p>
+            <div class="covercode">
+                <input class="coververify" type="text" placeholder="验证码"/>
+
+                <em class="coverrancode"><img class="changecode"/></em><br><br><br>
+                <span class="codespan">验证码不能为空</span><br>
+                <input class="ok" type="button" value="确定"/>
+                <input class="btncancel" type="button" value="取消"/>
+            </div>
+        </div>
+</body>
+</html>

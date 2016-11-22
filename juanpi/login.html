@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>登录</title>
+    <link rel="stylesheet" href="css/login1.css" />
+    <script src="libs/jquery-1.11.3.js"></script>
+    <script src="js/jquery.cookie.js"></script>
+    <script src="js/login.js"></script>
+</head>
+<body>
+<div class="header"></div>
+<!--登录区域-->
+<div class="login">
+    <div class="login_con">
+        <div class="login_con_top">
+            <p><span>老用户登录</span><i>/</i><em>尊敬的卷皮用户，欢迎您回来!</em></p>
+            <b><em>还没账号？</em><a class="clickreg" href="##">立即注册</a></b>
+        </div>
+        <div class="login_con_left">
+            <div class="name"><img src="images/yonghuming.jpg"/><input id="inputname" type="text" placeholder="手机号/邮箱/昵称"/></div>
+            <span class="namespan">账号不能为空</span>
+            <div class="pwd"><img src="images/mima.jpg"/><input id="inputpwd" type="password" placeholder="密码"/></div>
+            <span class="pwdspan">密码不能为空</span>
+            <div class="code">
+                <div class="verify"><input class="inputcode" type="text" placeholder="验证码"/></div>
+                <em class="rancode"><img /></em><a class="changecode" href="##">换一张</a>
+            </div>
+            <span class="codespan">验证码不能为空</span>
+            <div class="checkbox">
+                <input class="nonlog" type="checkbox" checked/>两周内免登陆
+                <em>忘记密码？</em>
+            </div>
+            <input class="btn" type="button" value="登录"/>
+            <ul>
+                <li class="li1">合作网站账号登录</li>
+                <li><img src="images/qq.jpg"/></li>
+                <li><img class="weixin" src="images/weixin.jpg"/></li>
+                <li><img src="images/xinlang.jpg"/></li>
+                <li> <img class="tao" src="images/tao.jpg"/></li>
+            </ul>
+            <div class="phone">
+                <img src="images/phone.jpg"/>
+                <em><a href="phonelogin.html">手机快捷登录></a></em>
+            </div>
+        </div>
+        <div class="pic"><img src="images/login.png"/></div>
+    </div>
+</div>
+<div class="footer"></div>
+</body>
+</html>

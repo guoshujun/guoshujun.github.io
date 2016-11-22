@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>商品详情</title>
+    <link rel="stylesheet" href="css/detail.css" />
+    <script src="libs/jquery-1.11.3.js"></script>
+    <script src="js/jquery.cookie.js"></script>
+    <script src="js/detail.js"></script>
+    <script src="js/toolbar.js"></script>
+    <script src="js/sidebar.js"></script>
+</head>
+<body>
+    <div class="tbtoolbar"></div>
+    <div class="tbtop"></div>
+    <div class="tbnav"></div>
+    <div class="goods">
+        <div class="goods_con">
+            <div class="goods_con_left">
+                <div class="bigbox">
+                    <img id="smallimg" >
+                    <div class="mag">
+                        <img id="bigimg" class="img" />
+                    </div>
+                    <div id="control" class="control"></div>
+                </div>
+
+                <div class="smallbox">
+                    <ul>
+                        <li class="first"><img src="images/smgoods0.jpg"/></li>
+                        <li><img src="images/smgoods1.jpg"/></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="goods_con_right">
+               <h3>芳外纯色连衣裙</h3>
+                <input type="hidden" value="1"/>
+                <p class="price"><em>￥</em><i>119</i><span>3.6折</span><b>￥329</b></p>
+                <p class="discount"><em>促销：</em><i>满件折</i><span>满2件九折，满3件8.5折</span><a>详情>></a></p>
+                <p class="goto"><em>配送至：</em>
+                    <select class="province">
+                        <option selected =selected>请选择省份</option>
+                    </select>
+                    <select class="city">
+                        <option selected =selected>请选择城市</option>
+                    </select>
+                    <i>包邮</i>
+                </p>
+                <div class="seclcolor">
+                    <em>颜色</em>
+                    <ul class="col">
+                        <li class="first"><img src="images/colgoods1.jpg"/></li>
+                        <li><img src="images/colgoods2.jpg"/></li>
+                    </ul>
+                </div>
+                <div class="size">
+                    <em>尺寸</em>
+                    <ul>
+                        <li><span>30</span><em>库存紧张</em></li>
+                        <li><span>30</span><em>库存紧张</em></li>
+                        <li><span>30</span><em>库存紧张</em></li>
+                    </ul>
+                </div>
+                <p class="num"><em>数量</em><span><a class="decnum">-</a><input class="numinput" type="text" value="1"/><a class="addnum">+</a></span></p>
+                <p class="addbag">加入购物车</p>
+                <div class="mall">
+                    <ul>
+                        <li class="coll"><a href=""><img src="images/mall1.jpg"/><em>收藏</em></a></li>
+                        <li class="share"><a href=""><img src="images/mall3.jpg"/><em>分享</em></a></li>
+                        <li class="three"><a href=""><img src="images/qqspace.jpg"/><img src="images/sina.jpg"/><img src="images/tecent.jpg"/></a></li>
+                        <li><a href="">举报</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="sale">
+        <div class="sale_con">
+            <img src="images/advantage-bg-new241-pc%20(1).png"/>
+        </div>
+    </div>
+<div class="tab">
+    <div class="tab_con">
+        <div class="alltop">
+            <ul class="tabul">
+                <li class="active2" >商品详情</li>
+                <li >物流与售后</li>
+                <li >消费保障</li>
+                <li class="phonebuy"><img src="images/phone2.jpg"/><em>手机购买</em>
+                    <div class="twocode">
+                        <img src="images/jp-app-90-new.png"/>
+                        <b>随时逛   及时抢</b>
+                    </div>
+                </li>
+                <span><em>￥</em><i>119</i><b>加入购物车</b></span>
+            </ul>
+
+            <ul class="prod">
+                <li>产品展示</li>
+                <li>产品细节</li>
+            </ul>
+        </div>
+        <div class="goodsinfo">
+            <p><span>参数规格</span><em></em></p>
+             <img src="images/info-tab.jpg"/>
+            <p><span>产品展示</span><em></em></p>
+            <img src="images/infor.jpg"/>
+            <img src="images/bagcolor.jpg"/>
+            <p><span>产品细节</span><em></em></p>
+            <img src="images/bagdetail.jpg"/>
+            <p><span>物流与售后</span><em></em></p>
+            <i><b>发货物流:</b>圆通速递，百世汇通，邮政国内小包</i>
+            <i><b>配送范围:</b>全国（港澳台地区除外）。</i>
+            <i><b>运费说明:</b>全国包邮（偏远地区除外）。</i>
+            <i><b>包裹跟踪:</b>您可在<a>【我的订单】</a>中查询物流跟踪信息。</i>
+            <i><b>确认收货:</b>当快件送达至您的收货地址后，卷皮将为您自动确认收货并将奖励积分发放至您的账户。</i>
+            <img src="images/renturn-process.jpg"/>
+            <i class="sale-after"><b>售后服务承诺</b><br>收到货后，如果因为主观原因不喜欢/不想要了，在不影响二次销售的情况下，签收后7天内，卷皮网为您提供七天无理由退货服务。如果未收到货或收到商品有质量问题，您可以在签收后15天内申请售后。<a> 售后服务说明>></a>。</i>
+            <i class="sale-after"><b>运费补贴政策</b><br>当您的退货商品单价≥29元，卷皮将提供价值10元的退货运费补贴。（每个订单仅补充一次优惠券） <a>退货运费补贴说明>></a></i>
+            <p><span>消费保障</span><em></em></p>
+         <div class="consume">
+             <ul class="consume_con">
+                 <li class="li1"><a></a></li>
+                 <li class="li2"><a></a></li>
+                 <li class="li3"><a></a></li>
+                 <li class="li4"><a></a></li>
+                 <li class="li5"><a></a></li>
+                 <li class="li6"><a></a></li>
+                 <li class="li7"><a></a></li>
+             </ul>
+             <div class="consume_img">
+                <ul>
+                    <li class="img1"><img src="images/cp02_1.jpg" alt=""></li>
+                    <li class="img2"><img src="images/cp02_2.jpg" alt=""></li>
+                    <li class="img3"><img src="images/cp02_3.jpg" alt=""></li>
+                    <li class="img4"><img src="images/cp02_4.jpg" alt=""></li>
+                    <li class="img5"><img src="images/cp02_5.jpg" alt=""></li>
+                    <li class="img6"><img src="images/cp02_6.jpg" alt=""></li>
+                    <li class="img7"><img src="images/cp02_7.jpg" alt=""></li>
+                </ul>
+             </div>
+         </div>
+        </div>
+    </div>
+</div>
+    <div class="like">
+        <div class="like_con">
+                <p>猜你喜欢</p>
+            <ul>
+                <li><img src="images/like1.jpg"/>
+                    <span>￥39</span>
+                </li>
+                <li><img src="images/like2.jpg"/>
+                    <span>￥79</span>
+                </li>
+                <li><img src="images/like3.jpg"/>
+                    <span>￥69</span>
+                </li>
+                <li><img src="images/like4.jpg"/>
+                    <span>￥49</span>
+                </li>
+                <li class="lastlike"><img src="images/like5.jpg"/>
+                    <span>￥59</span>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="foot">
+        <div class="foot_con">
+            <div class="foot_twocode">
+                <img src="images/jp-app-90.png"/>
+                <b>随时逛 及时抢</b>
+            </div>
+            <div class="foot_con_list">
+                <ul>
+                    <li>
+                        <dl>
+                            <dd>获取更新</dd>
+                            <dt><img src="images/icon10.jpg"/><a>iPhoe/Android</a></dt>
+                            <dt><img src="images/icon10.jpg"/><a>卷皮QQ空间</a></dt>
+                            <dt><img src="images/icon10.jpg"/><a>卷皮新浪微博</a></dt>
+                            <dt><img src="images/icon10.jpg"/><a>开放API</a></dt>
+                        </dl>
+                    </li>
+                    <li>
+                        <dl>
+                            <dd>商务合作</dd>
+                            <dt><img src="images/icon10.jpg"/><a>卖家免费报名</a></dt>
+                            <dt><img src="images/icon10.jpg"/><a>卷皮QQ空间</a></dt>
+                            <dt><img src="images/icon10.jpg"/><a>卷皮新浪微博</a></dt>
+                            <dt><img src="images/icon10.jpg"/><a>开放API</a></dt>
+                        </dl>
+                    </li>
+                    <li>
+                        <dl>
+                            <dd>公司信息</dd>
+                            <dt><img src="images/icon10.jpg"/><a>卖家免费报名</a></dt>
+                            <dt><img src="images/icon10.jpg"/><a>卷皮QQ空间</a></dt>
+                            <dt><img src="images/icon10.jpg"/><a>诚聘英才</a><img src="images/school-ico.png"/></dt>
+                            <dt><img src="images/icon10.jpg"/><a>开放API</a></dt>
+                        </dl>
+                    </li>
+                    <li>
+                        <dl>
+                            <dd>帮助中心</dd>
+                            <dt><img src="images/icon10.jpg"/><a>卖家免费报名</a></dt>
+                            <dt><img src="images/icon10.jpg"/><a>卷皮QQ空间</a></dt>
+                            <dt><img src="images/icon10.jpg"/><a>卷皮新浪微博</a></dt>
+                            <dt><img src="images/icon10.jpg"/><a>开放API</a></dt>
+                        </dl>
+                    </li>
+                </ul>
+            </div>
+            <a href="##"></a>
+            <span>周一至周日9:00-21:00</span>
+        </div>
+    </div>
+    <div></div>
+    <div class="foot_bottom">
+        <div class="foot_bottom_con">
+            <ul>
+                <li>武汉奇米网络股份有限公司&nbsp;鄂ICP备10209205</li>
+                <li>ICP许可证号：鄂B110209205</li>
+                <li class="last">食品流通许可证号&nbsp;SP110209205&nbsp;Copyright&nbsp;&copy;&nbsp;2010-2016juanpi.com&nbsp;All</li>
+            </ul>
+        </div>
+    </div>
+    <div class="side"></div>
+
+</body>
+</html>

@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>登录</title>
+    <style>
+        html, body, ul, li, ol, dl, dd, dt, p, h1, h2, h3, h4, h5, h6, form, fieldset, legend, img {margin:0; padding:0;}
+        fieldset, img{ border:none;}
+        a{text-decoration:none;color:#000;}
+        ul,ol,li{list-style:none;}
+        b,strong,h1, h2, h3, h4, h5, h6{font-weight:normal;}
+        i,em{font-style:normal;}
+        input{background:none;border:none;outline:none;}
+        img{font-size:0;border:none;}
+
+        .top{width:100%;height:76px;background:#FFF;border-bottom:solid 4px #ff464e;}
+        .top .top_con{width:980px;height:76px;margin:0 auto;}
+        .top .top_con .top_con_left h1{margin-top:16px;float: left;margin-right: 13px;}
+        .top .top_con .top_con_left span{float:left;margin-top:19px;}
+        .top .top_con .top_con_right{float: right;}
+        .top .top_con .top_con_right ul li{width:157px;height:30px;margin-top:24px;float: left;line-height: 30px;}
+        .top .top_con .top_con_right ul li img{margin-right:10px;vertical-align: middle;}
+        .top .top_con .top_con_right ul li a{border-right: dotted 2px #bfbfbf;padding:0 20px 0 0;}
+
+        .login{width:100%;height:545px;background:#f6f6f6;overflow: hidden;}
+        .login .login_con{width:977px;height:523px;border:solid 1px #e2e2e2;background:#fff;margin:20px  auto 0;}
+        .login .login_con .login_con_top{width:977px;height:64px;border-bottom: solid 1px #e2e2e2;line-height: 64px;}
+        .login .login_con .login_con_top p{margin-left:50px;width:288px;height:64px;float:left;}
+        .login .login_con .login_con_top p span{font-size:16px;color: #ff464e;margin-right: 4px;}
+        .login .login_con .login_con_top p em{font-size:12px;color: #666;}
+        .login .login_con .login_con_top p i{font-size:21px;color: #eaeaea;margin-right: 10px;}
+        .login .login_con .login_con_top b{float:right;margin-right: 50px;}
+        .login .login_con .login_con_top b em{font-size: 14px;color:#999;}
+        .login .login_con .login_con_top b a{font-size: 14px;color:#0289cd;}
+        .login .login_con .login_con_left{float:left;margin-left:90px;margin-top:30px;width:345px;height:456px;overflow: hidden;}
+        .login .login_con .login_con_left input{width:260px;height:38px;border:solid 1px #ccc;}
+        .login .login_con .login_con_left span{width:262px;height:30px;float:left;margin-left:80px;line-height:30px;color:#ff464e;visibility:hidden;font-size: 13px;}
+        .login .login_con .login_con_left em{margin-left: 32px;}
+        .login .login_con .login_con_left .btn{width:130px;height:40px;margin-left:80px;cursor:pointer;text-align:center;border-radius:2px;background:#aaa;font-size: 15px;color: #fff;}
+
+        /*bottom*/
+        .bottom{width:100%;height:116px;background:#f6f6f6;}
+        .bottom .bottom_con{width:977px;height:116px;margin: 0 auto;overflow: hidden;}
+        .bottom .bottom_con ul{width:890px;height:12px;margin:44px auto 0;}
+        .bottom .bottom_con ul li{padding: 0 6px;float:left;font-size: 12px;color:#666;border-right: solid 1px #936693;}
+        .bottom .bottom_con ul .last{border: none;}
+        .bottom .bottom_con span{display:block;width:100px;text-align:center;height:26px;line-height:26px;font-size: 12px;color:#666;margin:0 auto;}
+    </style>
+    <script src="libs/jquery-1.11.3.js"></script>
+    <script src="js/jquery.cookie.js"></script>
+    <script>
+        $(function(){
+            $('.header').load('tb.html .top');
+            $('.footer').load('tb.html .bottom');
+            var a,b;
+            var regpwd = /^\w\S{5,15}/;
+            $('input[id=inputname]').focus(function(){
+                $('span[class=namespan]').css('visibility','hidden');
+                $('div[class=name]').css('border-color','#c6c6c6');
+            });
+            $('input[id=inputname]').blur(function(){
+                var nameval = $('input[id=inputname]').val();
+                if(nameval == ''){
+                    $('div[class=name]').css('border-color','#ff464e');
+                    $('span[class=namespan]').css('visibility','visible');
+                    $('span[class=namespan]').html("手机号不能为空");
+                    a=0;
+                }
+            });
+            $('input[type=password]').focus(function(){
+                $('span[class=pwdspan]').css('visibility','hidden');
+            });
+            $('input[type=password]').blur(function(){
+                var pwdval = $('input[type=password]').val();
+                if(pwdval == ''){
+                    $('span[class=pwdspan]').css('visibility','visible');
+                    b=0;
+                }
+            });
+            $('input[type=password]').keypress(function(){
+                var pwd = $('input[type=password]').eq(0).val();
+                if(regpwd.test(pwd)){
+                    $('input[class=btn]').css("background","#ff464e");
+                }
+            });
+            //按钮变色
+            $('input[class=btn]').hover(fn1,fn2);
+            function fn1(){
+                $('input[class=btn]').css('opacity',0.5);
+            }
+            function fn2(){
+                $('input[class=btn]').css('opacity',1);
+            }
+//登录按钮
+            $('input[class=btn]').click(function(){
+                //获取cookie
+                var tmpVal = $.cookie($('input[id=inputname]').val());
+                if(tmpVal == undefined){
+                    $('span[class=namespan]').css('visibility','visible');
+                    $('span[class=namespan]').html('账户不存在');
+                    a=0;
+                }else {
+                    a=1;
+                    var tmpJSON = JSON.parse(tmpVal);
+                    if($('input[id=inputpwd]').val() != tmpJSON.pwdcookie ){
+                        $('span[class=pwdspan]').css('visibility','visible');
+                        $('span[class=pwdspan]').html('密码错误');
+                        b=0;
+
+                    }else {
+                        b=1;
+                        $('span[class=pwdspan]').css('visibility','hidden');
+                    }
+                }
+                if((a*b == 1) && ($('input[class=nonlog]')).attr('checked','checked')){
+                    $('input[id=inputname]').val() == tmpVal;
+                    var tmpJSON = JSON.parse(tmpVal);
+                    $('input[id=inputpwd]').val() == tmpJSON.pwdcookie;
+                    window.location.href="index.html";
+                }
+            });
+            //跳到注册页面
+            $('a[class=clickreg]').click(function(){
+                window.location.href="registered.html";
+            })
+        })
+    </script>
+</head>
+<body>
+<div class="header"></div>
+<!--登录区域-->
+<div class="login">
+    <div class="login_con">
+        <div class="login_con_top">
+            <p><span>手机快捷登录</span><i>/</i><em>快速享受卷皮购物体验</em></p>
+            <b><em>返回邮箱，</em><a class="clickreg" href="login.html">登录</a></b>
+        </div>
+        <div class="login_con_left">
+            手机号码：<input id="inputname" type="text" placeholder="请输入手机号"/><img  class="phonepic"/><br>
+            <span class="namespan"></span><br>
+            <em>密码：</em><input id="inputpwd" type="password" placeholder="请输入密码"/><img  class="pwdpic"/>
+            <span class="pwdspan">密码不能为空</span>
+            <input class="btn" value="登录"/><br>
+        </div>
+    </div>
+</div>
+<div class="footer"></div>
+</body>
+</html>
